@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "60516166040",
+    "firebase_url": "https://infovesele-1a7b2.firebaseio.com",
+    "project_id": "infovesele-1a7b2",
+    "storage_bucket": "infovesele-1a7b2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:60516166040:android:cf80f78b9817ff0e",
+        "android_client_info": {
+          "package_name": "com.artimanton.infovesele"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "60516166040-8lrinsp1nls5uos5h15mmh3taurd58mp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.artimanton.infovesele",
+            "certificate_hash": "e08f73e58a4ce78524850806f32f47457403ed84"
+          }
+        },
+        {
+          "client_id": "60516166040-f3n23410q7bv7tu8cg5flb6fkgjg1f1h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDLeaNGkWyhhcZ0fBs0JQhZHcqU0X9j4fI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "60516166040-f3n23410q7bv7tu8cg5flb6fkgjg1f1h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
