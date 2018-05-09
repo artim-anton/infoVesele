@@ -1,5 +1,6 @@
 package com.artimanton.infovesele.activity;
 
+import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -43,7 +44,7 @@ public class BusActivity extends AppCompatActivity {
         layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         recyclerView.setLayoutManager(layoutManager);
 
-        adapter = new BusAdapter(result);
+        adapter = new BusAdapter(this,result);
         recyclerView.setAdapter(adapter);
 
         updateList();
@@ -119,7 +120,6 @@ public class BusActivity extends AppCompatActivity {
 
     private void changeBus(int position){
         BusModel bus = result.get(position);
-
         Map<String, Object> busValue = bus.toMap();
         Map<String, Object> newBus = new HashMap<>();
         newBus.put(bus.key, busValue);

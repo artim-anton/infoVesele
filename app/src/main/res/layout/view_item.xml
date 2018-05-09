@@ -10,25 +10,29 @@
         android:id="@+id/et_time_go"
         android:inputType="text"
         android:layout_margin="10dp"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
+        android:layout_weight="1.5"
         android:layout_height="wrap_content"
-        android:text="5:30"/>
+        android:text="05:30"/>
     <EditText
         android:id="@+id/et_time_finish"
         android:inputType="text"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_weight="1.5"
         android:layout_margin="10dp"
-        android:text="7:30"/>
+        android:text="07:30"/>
     <EditText
         android:id="@+id/et_phone"
         android:inputType="phone"
         android:layout_margin="10dp"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_weight="3"
         android:textColor="@color/colorPhone"
-        android:text="0675932639"/>
+        android:text="0674512821"/>
     <ImageButton
+        android:id="@+id/btn_edit"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
@@ -36,6 +40,7 @@
         android:src="@drawable/ic_mode_edit_black_24dp"
         android:text="ED"/>
     <ImageButton
+        android:id="@+id/btn_call"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
