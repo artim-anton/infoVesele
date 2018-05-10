@@ -48,7 +48,7 @@ public class BusAdapter extends RecyclerView.Adapter<BusAdapter.BusViewHolder> {
             @Override
             public void onClick(View view) {
                 Toast.makeText(view.getContext(), "Click" + position, Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(Intent.ACTION_CALL, Uri.parse(bus.phone));
+                Intent intent = new Intent(Intent.ACTION_CALL, Uri.fromParts("tel", bus.phone, null));
                 if (ActivityCompat.checkSelfPermission(context, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
                     // TODO: Consider calling
                     //    ActivityCompat#requestPermissions
@@ -83,13 +83,13 @@ public class BusAdapter extends RecyclerView.Adapter<BusAdapter.BusViewHolder> {
         EditText etTimeGo, etTimeFinish, etPhone;
         ImageButton btnCall, btnEdit;
 
-        public BusViewHolder(View itemView) {
+        private BusViewHolder(View itemView) {
             super(itemView);
-            etTimeGo = (EditText) itemView.findViewById(R.id.et_time_go);
-            etTimeFinish = (EditText) itemView.findViewById(R.id.et_time_finish);
-            etPhone = (EditText) itemView.findViewById(R.id.et_phone);
-            btnEdit = (ImageButton) itemView.findViewById(R.id.btn_edit);
-            btnCall = (ImageButton) itemView.findViewById(R.id.btn_call);
+            etTimeGo = itemView.findViewById(R.id.et_time_go);
+            etTimeFinish = itemView.findViewById(R.id.et_time_finish);
+            etPhone = itemView.findViewById(R.id.et_phone);
+            btnEdit = itemView.findViewById(R.id.btn_edit);
+            btnCall = itemView.findViewById(R.id.btn_call);
         }
     }
 }
