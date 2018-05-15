@@ -8,27 +8,46 @@
     android:orientation="vertical">
 
     <Button
-        android:id="@+id/buses"
+        android:id="@+id/btn_buses"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="btBuses"
         android:text="Автобусы"
-        android:textStyle="bold|italic"
+        android:textStyle="|italic"
         android:gravity="center|center_vertical"
         android:textSize="20sp"
-       />
+        android:drawableLeft="@drawable/ic_bus"
+        android:background="@drawable/border"
+        android:layout_margin="10dp"
+        />
 
     <Button
-        android:id="@+id/trains"
+        android:id="@+id/btn_trains"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="btTrains"
         android:text="Поезда"
-        android:textStyle="bold|italic"
+        android:textStyle="|italic"
         android:gravity="center|center_vertical"
         android:textSize="20sp"
+        android:drawableLeft="@drawable/ic_train"
+        android:background="@drawable/border"
+        android:layout_margin="10dp"
         />
 
+    <Button
+        android:id="@+id/btn_taxi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="btTrains"
+        android:text="Такси"
+        android:textStyle="|italic"
+        android:gravity="center|center_vertical"
+        android:textSize="20sp"
+        android:drawableLeft="@drawable/ic_local_taxi_black_48dp"
+        android:background="@drawable/border"
+        android:layout_margin="10dp"
+        />
 
     <RadioGroup
         android:layout_width="match_parent"

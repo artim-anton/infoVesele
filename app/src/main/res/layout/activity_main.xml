@@ -13,10 +13,13 @@
         android:layout_height="wrap_content"
         android:onClick="btTransport"
         android:text="Траспорт"
-        android:textStyle="bold|italic"
+        android:textStyle="|italic"
         android:gravity="center|center_vertical"
         android:textSize="20sp"
-        />
+        android:drawableLeft="@drawable/ic_transport"
+        android:background="@drawable/border"
+        android:layout_margin="10dp"
+        android:paddingLeft="30dp"/>
 
 
 </LinearLayout>
