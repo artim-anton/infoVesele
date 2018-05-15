@@ -7,28 +7,30 @@ import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.widget.RecyclerView;
-import android.view.ContextMenu;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.artimanton.infovesele.R;
-import com.artimanton.infovesele.activity.BusActivity;
+import com.artimanton.infovesele.activity.BusZpRead;
 import com.artimanton.infovesele.model.BusModel;
 
 import java.util.List;
 
 public class BusAdapter extends RecyclerView.Adapter<BusAdapter.BusViewHolder> {
     private List<BusModel> list;
-    private Context mcon;
+    BusZpRead activity;
 
+    private static int adapterPosition;
 
-    public BusAdapter(Context con, List<BusModel> list) {
-        mcon = con;
+    public static int getAdapterPosition() {
+        return adapterPosition;
+    }
+
+    public BusAdapter(List<BusModel> list) {
         this.list = list;
     }
 
@@ -47,7 +49,6 @@ public class BusAdapter extends RecyclerView.Adapter<BusAdapter.BusViewHolder> {
         holder.btnCall.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(view.getContext(), "Click" + position, Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(Intent.ACTION_CALL, Uri.fromParts("tel", bus.phone, null));
                 if (ActivityCompat.checkSelfPermission(context, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
                     // TODO: Consider calling
@@ -64,14 +65,29 @@ public class BusAdapter extends RecyclerView.Adapter<BusAdapter.BusViewHolder> {
             }
         });
 
-        holder.itemView.setOnCreateContextMenuListener(new View.OnCreateContextMenuListener() {
+        holder.btnEdit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(view.getContext(), "После редактированя, нажмите сохранить", Toast.LENGTH_SHORT).show();
+                holder.etTimeGo.setEnabled(true);
+                holder.etTimeFinish.setEnabled(true);
+                holder.etPhone.setEnabled(true);
+                bus.time_go = holder.etTimeGo.getText().toString();
+                bus.time_finish = holder.etTimeFinish.getText().toString();
+                bus.phone = holder.etPhone.getText().toString();
+                adapterPosition = holder.getAdapterPosition();
+            }
+        });
+
+        //Context menu
+        /*holder.itemView.setOnCreateContextMenuListener(new View.OnCreateContextMenuListener() {
             @Override
             public void onCreateContextMenu(ContextMenu contextMenu, View view, ContextMenu.ContextMenuInfo contextMenuInfo) {
                 contextMenu.add(holder.getAdapterPosition(), 0, 0, "Удалить");
                 contextMenu.add(holder.getAdapterPosition(), 1, 0, "Изменить");
 
             }
-        });
+        });*/
     }
 
     @Override
@@ -80,8 +96,8 @@ public class BusAdapter extends RecyclerView.Adapter<BusAdapter.BusViewHolder> {
     }
 
     class BusViewHolder extends RecyclerView.ViewHolder{
-        EditText etTimeGo, etTimeFinish, etPhone;
-        ImageButton btnCall, btnEdit;
+        private EditText etTimeGo, etTimeFinish, etPhone;
+        private ImageButton btnCall, btnEdit;
 
         private BusViewHolder(View itemView) {
             super(itemView);
@@ -92,4 +108,5 @@ public class BusAdapter extends RecyclerView.Adapter<BusAdapter.BusViewHolder> {
             btnCall = itemView.findViewById(R.id.btn_call);
         }
     }
+
 }

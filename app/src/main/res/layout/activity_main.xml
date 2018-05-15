@@ -12,7 +12,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="btTransport"
-        android:text="Траспорт"/>
+        android:text="Траспорт"
+        android:textStyle="bold|italic"
+        android:gravity="center|center_vertical"
+        android:textSize="20sp"
+        />
 
 
 </LinearLayout>

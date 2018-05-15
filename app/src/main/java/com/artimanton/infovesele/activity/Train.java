@@ -1,7 +1,9 @@
-package com.artimanton.infovesele;
+package com.artimanton.infovesele.activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.artimanton.infovesele.R;
 
 public class Train extends AppCompatActivity {
 

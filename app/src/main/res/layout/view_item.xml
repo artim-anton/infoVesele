@@ -8,43 +8,61 @@
 
     <EditText
         android:id="@+id/et_time_go"
-        android:inputType="text"
-        android:layout_margin="10dp"
         android:layout_width="0dp"
-        android:layout_weight="1.5"
         android:layout_height="wrap_content"
-        android:text="05:30"/>
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_weight="2"
+        android:enabled="false"
+        android:inputType="text"
+        android:text="05:30"
+        android:textSize="18sp"
+        android:textColor="@color/colorTime"/>
+
     <EditText
         android:id="@+id/et_time_finish"
-        android:inputType="text"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_weight="1.5"
-        android:layout_margin="10dp"
-        android:text="07:30"/>
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_weight="2"
+        android:enabled="false"
+        android:inputType="text"
+        android:text="07:30"
+        android:textSize="18sp"
+        android:textColor="@color/colorTime"/>
+
     <EditText
         android:id="@+id/et_phone"
-        android:inputType="phone"
-        android:layout_margin="10dp"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_weight="3"
-        android:textColor="@color/colorPhone"
-        android:text="0674512821"/>
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_weight="4"
+        android:enabled="false"
+        android:inputType="phone"
+        android:text="0674512821"
+        android:textSize="18sp"
+        android:textColor="@color/colorPhone" />
     <ImageButton
         android:id="@+id/btn_edit"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:layout_weight="1"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_weight="1.2"
         android:src="@drawable/ic_mode_edit_black_24dp"
-        android:text="ED"/>
+        android:text="ED"
+        android:textSize="18sp" />
     <ImageButton
         android:id="@+id/btn_call"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:layout_weight="1"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_weight="1.2"
         android:src="@drawable/ic_call_black_24dp"
-        android:text="CL"/>
+        android:text="CL"
+        android:textSize="18sp"/>
 </LinearLayout>

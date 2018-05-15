@@ -6,7 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 
 
-import com.artimanton.infovesele.activity.BusActivity;
+import com.artimanton.infovesele.activity.BusAdd;
+import com.artimanton.infovesele.activity.Transport;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -18,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void btTransport(View view) {
-        Intent intent = new Intent(MainActivity.this, BusActivity.class);
+        Intent intent = new Intent(MainActivity.this, Transport.class);
         startActivity(intent);
     }
 }

@@ -6,6 +6,8 @@
     <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.INTERNET" />
 
+    <uses-feature android:name="android.hardware.telephony" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -20,17 +22,24 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Transport" />
+        <activity android:name=".activity.Transport" />
         <activity
-            android:name=".Train"
+            android:name=".activity.Train"
             android:label="@string/title_activity_train"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".Bus"
+            android:name=".activity.BusAdd"
             android:label="@string/title_activity_tr_bus"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".RemoteConfig" />
-        <activity android:name=".activity.BusActivity"></activity>
+        <activity
+            android:name=".activity.BusZpRead"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".activity.BusMelitopolRead"
+            android:windowSoftInputMode="stateHidden"/>
+        <activity
+            android:name=".activity.BusCity"></activity>
     </application>
 
 </manifest>

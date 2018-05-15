@@ -1,12 +1,11 @@
 package com.artimanton.infovesele.activity;
 
-import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.view.MenuItem;
-import android.widget.LinearLayout;
+import android.view.View;
+import android.widget.Button;
 
 import com.artimanton.infovesele.R;
 import com.artimanton.infovesele.adapters.BusAdapter;
@@ -22,10 +21,11 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class BusActivity extends AppCompatActivity {
+public class BusZpRead extends AppCompatActivity {
     private RecyclerView recyclerView;
     private List<BusModel> result;
     private BusAdapter adapter;
+    private Button btnPushToServer;
 
     private FirebaseDatabase database;
     private DatabaseReference reference;
@@ -33,10 +33,12 @@ public class BusActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_bus2);
+        setContentView(R.layout.activity_bus_zp_read);
+
+        btnPushToServer = (Button) findViewById(R.id.btn_push_to_server);
 
         database = FirebaseDatabase.getInstance();
-        reference = database.getReference("buses");
+        reference = database.getReference("transport/buses/zp");
 
         result = new ArrayList<>();
         recyclerView =  findViewById(R.id.bus_list);
@@ -44,14 +46,14 @@ public class BusActivity extends AppCompatActivity {
         layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         recyclerView.setLayoutManager(layoutManager);
 
-        adapter = new BusAdapter(this,result);
+        adapter = new BusAdapter(result);
         recyclerView.setAdapter(adapter);
 
         updateList();
 
     }
-
-    @Override
+   //Context menu
+   /*  @Override
     public boolean onContextItemSelected(MenuItem item) {
         switch (item.getItemId()){
             case 0:
@@ -63,7 +65,7 @@ public class BusActivity extends AppCompatActivity {
         }
 
         return super.onContextItemSelected(item);
-    }
+    }*/
 
     private void updateList(){
         reference.addChildEventListener(new ChildEventListener() {
@@ -118,12 +120,17 @@ public class BusActivity extends AppCompatActivity {
         reference.child(result.get(position).key).removeValue();
     }
 
-    private void changeBus(int position){
+    public void changeBus(int position){
         BusModel bus = result.get(position);
         Map<String, Object> busValue = bus.toMap();
         Map<String, Object> newBus = new HashMap<>();
         newBus.put(bus.key, busValue);
         reference.updateChildren(newBus);
     }
+
+    public void pushToServer(View view) {
+        changeBus(BusAdapter.getAdapterPosition());
+    }
+
 }
 
