@@ -16,8 +16,10 @@
         android:textStyle="italic"
         android:gravity="center|center_vertical"
         android:textSize="20sp"
+        android:drawableLeft="@drawable/ic_location_city_selector"
         android:background="@drawable/border"
-        android:layout_margin="10dp"/>
+        android:layout_margin="10dp"
+        android:paddingLeft="10dp"/>
     <Button
         android:id="@+id/btn_melitopol"
         android:layout_width="match_parent"
@@ -27,8 +29,10 @@
         android:textStyle="italic"
         android:gravity="center|center_vertical"
         android:textSize="20sp"
+        android:drawableLeft="@drawable/ic_location_city_selector"
         android:background="@drawable/border"
-        android:layout_margin="10dp"/>
+        android:layout_margin="10dp"
+        android:paddingLeft="10dp"/>
 
 
 

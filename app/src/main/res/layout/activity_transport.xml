@@ -15,10 +15,11 @@
         android:text="Автобусы"
         android:textStyle="italic"
         android:gravity="center|center_vertical"
-        android:textSize="20sp"
+        android:textSize="24sp"
         android:drawableLeft="@drawable/ic_bus"
         android:background="@drawable/border"
         android:layout_margin="10dp"
+        android:paddingLeft="10dp"
         />
 
     <Button
@@ -29,10 +30,11 @@
         android:text="Поезда"
         android:textStyle="italic"
         android:gravity="center|center_vertical"
-        android:textSize="20sp"
+        android:textSize="24sp"
         android:drawableLeft="@drawable/ic_train"
         android:background="@drawable/border"
         android:layout_margin="10dp"
+        android:paddingLeft="10dp"
         />
 
     <Button
@@ -43,15 +45,12 @@
         android:text="Такси"
         android:textStyle="italic"
         android:gravity="center|center_vertical"
-        android:textSize="20sp"
+        android:textSize="24sp"
         android:drawableLeft="@drawable/ic_local_taxi_black_48dp"
         android:background="@drawable/border"
         android:layout_margin="10dp"
+        android:paddingLeft="10dp"
         />
-
-    <RadioGroup
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
 
 
 </LinearLayout>
