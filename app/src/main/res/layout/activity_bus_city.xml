@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:onClick="Zp"
         android:text="Запорожье"
-        android:textStyle="|italic"
+        android:textStyle="italic"
         android:gravity="center|center_vertical"
         android:textSize="20sp"
         android:background="@drawable/border"
