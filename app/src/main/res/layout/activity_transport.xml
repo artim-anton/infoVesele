@@ -41,7 +41,7 @@
         android:id="@+id/btn_taxi"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="btTrains"
+        android:onClick="btTaxi"
         android:text="Такси"
         android:textStyle="italic"
         android:gravity="center|center_vertical"

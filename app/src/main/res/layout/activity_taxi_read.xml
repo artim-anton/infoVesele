@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".activity.BusZpRead">
+    tools:context=".activity.TaxiRead">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -17,7 +17,7 @@
             android:layout_margin="5dp"
             android:padding="5dp"
             android:layout_weight="1"
-            android:text="На Запорожье"
+            android:text="Такси"
             android:textSize="18sp"
             android:textColor="@color/green"/>
 
@@ -38,10 +38,10 @@
         android:layout_height="wrap_content">
 
         <android.support.v7.widget.RecyclerView
-            android:id="@+id/bus_list"
+            android:id="@+id/taxi_list"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            tools:listitem="@layout/view_item_bus">
+            tools:listitem="@layout/view_item_taxi">
 
         </android.support.v7.widget.RecyclerView>
     </LinearLayout>

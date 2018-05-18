@@ -26,4 +26,8 @@ public class Transport extends AppCompatActivity {
     }
 
 
+    public void btTaxi(View view) {
+        Intent intent = new Intent(Transport.this, TaxiRead.class);
+        startActivity(intent);
+    }
 }

@@ -15,14 +15,14 @@ import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.artimanton.infovesele.R;
-import com.artimanton.infovesele.activity.BusZpRead;
-import com.artimanton.infovesele.model.BusModel;
+import com.artimanton.infovesele.activity.TaxiRead;
+import com.artimanton.infovesele.model.TaxiModel;
 
 import java.util.List;
 
-public class BusAdapter extends RecyclerView.Adapter<BusAdapter.BusViewHolder> {
-    private List<BusModel> list;
-    BusZpRead activity;
+public class TaxiAdapter extends RecyclerView.Adapter<TaxiAdapter.TaxiViewHolder> {
+    private List<TaxiModel> list;
+    TaxiRead activity;
 
     private static int adapterPosition;
 
@@ -30,26 +30,25 @@ public class BusAdapter extends RecyclerView.Adapter<BusAdapter.BusViewHolder> {
         return adapterPosition;
     }
 
-    public BusAdapter(List<BusModel> list) {
+    public TaxiAdapter(List<TaxiModel> list) {
         this.list = list;
     }
 
     @Override
-    public BusViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        return new BusViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.view_item_bus, parent, false));
+    public TaxiViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        return new TaxiViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.view_item_taxi, parent, false));
     }
 
     @Override
-    public void onBindViewHolder(final BusViewHolder holder, final int position) {
-        final BusModel bus = list.get(position);
+    public void onBindViewHolder(final TaxiViewHolder holder, final int position) {
+        final TaxiModel taxi = list.get(position);
         final Context context = holder.itemView.getContext();
-        holder.etTimeGo.setText(bus.time_go);
-        holder.etTimeFinish.setText(bus.time_finish);
-        holder.etPhone.setText(bus.phone);
+        holder.etInfoCar.setText(taxi.info_car);
+        holder.etPhone.setText(taxi.phone);
         holder.btnCall.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Intent.ACTION_CALL, Uri.fromParts("tel", bus.phone, null));
+                Intent intent = new Intent(Intent.ACTION_CALL, Uri.fromParts("tel", taxi.phone, null));
                 if (ActivityCompat.checkSelfPermission(context, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
                     // TODO: Consider calling
                     //    ActivityCompat#requestPermissions
@@ -69,12 +68,10 @@ public class BusAdapter extends RecyclerView.Adapter<BusAdapter.BusViewHolder> {
             @Override
             public void onClick(View view) {
                 Toast.makeText(view.getContext(), "После редактированя, нажмите сохранить", Toast.LENGTH_SHORT).show();
-                holder.etTimeGo.setEnabled(true);
-                holder.etTimeFinish.setEnabled(true);
+                holder.etInfoCar.setEnabled(true);
                 holder.etPhone.setEnabled(true);
-                bus.time_go = holder.etTimeGo.getText().toString();
-                bus.time_finish = holder.etTimeFinish.getText().toString();
-                bus.phone = holder.etPhone.getText().toString();
+                taxi.info_car = holder.etInfoCar.getText().toString();
+                taxi.phone = holder.etPhone.getText().toString();
                 adapterPosition = holder.getAdapterPosition();
             }
         });
@@ -95,14 +92,13 @@ public class BusAdapter extends RecyclerView.Adapter<BusAdapter.BusViewHolder> {
         return list.size();
     }
 
-    class BusViewHolder extends RecyclerView.ViewHolder{
-        private EditText etTimeGo, etTimeFinish, etPhone;
+    class TaxiViewHolder extends RecyclerView.ViewHolder{
+        private EditText etInfoCar, etPhone;
         private ImageButton btnCall, btnEdit;
 
-        private BusViewHolder(View itemView) {
+        private TaxiViewHolder(View itemView) {
             super(itemView);
-            etTimeGo = itemView.findViewById(R.id.et_time_go);
-            etTimeFinish = itemView.findViewById(R.id.et_time_finish);
+            etInfoCar = itemView.findViewById(R.id.et_info_car);
             etPhone = itemView.findViewById(R.id.et_phone);
             btnEdit = itemView.findViewById(R.id.btn_edit);
             btnCall = itemView.findViewById(R.id.btn_call);

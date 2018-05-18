@@ -38,7 +38,7 @@
         android:id="@+id/bus_list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:listitem="@layout/view_item">
+        tools:listitem="@layout/view_item_bus">
 
     </android.support.v7.widget.RecyclerView>
 
