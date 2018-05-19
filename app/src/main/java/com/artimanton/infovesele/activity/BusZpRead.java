@@ -7,10 +7,13 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.artimanton.infovesele.R;
 import com.artimanton.infovesele.adapters.BusAdapter;
 import com.artimanton.infovesele.model.BusModel;
+import com.artimanton.infovesele.permission.Internet;
+import com.artimanton.infovesele.server.MyFireBase;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -38,13 +41,18 @@ public class BusZpRead extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bus_zp_read);
 
+        if (!Internet.isOnline(this)){
+            Toast.makeText(this, "Проверьте подключение к Интернету", Toast.LENGTH_LONG).show();
+        }
+
         btnPushToServer = (Button) findViewById(R.id.btn_push_to_server);
+        recyclerView =  findViewById(R.id.bus_list);
 
         database = FirebaseDatabase.getInstance();
         reference = database.getReference("transport/buses/zp");
 
+
         result = new ArrayList<>();
-        recyclerView =  findViewById(R.id.bus_list);
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         recyclerView.setLayoutManager(layoutManager);
@@ -52,6 +60,7 @@ public class BusZpRead extends AppCompatActivity {
         adapter = new BusAdapter(result);
         recyclerView.setAdapter(adapter);
 
+        MyFireBase myFireBase = new MyFireBase(this);
         updateList();
 
     }
@@ -114,7 +123,7 @@ public class BusZpRead extends AppCompatActivity {
                 index = i;
                 break;
             }
-            
+
         }
         return index;
     }
@@ -135,5 +144,8 @@ public class BusZpRead extends AppCompatActivity {
         changeBus(BusAdapter.getAdapterPosition());
     }
 
+
 }
+
+
 

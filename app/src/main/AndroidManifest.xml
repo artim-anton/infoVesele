@@ -37,8 +37,17 @@
         <activity
             android:name=".activity.BusMelitopolRead"
             android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".activity.BusZpReadBack"
+            android:windowSoftInputMode="stateHidden"/>
+        <activity
+            android:name=".activity.BusMelitopolReadBack"
+            android:windowSoftInputMode="stateHidden"/>
         <activity android:name=".activity.BusCity" />
-        <activity android:name=".activity.TaxiRead"></activity>
+        <activity
+            android:name=".activity.TaxiRead"
+            android:windowSoftInputMode="stateHidden"/>
+
     </application>
 
 </manifest>

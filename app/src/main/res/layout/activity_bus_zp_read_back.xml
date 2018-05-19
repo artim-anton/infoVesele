@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".activity.BusZpRead">
 
@@ -17,7 +17,7 @@
             android:layout_margin="5dp"
             android:padding="5dp"
             android:layout_weight="1"
-            android:text="На Запорожье"
+            android:text="Обратно на Веселое"
             android:textSize="18sp"
             android:textColor="@color/green"/>
 
@@ -38,12 +38,14 @@
         android:layout_height="wrap_content">
 
         <android.support.v7.widget.RecyclerView
-            android:id="@+id/bus_list"
+            android:id="@+id/bus_list_back"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             tools:listitem="@layout/view_item_bus">
 
         </android.support.v7.widget.RecyclerView>
     </LinearLayout>
+
+
 
 </LinearLayout>

@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         // проверяем разрешения: если они уже есть,
         // то приложение продолжает работу в нормальном режиме
         if (isPermissionGranted(READ_PHONE_STATE_PERMISSION)) {
-            Toast.makeText(this, "Разрешения есть, можно работать", Toast.LENGTH_SHORT).show();
+            //Toast.makeText(this, "Разрешения есть, можно работать", Toast.LENGTH_SHORT).show();
         } else {
             // иначе запрашиваем разрешение у пользователя
             requestPermission(READ_PHONE_STATE_PERMISSION, REQUEST_READ_PHONE_STATE);
@@ -63,5 +63,10 @@ public class MainActivity extends AppCompatActivity {
     private void requestPermission(String permission, int requestCode) {
         // запрашиваем разрешение
         ActivityCompat.requestPermissions(this, new String[]{permission}, requestCode);
+    }
+
+    public void btTransportAdd(View view) {
+        Intent intent = new Intent(MainActivity.this, BusAdd.class);
+        startActivity(intent);
     }
 }

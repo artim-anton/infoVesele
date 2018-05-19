@@ -6,10 +6,12 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.artimanton.infovesele.R;
 import com.artimanton.infovesele.adapters.TaxiAdapter;
 import com.artimanton.infovesele.model.TaxiModel;
+import com.artimanton.infovesele.permission.Internet;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -36,6 +38,10 @@ public class TaxiRead extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_taxi_read);
+
+        if (!Internet.isOnline(this)){
+            Toast.makeText(this, "Проверьте подключение к Интернету", Toast.LENGTH_LONG).show();
+        }
 
         btnPushToServer = (Button) findViewById(R.id.btn_push_to_server);
 

@@ -23,7 +23,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class BusMelitopolRead extends AppCompatActivity {
+public class BusMelitopolReadBack extends AppCompatActivity {
     private RecyclerView recyclerView;
     private List<BusModel> result;
     private BusAdapter adapter;
@@ -35,7 +35,7 @@ public class BusMelitopolRead extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_bus_melitopol_read);
+        setContentView(R.layout.activity_bus_melitopol_read_back);
 
         if (!Internet.isOnline(this)){
             Toast.makeText(this, "Проверьте подключение к Интернету", Toast.LENGTH_LONG).show();
@@ -44,10 +44,10 @@ public class BusMelitopolRead extends AppCompatActivity {
         btnPushToServer = (Button) findViewById(R.id.btn_push_to_server);
 
         database = FirebaseDatabase.getInstance();
-        reference = database.getReference("transport/buses/melitopol");
+        reference = database.getReference("transport/buses/melitopol_back");
 
         result = new ArrayList<>();
-        recyclerView =  findViewById(R.id.bus_list);
+        recyclerView =  findViewById(R.id.bus_list_back);
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         recyclerView.setLayoutManager(layoutManager);

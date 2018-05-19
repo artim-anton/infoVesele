@@ -12,7 +12,21 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="Zp"
-        android:text="Запорожье"
+        android:text="Веселое - Запорожье"
+        android:textStyle="italic"
+        android:gravity="center|center_vertical"
+        android:textSize="20sp"
+        android:drawableLeft="@drawable/ic_location_city_selector"
+        android:background="@drawable/border"
+        android:layout_margin="10dp"
+        android:paddingLeft="10dp"/>
+
+    <Button
+        android:id="@+id/btn_melitopol"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="Melitopol"
+        android:text="Веселое - Мелитополь"
         android:textStyle="italic"
         android:gravity="center|center_vertical"
         android:textSize="20sp"
@@ -21,11 +35,25 @@
         android:layout_margin="10dp"
         android:paddingLeft="10dp"/>
     <Button
-        android:id="@+id/btn_melitopol"
+        android:id="@+id/btn_zp_back"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="Melitopol"
-        android:text="Мелитополь"
+        android:onClick="Zp_back"
+        android:text="Запорожье - Веселое"
+        android:textStyle="italic"
+        android:gravity="center|center_vertical"
+        android:textSize="20sp"
+        android:drawableLeft="@drawable/ic_location_city_selector"
+        android:background="@drawable/border"
+        android:layout_margin="10dp"
+        android:paddingLeft="10dp"/>
+
+    <Button
+        android:id="@+id/btn_melitopol_back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="Melitopol_back"
+        android:text="Мелитополь - Веселое"
         android:textStyle="italic"
         android:gravity="center|center_vertical"
         android:textSize="20sp"

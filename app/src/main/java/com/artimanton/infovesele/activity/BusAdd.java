@@ -47,7 +47,7 @@ public class BusAdd extends AppCompatActivity {
         etPhone = (EditText) findViewById(R.id.et_phone_add);
 
         database = FirebaseDatabase.getInstance();
-        reference = database.getReference("transport/buses/melitopol");
+        reference = database.getReference("transport/buses/melitopol_back");
 
         reference.addValueEventListener(new ValueEventListener() {
             @Override

@@ -24,4 +24,14 @@ public class BusCity extends AppCompatActivity {
         Intent intent = new Intent(BusCity.this, BusZpRead.class);
         startActivity(intent);
     }
+
+    public void Zp_back(View view) {
+        Intent intent = new Intent(BusCity.this, BusZpReadBack.class);
+        startActivity(intent);
+    }
+
+    public void Melitopol_back(View view) {
+        Intent intent = new Intent(BusCity.this, BusMelitopolReadBack.class);
+        startActivity(intent);
+    }
 }
