@@ -11,6 +11,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.artimanton.infovesele.model.NewsModel;
+import com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -21,16 +23,27 @@ public class ListNewsActivity extends AppCompatActivity {
     private RecyclerView mRecyclerView;
     private String MY_LOG = "myLog";
     TextView tvLog;
+    BottomNavigationViewEx bottomNavigationViewEx;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_news);
+        bottomNavigationViewEx = findViewById(R.id.bottom_navigation_view);
+        bottomNavigationViewEx.setTextVisibility(false);
+        bottomNavigationViewEx.enableItemShiftingMode(false);
+        bottomNavigationViewEx.enableShiftingMode(false);
+        bottomNavigationViewEx.enableAnimation(false);
+        for (int i = 0; i < bottomNavigationViewEx.getMenu().size(); i++) {
+            bottomNavigationViewEx.setIconTintList(i, null);
+        }
+
+
         mRecyclerView = findViewById(R.id.news_list);
         tvLog = findViewById(R.id.tvLog);
 
 
-        ArrayList<News> mListNews = getIntent().getParcelableArrayListExtra("news");
+        ArrayList<NewsModel> mListNews = getIntent().getParcelableArrayListExtra("news");
 
         //tvLog.setText(String.valueOf(mListNews.get(1).getNameNews()));
 
@@ -51,9 +64,9 @@ public class ListNewsActivity extends AppCompatActivity {
 
     public class RVAdapter extends RecyclerView.Adapter<RVAdapter.NewsViewHolder>{
 
-        List<News> mNews;
+        List<NewsModel> mNews;
 
-        public RVAdapter(List<News> news){
+        public RVAdapter(List<NewsModel> news){
             mNews = news;
         }
 

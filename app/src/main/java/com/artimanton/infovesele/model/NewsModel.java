@@ -1,26 +1,26 @@
-package com.artimanton.infovesele;
+package com.artimanton.infovesele.model;
 
 import android.os.Parcel;
 import android.os.Parcelable;
 
 import java.io.Serializable;
 
-public class News implements Parcelable, Serializable {
+public class NewsModel implements Parcelable, Serializable {
     private String linkImageNews = "1";
     private String nameNews = "2";
     private String linkPageNews = "3";
 
-    public News(){
+    public NewsModel(){
 
     }
 
-    public News(String linkImageNews, String nameNews, String linkPageNews) {
+    public NewsModel(String linkImageNews, String nameNews, String linkPageNews) {
         this.linkImageNews = linkImageNews;
         this.nameNews = nameNews;
         this.linkPageNews = linkPageNews;
     }
 
-    protected News(Parcel in) {
+    protected NewsModel(Parcel in) {
         String [] data = new String[3];
         in.readStringArray(data);
         linkImageNews = data[0];
@@ -28,15 +28,15 @@ public class News implements Parcelable, Serializable {
         linkPageNews = data[2];
     }
 
-    public static final Creator<News> CREATOR = new Creator<News>() {
+    public static final Creator<NewsModel> CREATOR = new Creator<NewsModel>() {
         @Override
-        public News createFromParcel(Parcel in) {
-            return new News(in);
+        public NewsModel createFromParcel(Parcel in) {
+            return new NewsModel(in);
         }
 
         @Override
-        public News[] newArray(int size) {
-            return new News[size];
+        public NewsModel[] newArray(int size) {
+            return new NewsModel[size];
         }
     };
 

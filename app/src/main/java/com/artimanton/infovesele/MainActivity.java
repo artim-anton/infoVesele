@@ -6,6 +6,8 @@ import android.os.Parcelable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import com.artimanton.infovesele.model.NewsModel;
+
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -18,7 +20,7 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
 
     private String MY_LOG = "myLog";
-    private List<News> listNews = new ArrayList<>();
+    private List<NewsModel> listNews = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
                     nameNews = el.select("div[class=row]>div[class=col-sm-8]>p>a").text();
 
                     //Log.d(MY_LOG, linkPageNews + " " + linkImageNews + " " + nameNews);
-                    listNews.add(new News(linkImageNews, nameNews, linkPageNews));
+                    listNews.add(new NewsModel(linkImageNews, nameNews, linkPageNews));
 
                 }
 
