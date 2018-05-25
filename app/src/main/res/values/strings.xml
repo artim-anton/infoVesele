@@ -3,5 +3,6 @@
     <string name="btn_traffic">Траспорт</string>
     <string name="title_activity_train">Train</string>
     <string name="title_activity_tr_bus">TrBus</string>
+    <string name="splash">Splash</string>
 
 </resources>

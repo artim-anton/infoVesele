@@ -5,7 +5,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-import com.artimanton.infovesele.MainActivity;
 import com.artimanton.infovesele.R;
 
 public class Transport extends AppCompatActivity {

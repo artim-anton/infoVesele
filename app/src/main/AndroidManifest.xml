@@ -39,14 +39,16 @@
             android:windowSoftInputMode="stateHidden" />
         <activity
             android:name=".activity.BusZpReadBack"
-            android:windowSoftInputMode="stateHidden"/>
+            android:windowSoftInputMode="stateHidden" />
         <activity
             android:name=".activity.BusMelitopolReadBack"
-            android:windowSoftInputMode="stateHidden"/>
+            android:windowSoftInputMode="stateHidden" />
         <activity android:name=".activity.BusCity" />
         <activity
             android:name=".activity.TaxiRead"
-            android:windowSoftInputMode="stateHidden"/>
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".MainActivityTwo"></activity>
+        <activity android:name=".ListNewsActivity"></activity>
 
     </application>
 

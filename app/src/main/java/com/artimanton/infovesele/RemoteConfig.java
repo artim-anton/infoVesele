@@ -1,6 +1,5 @@
 package com.artimanton.infovesele;
 
-import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -45,7 +44,7 @@ public class RemoteConfig extends AppCompatActivity {
     private void getData(){
         remoteConfig.fetch(0).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
-            public void onComplete(@NonNull Task<Void> task) {
+            public void onComplete( Task<Void> task) {
                 if(task.isComplete()){
                     Toast.makeText(RemoteConfig.this, "Успех", Toast.LENGTH_SHORT).show();
                     remoteConfig.activateFetched();
