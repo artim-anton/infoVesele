@@ -1,19 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:icon="@drawable/ic_home_grey_24dp"
+        android:id="@+id/nav_item_home"
+        android:icon="@drawable/ic_home_selector"
         android:title="" />
     <item
-        android:icon="@drawable/ic_transport_gray_24dp"
+        android:id="@+id/nav_item_transport"
+        android:icon="@drawable/ic_transport_selector"
         android:title="" />
     <item
-        android:icon="@drawable/ic_forum_grey_24dp"
+        android:id="@+id/nav_item_forum"
+        android:icon="@drawable/ic_forum_selector"
         android:title="" />
     <item
-        android:icon="@drawable/ic_record_voice_over_gray_24dp"
+        android:id="@+id/nav_item_voice"
+        android:icon="@drawable/ic_record_voice_over_selector"
         android:title="" />
     <item
-        android:icon="@drawable/ic_build_gray_24dp"
+        android:id="@+id/nav_item_build"
+        android:icon="@drawable/ic_build_selector"
         android:title="" />
 
 </menu>

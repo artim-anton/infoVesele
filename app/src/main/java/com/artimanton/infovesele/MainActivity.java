@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
             try {
                 String linkPageNews, linkImageNews, nameNews;
                 Document document = Jsoup.connect(url).get();
-                Elements els =  document.select("div[class=col-xs-12]>div[id=content_block]>div*[class=one_object_news]");
+                Elements els =  document.select("div[class=col-xs-12]>div[id=content_block]>div[class=one_object_news]");
                 for (Element el : els) {
                     linkPageNews = el.select("div[class=row]>div[class=col-sm-4]>a").attr("href");
                     linkImageNews = el.select("div[class=row]>div[class=col-sm-4]>a>img").attr("src");

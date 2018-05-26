@@ -2,10 +2,13 @@ package com.artimanton.infovesele;
 
 import android.content.res.Configuration;
 import android.os.Bundle;
+import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -22,6 +25,7 @@ public class ListNewsActivity extends AppCompatActivity {
 
     private RecyclerView mRecyclerView;
     private String MY_LOG = "myLog";
+    private String TAG = "Log";
     TextView tvLog;
     BottomNavigationViewEx bottomNavigationViewEx;
 
@@ -37,6 +41,13 @@ public class ListNewsActivity extends AppCompatActivity {
         for (int i = 0; i < bottomNavigationViewEx.getMenu().size(); i++) {
             bottomNavigationViewEx.setIconTintList(i, null);
         }
+       /* bottomNavigationViewEx.setOnNavigationItemSelectedListener(bottomNavigationViewEx.getOnNavigationItemSelectedListener()){
+            if(bottomNavigationViewEx.getId()==R.id.nav_item_home)
+                Log.d(TAG, "nav_item_home");
+            }
+            if(bottomNavigationViewEx.getId()==R.id.nav_item_home)
+            Log.d(TAG, "nav_item_home"); }*/
+
 
 
         mRecyclerView = findViewById(R.id.news_list);
@@ -85,11 +96,9 @@ public class ListNewsActivity extends AppCompatActivity {
 
             Picasso.get()
                     .load(mNews.get(position).getLinkImageNews())
-                    .resize(800, 800)
-                    .centerCrop()
+                    .resize(800,0)
+                    .centerInside()
                     .into(holder.imageNews);
-
-
         }
 
         @Override

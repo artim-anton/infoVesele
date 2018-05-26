@@ -6,6 +6,16 @@
     android:layout_height="wrap_content"
     android:orientation="vertical">
 
+    <TextView
+        android:id="@+id/et_name_news"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:text="Назва новини"
+        android:textColor="@color/name_news"
+        android:textSize="18sp" />
+
     <ImageView
         android:id="@+id/img_news"
         android:layout_width="match_parent"
@@ -13,16 +23,6 @@
         android:layout_margin="5dp"
         android:scaleType="centerCrop"
         app:srcCompat="@mipmap/ic_launcher" />
-
-        <TextView
-            android:id="@+id/et_name_news"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-            android:layout_marginTop="5dp"
-            android:text="Назва новини"
-            android:textColor="@color/name_news"
-            android:textSize="18sp" />
 
         <TextView
             android:id="@+id/et_text_news"

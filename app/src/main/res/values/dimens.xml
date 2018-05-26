@@ -1,3 +1,5 @@
 <resources>
     <dimen name="fab_margin">16dp</dimen>
+    <dimen name="img_size">800dp</dimen>
+    <dimen name="img_size0">0dp</dimen>
 </resources>
