@@ -1,56 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.artimanton.infovesele.activity.Transport"
-    android:orientation="vertical">
+    tools:context="com.artimanton.infovesele.activity.Transport">
 
-    <Button
-        android:id="@+id/btn_buses"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="btBuses"
-        android:text="Автобусы"
-        android:textStyle="italic"
-        android:gravity="center|center_vertical"
-        android:textSize="24sp"
-        android:drawableLeft="@drawable/ic_bus"
-        android:background="@drawable/border"
-        android:layout_margin="10dp"
-        android:paddingLeft="10dp"
-        />
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <Button
-        android:id="@+id/btn_trains"
+        <Button
+            android:id="@+id/btn_buses"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/border"
+            android:drawableLeft="@drawable/ic_bus"
+            android:gravity="center|center_vertical"
+            android:onClick="btBuses"
+            android:paddingLeft="10dp"
+            android:text="Автобусы"
+            android:textSize="24sp"
+            android:textStyle="italic" />
+
+        <Button
+            android:id="@+id/btn_trains"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/border"
+            android:drawableLeft="@drawable/ic_train"
+            android:gravity="center|center_vertical"
+            android:onClick="btTrains"
+            android:paddingLeft="10dp"
+            android:text="Поезда"
+            android:textSize="24sp"
+            android:textStyle="italic" />
+
+        <Button
+            android:id="@+id/btn_taxi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/border"
+            android:drawableLeft="@drawable/ic_local_taxi_black_48dp"
+            android:gravity="center|center_vertical"
+            android:onClick="btTaxi"
+            android:paddingLeft="10dp"
+            android:text="Такси"
+            android:textSize="24sp"
+            android:textStyle="italic" />
+    </LinearLayout>
+
+    <com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
+        android:id="@+id/bottom_navigation_view"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="btTrains"
-        android:text="Поезда"
-        android:textStyle="italic"
-        android:gravity="center|center_vertical"
-        android:textSize="24sp"
-        android:drawableLeft="@drawable/ic_train"
-        android:background="@drawable/border"
-        android:layout_margin="10dp"
-        android:paddingLeft="10dp"
-        />
+        android:layout_height="50dp"
+        android:background="@color/whiteish"
+        android:elevation="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:menu="@menu/bottom_navigation_menu">
 
-    <Button
-        android:id="@+id/btn_taxi"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="btTaxi"
-        android:text="Такси"
-        android:textStyle="italic"
-        android:gravity="center|center_vertical"
-        android:textSize="24sp"
-        android:drawableLeft="@drawable/ic_local_taxi_black_48dp"
-        android:background="@drawable/border"
-        android:layout_margin="10dp"
-        android:paddingLeft="10dp"
-        />
+    </com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx>
+
+</android.support.constraint.ConstraintLayout>
 
 
-</LinearLayout>

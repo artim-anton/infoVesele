@@ -48,7 +48,7 @@
             android:name=".activity.TaxiRead"
             android:windowSoftInputMode="stateHidden" />
         <activity android:name=".MainActivityTwo"></activity>
-        <activity android:name=".ListNewsActivity"></activity>
+        <activity android:name=".activity.ListNewsActivity"></activity>
 
     </application>
 

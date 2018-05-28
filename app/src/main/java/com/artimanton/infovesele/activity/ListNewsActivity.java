@@ -1,53 +1,36 @@
-package com.artimanton.infovesele;
+package com.artimanton.infovesele.activity;
 
 import android.content.res.Configuration;
 import android.os.Bundle;
-import android.support.design.widget.BottomNavigationView;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.artimanton.infovesele.R;
+import com.artimanton.infovesele.activity.BaseActivity;
 import com.artimanton.infovesele.model.NewsModel;
-import com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class ListNewsActivity extends AppCompatActivity {
+public class ListNewsActivity extends BaseActivity {
 
     private RecyclerView mRecyclerView;
     private String MY_LOG = "myLog";
     private String TAG = "Log";
     TextView tvLog;
-    BottomNavigationViewEx bottomNavigationViewEx;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_news);
-        bottomNavigationViewEx = findViewById(R.id.bottom_navigation_view);
-        bottomNavigationViewEx.setTextVisibility(false);
-        bottomNavigationViewEx.enableItemShiftingMode(false);
-        bottomNavigationViewEx.enableShiftingMode(false);
-        bottomNavigationViewEx.enableAnimation(false);
-        for (int i = 0; i < bottomNavigationViewEx.getMenu().size(); i++) {
-            bottomNavigationViewEx.setIconTintList(i, null);
-        }
-       /* bottomNavigationViewEx.setOnNavigationItemSelectedListener(bottomNavigationViewEx.getOnNavigationItemSelectedListener()){
-            if(bottomNavigationViewEx.getId()==R.id.nav_item_home)
-                Log.d(TAG, "nav_item_home");
-            }
-            if(bottomNavigationViewEx.getId()==R.id.nav_item_home)
-            Log.d(TAG, "nav_item_home"); }*/
-
+        setupBottomNavigation();
 
 
         mRecyclerView = findViewById(R.id.news_list);
@@ -117,5 +100,11 @@ public class ListNewsActivity extends AppCompatActivity {
                 linkPageNews = itemView.findViewById(R.id.et_text_news);
             }
         }
+    }
+
+    @Override
+    protected void onDestroy() {
+
+        super.onDestroy();
     }
 }

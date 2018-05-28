@@ -29,9 +29,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
-            android:layout_marginTop="5dp"
-            android:text="посылання"
+            android:layout_marginBottom="20dp"
+            android:text="посилання"
             android:autoLink="web"
             android:linksClickable="true"
-            android:textSize="18sp" />
+            android:textSize="14sp" />
 </LinearLayout>

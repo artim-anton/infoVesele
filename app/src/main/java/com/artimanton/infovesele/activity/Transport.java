@@ -7,12 +7,13 @@ import android.view.View;
 
 import com.artimanton.infovesele.R;
 
-public class Transport extends AppCompatActivity {
+public class Transport extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_transport);
+        setupBottomNavigation();
     }
 
 
