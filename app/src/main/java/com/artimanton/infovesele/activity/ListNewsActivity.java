@@ -2,6 +2,7 @@ package com.artimanton.infovesele.activity;
 
 import android.content.res.Configuration;
 import android.os.Bundle;
+import android.os.PersistableBundle;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -24,7 +25,14 @@ public class ListNewsActivity extends BaseActivity {
     private String MY_LOG = "myLog";
     private String TAG = "Log";
     TextView tvLog;
+    ArrayList<NewsModel> mListNews;
 
+
+    @Override
+    public void onSaveInstanceState(Bundle outState, PersistableBundle outPersistentState) {
+        outState.putParcelableArrayList("array",mListNews);
+        super.onSaveInstanceState(outState, outPersistentState);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,8 +44,9 @@ public class ListNewsActivity extends BaseActivity {
         mRecyclerView = findViewById(R.id.news_list);
         tvLog = findViewById(R.id.tvLog);
 
-
-        ArrayList<NewsModel> mListNews = getIntent().getParcelableArrayListExtra("news");
+        if(savedInstanceState == null) {
+        mListNews = getIntent().getParcelableArrayListExtra("news");}
+        else {mListNews = savedInstanceState.getParcelableArrayList("array");}
 
         //tvLog.setText(String.valueOf(mListNews.get(1).getNameNews()));
 
@@ -77,11 +86,12 @@ public class ListNewsActivity extends BaseActivity {
             holder.nameNews.setText(mNews.get(position).getNameNews().toString());
             holder.linkPageNews.setText(mNews.get(position).getLinkPageNews().toString());
 
+            if (!mNews.get(position).getLinkImageNews().isEmpty()){
             Picasso.get()
                     .load(mNews.get(position).getLinkImageNews())
                     .resize(800,0)
                     .centerInside()
-                    .into(holder.imageNews);
+                    .into(holder.imageNews);}
         }
 
         @Override
@@ -107,4 +117,6 @@ public class ListNewsActivity extends BaseActivity {
 
         super.onDestroy();
     }
+
+
 }
