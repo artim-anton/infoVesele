@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.artimanton.infovesele.R;
 import com.artimanton.infovesele.activity.BaseActivity;
@@ -29,16 +30,29 @@ public class ListNewsActivity extends BaseActivity {
 
 
     @Override
+    protected void onPause() {
+        super.onPause();
+        Toast.makeText(this, "onPause", Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Toast.makeText(this, "onResume", Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
     public void onSaveInstanceState(Bundle outState, PersistableBundle outPersistentState) {
         outState.putParcelableArrayList("array",mListNews);
         super.onSaveInstanceState(outState, outPersistentState);
+        Toast.makeText(this, "onSaveInstanceState", Toast.LENGTH_SHORT).show();
     }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_news);
-        setupBottomNavigation();
+        setupBottomNavigation(0);
 
 
         mRecyclerView = findViewById(R.id.news_list);
@@ -110,12 +124,6 @@ public class ListNewsActivity extends BaseActivity {
                 linkPageNews = itemView.findViewById(R.id.et_text_news);
             }
         }
-    }
-
-    @Override
-    protected void onDestroy() {
-
-        super.onDestroy();
     }
 
 

@@ -54,16 +54,7 @@
             android:textStyle="italic" />
     </LinearLayout>
 
-    <com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
-        android:id="@+id/bottom_navigation_view"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="@color/whiteish"
-        android:elevation="4dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:menu="@menu/bottom_navigation_menu">
-
-    </com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx>
+    <include layout="@layout/bottom_navigation_view"/>
 
 </android.support.constraint.ConstraintLayout>
 

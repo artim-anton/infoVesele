@@ -59,6 +59,7 @@ public class MainActivity extends AppCompatActivity {
 
             Intent intent = new Intent(MainActivity.this, ListNewsActivity.class);
             intent.putParcelableArrayListExtra("news", (ArrayList<? extends Parcelable>) listNews);
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(intent);
             finish();
         }
