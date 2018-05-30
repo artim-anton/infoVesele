@@ -13,7 +13,7 @@ public class Transport extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_transport);
-        setupBottomNavigation(1);
+        setupBottomNavigation(1, this);
     }
 
 

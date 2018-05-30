@@ -2,7 +2,6 @@ package com.artimanton.infovesele.activity;
 
 import android.content.res.Configuration;
 import android.os.Bundle;
-import android.os.PersistableBundle;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -13,7 +12,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.artimanton.infovesele.R;
-import com.artimanton.infovesele.activity.BaseActivity;
 import com.artimanton.infovesele.model.NewsModel;
 import com.squareup.picasso.Picasso;
 
@@ -27,32 +25,29 @@ public class ListNewsActivity extends BaseActivity {
     private String TAG = "Log";
     TextView tvLog;
     ArrayList<NewsModel> mListNews;
+    Bundle outState;
 
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putParcelableArrayList("array",mListNews);
+        Toast.makeText(this, "onSaveInstanceState", Toast.LENGTH_SHORT).show();
+    }
 
     @Override
     protected void onPause() {
         super.onPause();
-        Toast.makeText(this, "onPause", Toast.LENGTH_SHORT).show();
+     //   outState.putParcelableArrayList("array",mListNews);
+      //  onSaveInstanceState(outState);
     }
 
-    @Override
-    protected void onResume() {
-        super.onResume();
-        Toast.makeText(this, "onResume", Toast.LENGTH_SHORT).show();
-    }
-
-    @Override
-    public void onSaveInstanceState(Bundle outState, PersistableBundle outPersistentState) {
-        outState.putParcelableArrayList("array",mListNews);
-        super.onSaveInstanceState(outState, outPersistentState);
-        Toast.makeText(this, "onSaveInstanceState", Toast.LENGTH_SHORT).show();
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_news);
-        setupBottomNavigation(0);
+        setupBottomNavigation(0, this);
 
 
         mRecyclerView = findViewById(R.id.news_list);
@@ -60,8 +55,9 @@ public class ListNewsActivity extends BaseActivity {
 
         if(savedInstanceState == null) {
         mListNews = getIntent().getParcelableArrayListExtra("news");}
-        else {mListNews = savedInstanceState.getParcelableArrayList("array");}
-
+        else {
+            mListNews = savedInstanceState.getParcelableArrayList("array");}
+       // mListNews = getIntent().getParcelableArrayListExtra("news");
         //tvLog.setText(String.valueOf(mListNews.get(1).getNameNews()));
 
         GridLayoutManager manager;

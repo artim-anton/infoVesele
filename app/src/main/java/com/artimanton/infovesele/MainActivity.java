@@ -3,8 +3,10 @@ package com.artimanton.infovesele;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Parcelable;
+import android.os.PersistableBundle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.Toast;
 
 import com.artimanton.infovesele.activity.ListNewsActivity;
 import com.artimanton.infovesele.model.NewsModel;
@@ -23,6 +25,10 @@ public class MainActivity extends AppCompatActivity {
     private String MY_LOG = "myLog";
     private List<NewsModel> listNews = new ArrayList<>();
 
+    public void onSaveInstanceState(Bundle outState, PersistableBundle outPersistentState) {
+        super.onSaveInstanceState(outState, outPersistentState);
+        Toast.makeText(this, "onSaveInstanceState", Toast.LENGTH_SHORT).show();
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -1,5 +1,6 @@
 package com.artimanton.infovesele.activity;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.support.design.widget.BottomNavigationView;
@@ -14,7 +15,7 @@ abstract class BaseActivity extends AppCompatActivity {
 
     static BottomNavigationViewEx bottomNavigationViewEx;
 
-    public void setupBottomNavigation(int navNumber) {
+    public void setupBottomNavigation(int navNumber, final Activity activity) {
         bottomNavigationViewEx = findViewById(R.id.bottom_navigation_view);
         bottomNavigationViewEx.setTextVisibility(false);
         bottomNavigationViewEx.enableItemShiftingMode(false);
@@ -52,6 +53,7 @@ abstract class BaseActivity extends AppCompatActivity {
                     Intent intent = new Intent(con, ActivityToOpen);
                     intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                     startActivity(intent);
+                    activity.finish();
                     overridePendingTransition(0,0);
                     return true;
                 } else {
