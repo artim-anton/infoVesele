@@ -3,12 +3,14 @@ package com.artimanton.infovesele.model;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import com.orm.SugarRecord;
+
 import java.io.Serializable;
 
-public class NewsModel implements Parcelable, Serializable {
-    private String linkImageNews = "1";
-    private String nameNews = "2";
-    private String linkPageNews = "3";
+public class NewsModel extends SugarRecord implements Parcelable, Serializable {
+    private String linkImageNews;
+    private String nameNews;
+    private String linkPageNews;
 
     public NewsModel(){
 

@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
 
     private String MY_LOG = "myLog";
     private List<NewsModel> listNews = new ArrayList<>();
+    private NewsModel newsModel;
 
     public void onSaveInstanceState(Bundle outState, PersistableBundle outPersistentState) {
         super.onSaveInstanceState(outState, outPersistentState);
@@ -33,6 +34,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.splash);
+        NewsModel.deleteAll(NewsModel.class);
+
 
         new ParseAllNews().execute();
     }
@@ -84,6 +87,8 @@ public class MainActivity extends AppCompatActivity {
 
                     //Log.d(MY_LOG, linkPageNews + " " + linkImageNews + " " + nameNews);
                     listNews.add(new NewsModel(linkImageNews, nameNews, linkPageNews));
+                    newsModel = new NewsModel(linkImageNews, nameNews, linkPageNews);
+                    newsModel.save();
 
                 }
 
@@ -94,6 +99,8 @@ public class MainActivity extends AppCompatActivity {
 
                     //Log.d(MY_LOG, linkPageNews + " " + linkImageNews + " " + nameNews);
                     listNews.add(new NewsModel(linkImageNews, nameNews, linkPageNews));
+                    newsModel = new NewsModel(linkImageNews, nameNews, linkPageNews);
+                    newsModel.save();
                 }
 
 

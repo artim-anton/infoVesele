@@ -13,6 +13,7 @@ import android.widget.Toast;
 
 import com.artimanton.infovesele.R;
 import com.artimanton.infovesele.model.NewsModel;
+import com.orm.SugarContext;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -23,9 +24,11 @@ public class ListNewsActivity extends BaseActivity {
     private RecyclerView mRecyclerView;
     private String MY_LOG = "myLog";
     private String TAG = "Log";
-    TextView tvLog;
-    ArrayList<NewsModel> mListNews;
-    Bundle outState;
+    private TextView tvLog;
+    private ArrayList<NewsModel> mListNews;
+    private Bundle outState;
+    private NewsModel newsModel;
+    private List<NewsModel> allContacts;
 
 
     @Override
@@ -40,6 +43,12 @@ public class ListNewsActivity extends BaseActivity {
         super.onPause();
      //   outState.putParcelableArrayList("array",mListNews);
       //  onSaveInstanceState(outState);
+        /*SugarContext.init(this);
+        for (int i = 0; i < mListNews.size() ; i++) {
+            newsModel = new NewsModel(mListNews.get(i).getLinkImageNews(), mListNews.get(i).getNameNews(),mListNews.get(i).getLinkPageNews());
+            newsModel.save();
+
+        }*/
     }
 
 
@@ -52,6 +61,8 @@ public class ListNewsActivity extends BaseActivity {
 
         mRecyclerView = findViewById(R.id.news_list);
         tvLog = findViewById(R.id.tvLog);
+
+        allContacts = NewsModel.listAll(NewsModel.class);
 
         if(savedInstanceState == null) {
         mListNews = getIntent().getParcelableArrayListExtra("news");}
@@ -70,7 +81,7 @@ public class ListNewsActivity extends BaseActivity {
 
         mRecyclerView.setLayoutManager(manager);
 
-        RVAdapter adapter = new RVAdapter(mListNews);
+        RVAdapter adapter = new RVAdapter(allContacts);
 
         mRecyclerView.setAdapter(adapter);
     }
