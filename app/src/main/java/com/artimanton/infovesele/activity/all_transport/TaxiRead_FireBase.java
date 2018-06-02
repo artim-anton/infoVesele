@@ -1,5 +1,4 @@
-package com.artimanton.infovesele.activity;
-
+package com.artimanton.infovesele.activity.all_transport;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -10,10 +9,9 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.artimanton.infovesele.R;
-import com.artimanton.infovesele.adapters.BusAdapter;
-import com.artimanton.infovesele.model.BusModel;
+import com.artimanton.infovesele.adapters.TaxiAdapter;
+import com.artimanton.infovesele.model.TaxiModel;
 import com.artimanton.infovesele.permission.Internet;
-import com.artimanton.infovesele.server.MyFireBase;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -25,12 +23,12 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class BusZpRead extends AppCompatActivity {
+public class TaxiRead_FireBase extends AppCompatActivity {
 
 
     private RecyclerView recyclerView;
-    private List<BusModel> result;
-    private BusAdapter adapter;
+    private List<TaxiModel> result;
+    private TaxiAdapter adapter;
     private Button btnPushToServer;
 
     private FirebaseDatabase database;
@@ -39,32 +37,30 @@ public class BusZpRead extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_bus_zp_read);
+        setContentView(R.layout.activity_taxi_read);
 
         if (!Internet.isOnline(this)){
             Toast.makeText(this, "Проверьте подключение к Интернету", Toast.LENGTH_LONG).show();
         }
 
         btnPushToServer = (Button) findViewById(R.id.btn_push_to_server);
-        recyclerView =  findViewById(R.id.bus_list);
 
         database = FirebaseDatabase.getInstance();
-        reference = database.getReference("transport/buses/zp");
-
+        reference = database.getReference("transport/taxi");
 
         result = new ArrayList<>();
+        recyclerView =  findViewById(R.id.taxi_list);
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         recyclerView.setLayoutManager(layoutManager);
 
-        adapter = new BusAdapter(result);
+        adapter = new TaxiAdapter(result);
         recyclerView.setAdapter(adapter);
 
-        MyFireBase myFireBase = new MyFireBase(this);
         updateList();
 
     }
-   //Context menu
+    //Context menu
    /*  @Override
     public boolean onContextItemSelected(MenuItem item) {
         switch (item.getItemId()){
@@ -83,22 +79,22 @@ public class BusZpRead extends AppCompatActivity {
         reference.addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(DataSnapshot dataSnapshot, String s) {
-                result.add(dataSnapshot.getValue(BusModel.class));
+                result.add(dataSnapshot.getValue(TaxiModel.class));
                 adapter.notifyDataSetChanged();
             }
 
             @Override
             public void onChildChanged(DataSnapshot dataSnapshot, String s) {
-                BusModel bus = dataSnapshot.getValue(BusModel.class);
-                int index = getItemIndex(bus);
-                result.set(index, bus);
+                TaxiModel taxi = dataSnapshot.getValue(TaxiModel.class);
+                int index = getItemIndex(taxi);
+                result.set(index, taxi);
                 adapter.notifyItemChanged(index);
             }
 
             @Override
             public void onChildRemoved(DataSnapshot dataSnapshot) {
-                BusModel bus = dataSnapshot.getValue(BusModel.class);
-                int index = getItemIndex(bus);
+                TaxiModel taxi = dataSnapshot.getValue(TaxiModel.class);
+                int index = getItemIndex(taxi);
                 result.remove(index);
                 adapter.notifyItemRemoved(index);
 
@@ -116,10 +112,10 @@ public class BusZpRead extends AppCompatActivity {
         });
     }
 
-    private int getItemIndex(BusModel bus){
+    private int getItemIndex(TaxiModel taxi){
         int index = -1;
         for (int i = 0; i < result.size(); i++) {
-            if(result.get(i).key.equals(bus.key)){
+            if(result.get(i).key.equals(taxi.key)){
                 index = i;
                 break;
             }
@@ -128,24 +124,20 @@ public class BusZpRead extends AppCompatActivity {
         return index;
     }
 
-    private void removeBus(int position){
+    private void removeTaxi(int position){
         reference.child(result.get(position).key).removeValue();
     }
 
-    public void changeBus(int position){
-        BusModel bus = result.get(position);
-        Map<String, Object> busValue = bus.toMap();
-        Map<String, Object> newBus = new HashMap<>();
-        newBus.put(bus.key, busValue);
-        reference.updateChildren(newBus);
+    public void changeTaxi(int position){
+        TaxiModel taxi = result.get(position);
+        Map<String, Object> taxiValue = taxi.toMap();
+        Map<String, Object> newTaxi = new HashMap<>();
+        newTaxi.put(taxi.key, taxiValue);
+        reference.updateChildren(newTaxi);
     }
 
     public void pushToServer(View view) {
-        changeBus(BusAdapter.getAdapterPosition());
+        changeTaxi(TaxiAdapter.getAdapterPosition());
     }
 
-
 }
-
-
-

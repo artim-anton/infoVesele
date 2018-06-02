@@ -4,18 +4,19 @@
     package="com.artimanton.infovesele">
 
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.INTERNET" />
 
+
     <application
-        android:name="com.orm.SugarApp"
+        android:name="com.artimanton.infoVesele"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
         <meta-data
             android:name="DATABASE"
             android:value="info_vesele.db" />
@@ -36,34 +37,34 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.Transport" />
+        <activity android:name=".activity.TransportActivity" />
         <activity
-            android:name=".activity.Train"
+            android:name=".activity.all_transport.Train"
             android:label="@string/title_activity_train"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".activity.BusAdd"
+            android:name=".activity.all_transport.BusAdd"
             android:label="@string/title_activity_tr_bus"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".activity.BusZpRead"
+            android:name=".activity.all_transport.BusZpRead_FireBase"
             android:windowSoftInputMode="stateHidden" />
         <activity
-            android:name=".activity.BusMelitopolRead"
+            android:name=".activity.all_transport.BusMelitopolRead"
             android:windowSoftInputMode="stateHidden" />
         <activity
-            android:name=".activity.BusZpReadBack"
+            android:name=".activity.all_transport.BusZpReadBack_FireBase"
             android:windowSoftInputMode="stateHidden" />
         <activity
-            android:name=".activity.BusMelitopolReadBack"
+            android:name=".activity.all_transport.BusMelitopolReadBack"
             android:windowSoftInputMode="stateHidden" />
-        <activity android:name=".activity.BusCity" />
+        <activity android:name=".activity.all_transport.BusCity" />
         <activity
-            android:name=".activity.TaxiRead"
+            android:name=".activity.all_transport.TaxiRead_FireBase"
             android:windowSoftInputMode="stateHidden" />
-        <activity android:name=".MainActivityTwo"></activity>
-        <activity android:name=".activity.ListNewsActivity"></activity>
-
+        <activity android:name=".MainActivityTwo" />
+        <activity android:name=".activity.HomeActivity" />
+        <activity android:name=".activity.AdvertVeseleActivity"></activity>
     </application>
 
 </manifest>

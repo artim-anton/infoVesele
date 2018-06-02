@@ -1,4 +1,5 @@
-package com.artimanton.infovesele.activity;
+package com.artimanton.infovesele.activity.all_transport;
+
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -12,6 +13,7 @@ import com.artimanton.infovesele.R;
 import com.artimanton.infovesele.adapters.BusAdapter;
 import com.artimanton.infovesele.model.BusModel;
 import com.artimanton.infovesele.permission.Internet;
+import com.artimanton.infovesele.server.MyFireBase;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -23,7 +25,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class BusMelitopolReadBack extends AppCompatActivity {
+public class BusZpRead_FireBase extends AppCompatActivity {
+
+
     private RecyclerView recyclerView;
     private List<BusModel> result;
     private BusAdapter adapter;
@@ -35,19 +39,20 @@ public class BusMelitopolReadBack extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_bus_melitopol_read_back);
+        setContentView(R.layout.activity_bus_zp_read);
 
         if (!Internet.isOnline(this)){
             Toast.makeText(this, "Проверьте подключение к Интернету", Toast.LENGTH_LONG).show();
         }
 
         btnPushToServer = (Button) findViewById(R.id.btn_push_to_server);
+        recyclerView =  findViewById(R.id.bus_list);
 
         database = FirebaseDatabase.getInstance();
-        reference = database.getReference("transport/buses/melitopol_back");
+        reference = database.getReference("transport/buses/zp");
+
 
         result = new ArrayList<>();
-        recyclerView =  findViewById(R.id.bus_list_back);
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         recyclerView.setLayoutManager(layoutManager);
@@ -55,10 +60,11 @@ public class BusMelitopolReadBack extends AppCompatActivity {
         adapter = new BusAdapter(result);
         recyclerView.setAdapter(adapter);
 
+        MyFireBase myFireBase = new MyFireBase(this);
         updateList();
 
     }
-    //Context menu
+   //Context menu
    /*  @Override
     public boolean onContextItemSelected(MenuItem item) {
         switch (item.getItemId()){
@@ -138,4 +144,8 @@ public class BusMelitopolReadBack extends AppCompatActivity {
         changeBus(BusAdapter.getAdapterPosition());
     }
 
+
 }
+
+
+

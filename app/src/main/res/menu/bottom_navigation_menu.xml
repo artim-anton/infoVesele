@@ -9,12 +9,12 @@
         android:icon="@drawable/ic_transport_selector"
         android:title="" />
     <item
-        android:id="@+id/nav_item_forum"
-        android:icon="@drawable/ic_forum_selector"
-        android:title="" />
-    <item
         android:id="@+id/nav_item_voice"
         android:icon="@drawable/ic_record_voice_over_selector"
+        android:title="" />
+    <item
+        android:id="@+id/nav_item_forum"
+        android:icon="@drawable/ic_forum_selector"
         android:title="" />
     <item
         android:id="@+id/nav_item_build"

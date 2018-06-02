@@ -15,14 +15,14 @@ import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.artimanton.infovesele.R;
-import com.artimanton.infovesele.activity.BusZpRead;
+import com.artimanton.infovesele.activity.all_transport.BusZpRead_FireBase;
 import com.artimanton.infovesele.model.BusModel;
 
 import java.util.List;
 
 public class BusAdapter extends RecyclerView.Adapter<BusAdapter.BusViewHolder> {
     private List<BusModel> list;
-    BusZpRead activity;
+    BusZpRead_FireBase activity;
 
     private static int adapterPosition;
 

@@ -1,4 +1,4 @@
-package com.artimanton.infovesele.activity;
+package com.artimanton.infovesele.activity.all_transport;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

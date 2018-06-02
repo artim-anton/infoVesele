@@ -15,14 +15,14 @@ import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.artimanton.infovesele.R;
-import com.artimanton.infovesele.activity.TaxiRead;
+import com.artimanton.infovesele.activity.all_transport.TaxiRead_FireBase;
 import com.artimanton.infovesele.model.TaxiModel;
 
 import java.util.List;
 
 public class TaxiAdapter extends RecyclerView.Adapter<TaxiAdapter.TaxiViewHolder> {
     private List<TaxiModel> list;
-    TaxiRead activity;
+    TaxiRead_FireBase activity;
 
     private static int adapterPosition;
 

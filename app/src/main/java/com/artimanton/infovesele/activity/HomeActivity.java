@@ -13,13 +13,13 @@ import android.widget.Toast;
 
 import com.artimanton.infovesele.R;
 import com.artimanton.infovesele.model.NewsModel;
-import com.orm.SugarContext;
+import com.artimanton.infovesele.permission.Internet;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class ListNewsActivity extends BaseActivity {
+public class HomeActivity extends BaseActivity {
 
     private RecyclerView mRecyclerView;
     private String MY_LOG = "myLog";
@@ -55,8 +55,12 @@ public class ListNewsActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_list_news);
+        setContentView(R.layout.activity_home);
         setupBottomNavigation(0, this);
+
+        if ( !Internet.isOnline(this) ){
+            Toast.makeText(this, "Нет соединения с интернетом!", Toast.LENGTH_LONG).show();
+        }
 
 
         mRecyclerView = findViewById(R.id.news_list);

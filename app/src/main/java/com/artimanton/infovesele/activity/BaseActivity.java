@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.support.design.widget.BottomNavigationView;
-import android.support.v4.app.NavUtils;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 
@@ -34,10 +33,13 @@ abstract class BaseActivity extends AppCompatActivity {
                 Class ActivityToOpen = null;
                 switch (item.getItemId()) {
                     case R.id.nav_item_home:
-                        ActivityToOpen = ListNewsActivity.class;
+                        ActivityToOpen = HomeActivity.class;
                         break;
                     case R.id.nav_item_transport:
-                        ActivityToOpen = Transport.class;
+                        ActivityToOpen = TransportActivity.class;
+                        break;
+                    case R.id.nav_item_voice:
+                        ActivityToOpen = AdvertVeseleActivity.class;
                         break;
                     case R.id.nav_item_build:
                         //Toast.makeText(con, "nav_item_build", Toast.LENGTH_SHORT).show();
@@ -45,8 +47,6 @@ abstract class BaseActivity extends AppCompatActivity {
                     case R.id.nav_item_forum:
                         //Toast.makeText(con, "nav_item_forum", Toast.LENGTH_SHORT).show();
                         break;
-                    case R.id.nav_item_voice:
-                        //Toast.makeText(con, "nav_item_voice", Toast.LENGTH_SHORT).show();
                 }
 
                 if (ActivityToOpen != null) {

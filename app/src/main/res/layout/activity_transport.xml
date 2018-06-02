@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.artimanton.infovesele.activity.Transport">
+    tools:context="com.artimanton.infovesele.activity.TransportActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -50,6 +50,20 @@
             android:onClick="btTaxi"
             android:paddingLeft="10dp"
             android:text="Такси"
+            android:textSize="24sp"
+            android:textStyle="italic" />
+
+        <Button
+            android:id="@+id/btn_delivery_service"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/border"
+            android:drawableLeft="@drawable/ic_delivery_service_black_24dp"
+            android:gravity="center|center_vertical"
+            android:onClick="btTaxi"
+            android:paddingLeft="10dp"
+            android:text="Службы доставки"
             android:textSize="24sp"
             android:textStyle="italic" />
     </LinearLayout>

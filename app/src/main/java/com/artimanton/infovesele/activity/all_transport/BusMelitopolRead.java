@@ -1,4 +1,4 @@
-package com.artimanton.infovesele.activity;
+package com.artimanton.infovesele.activity.all_transport;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -9,8 +9,8 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.artimanton.infovesele.R;
-import com.artimanton.infovesele.adapters.TaxiAdapter;
-import com.artimanton.infovesele.model.TaxiModel;
+import com.artimanton.infovesele.adapters.BusAdapter;
+import com.artimanton.infovesele.model.BusModel;
 import com.artimanton.infovesele.permission.Internet;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
@@ -23,12 +23,10 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class TaxiRead extends AppCompatActivity {
-
-
+public class BusMelitopolRead extends AppCompatActivity {
     private RecyclerView recyclerView;
-    private List<TaxiModel> result;
-    private TaxiAdapter adapter;
+    private List<BusModel> result;
+    private BusAdapter adapter;
     private Button btnPushToServer;
 
     private FirebaseDatabase database;
@@ -37,7 +35,7 @@ public class TaxiRead extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_taxi_read);
+        setContentView(R.layout.activity_bus_melitopol_read);
 
         if (!Internet.isOnline(this)){
             Toast.makeText(this, "Проверьте подключение к Интернету", Toast.LENGTH_LONG).show();
@@ -46,15 +44,15 @@ public class TaxiRead extends AppCompatActivity {
         btnPushToServer = (Button) findViewById(R.id.btn_push_to_server);
 
         database = FirebaseDatabase.getInstance();
-        reference = database.getReference("transport/taxi");
+        reference = database.getReference("transport/buses/melitopol");
 
         result = new ArrayList<>();
-        recyclerView =  findViewById(R.id.taxi_list);
+        recyclerView =  findViewById(R.id.bus_list);
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         recyclerView.setLayoutManager(layoutManager);
 
-        adapter = new TaxiAdapter(result);
+        adapter = new BusAdapter(result);
         recyclerView.setAdapter(adapter);
 
         updateList();
@@ -79,22 +77,22 @@ public class TaxiRead extends AppCompatActivity {
         reference.addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(DataSnapshot dataSnapshot, String s) {
-                result.add(dataSnapshot.getValue(TaxiModel.class));
+                result.add(dataSnapshot.getValue(BusModel.class));
                 adapter.notifyDataSetChanged();
             }
 
             @Override
             public void onChildChanged(DataSnapshot dataSnapshot, String s) {
-                TaxiModel taxi = dataSnapshot.getValue(TaxiModel.class);
-                int index = getItemIndex(taxi);
-                result.set(index, taxi);
+                BusModel bus = dataSnapshot.getValue(BusModel.class);
+                int index = getItemIndex(bus);
+                result.set(index, bus);
                 adapter.notifyItemChanged(index);
             }
 
             @Override
             public void onChildRemoved(DataSnapshot dataSnapshot) {
-                TaxiModel taxi = dataSnapshot.getValue(TaxiModel.class);
-                int index = getItemIndex(taxi);
+                BusModel bus = dataSnapshot.getValue(BusModel.class);
+                int index = getItemIndex(bus);
                 result.remove(index);
                 adapter.notifyItemRemoved(index);
 
@@ -112,10 +110,10 @@ public class TaxiRead extends AppCompatActivity {
         });
     }
 
-    private int getItemIndex(TaxiModel taxi){
+    private int getItemIndex(BusModel bus){
         int index = -1;
         for (int i = 0; i < result.size(); i++) {
-            if(result.get(i).key.equals(taxi.key)){
+            if(result.get(i).key.equals(bus.key)){
                 index = i;
                 break;
             }
@@ -124,20 +122,20 @@ public class TaxiRead extends AppCompatActivity {
         return index;
     }
 
-    private void removeTaxi(int position){
+    private void removeBus(int position){
         reference.child(result.get(position).key).removeValue();
     }
 
-    public void changeTaxi(int position){
-        TaxiModel taxi = result.get(position);
-        Map<String, Object> taxiValue = taxi.toMap();
-        Map<String, Object> newTaxi = new HashMap<>();
-        newTaxi.put(taxi.key, taxiValue);
-        reference.updateChildren(newTaxi);
+    public void changeBus(int position){
+        BusModel bus = result.get(position);
+        Map<String, Object> busValue = bus.toMap();
+        Map<String, Object> newBus = new HashMap<>();
+        newBus.put(bus.key, busValue);
+        reference.updateChildren(newBus);
     }
 
     public void pushToServer(View view) {
-        changeTaxi(TaxiAdapter.getAdapterPosition());
+        changeBus(BusAdapter.getAdapterPosition());
     }
 
 }

@@ -1,4 +1,4 @@
-package com.artimanton.infovesele.activity;
+package com.artimanton.infovesele.activity.all_transport;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -29,7 +29,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class BusZpReadBack extends AppCompatActivity {
+public class BusZpReadBack_FireBase extends AppCompatActivity {
 
 
     private RecyclerView recyclerView;

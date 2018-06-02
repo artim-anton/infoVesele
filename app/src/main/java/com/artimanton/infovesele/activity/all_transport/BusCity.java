@@ -1,4 +1,4 @@
-package com.artimanton.infovesele.activity;
+package com.artimanton.infovesele.activity.all_transport;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -21,12 +21,12 @@ public class BusCity extends AppCompatActivity {
     }
 
     public void Zp(View view) {
-        Intent intent = new Intent(BusCity.this, BusZpRead.class);
+        Intent intent = new Intent(BusCity.this, BusZpRead_FireBase.class);
         startActivity(intent);
     }
 
     public void Zp_back(View view) {
-        Intent intent = new Intent(BusCity.this, BusZpReadBack.class);
+        Intent intent = new Intent(BusCity.this, BusZpReadBack_FireBase.class);
         startActivity(intent);
     }
 

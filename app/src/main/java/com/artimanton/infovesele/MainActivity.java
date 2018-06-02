@@ -2,13 +2,13 @@ package com.artimanton.infovesele;
 
 import android.content.Intent;
 import android.os.AsyncTask;
-import android.os.Parcelable;
 import android.os.PersistableBundle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Toast;
 
-import com.artimanton.infovesele.activity.ListNewsActivity;
+import com.artimanton.infovesele.activity.HomeActivity;
+import com.artimanton.infovesele.db.SugarORM;
 import com.artimanton.infovesele.model.NewsModel;
 
 import org.jsoup.Jsoup;
@@ -34,8 +34,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.splash);
-        NewsModel.deleteAll(NewsModel.class);
 
+        SugarORM.deleteTables();
 
         new ParseAllNews().execute();
     }
@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
                 String lastPage = element.select("li>a[class=last]").attr("href");
                 int count = Integer.parseInt(lastPage.replace("?p=",""));
 
-                for (int i = 1; i <= 10; i++) {
+                for (int i = 1; i <= 3; i++) {
                     String url = "https://veselivska-gromada.gov.ua/news/?p=" + i;
                     itemNews(url);
                 }
@@ -66,8 +66,8 @@ public class MainActivity extends AppCompatActivity {
         protected void onPostExecute(Void aVoid) {
             super.onPostExecute(aVoid);
 
-            Intent intent = new Intent(MainActivity.this, ListNewsActivity.class);
-            intent.putParcelableArrayListExtra("news", (ArrayList<? extends Parcelable>) listNews);
+            Intent intent = new Intent(MainActivity.this, HomeActivity.class);
+            //intent.putParcelableArrayListExtra("news", (ArrayList<? extends Parcelable>) listNews);
             intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(intent);
             finish();
@@ -85,8 +85,7 @@ public class MainActivity extends AppCompatActivity {
                     linkImageNews = elj.select("div[class=row]>div[class=col-sm-4]>a>img").attr("src");
                     nameNews = elj.select("div[class=row]>div[class=col-sm-8]>p>a").text();
 
-                    //Log.d(MY_LOG, linkPageNews + " " + linkImageNews + " " + nameNews);
-                    listNews.add(new NewsModel(linkImageNews, nameNews, linkPageNews));
+                    //listNews.add(new NewsModel(linkImageNews, nameNews, linkPageNews));
                     newsModel = new NewsModel(linkImageNews, nameNews, linkPageNews);
                     newsModel.save();
 
@@ -97,8 +96,7 @@ public class MainActivity extends AppCompatActivity {
                     linkImageNews = el.select("div[class=row]>div[class=col-sm-4]>a>img").attr("src");
                     nameNews = el.select("div[class=row]>div[class=col-sm-8]>p>a").text();
 
-                    //Log.d(MY_LOG, linkPageNews + " " + linkImageNews + " " + nameNews);
-                    listNews.add(new NewsModel(linkImageNews, nameNews, linkPageNews));
+                    //listNews.add(new NewsModel(linkImageNews, nameNews, linkPageNews));
                     newsModel = new NewsModel(linkImageNews, nameNews, linkPageNews);
                     newsModel.save();
                 }

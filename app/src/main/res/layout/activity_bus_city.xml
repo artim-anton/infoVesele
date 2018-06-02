@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.artimanton.infovesele.activity.BusCity"
+    tools:context="com.artimanton.infovesele.activity.all_transport.BusCity"
     android:orientation="vertical">
 
     <Button
