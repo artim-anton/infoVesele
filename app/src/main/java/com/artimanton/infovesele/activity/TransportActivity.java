@@ -10,6 +10,7 @@ import android.widget.Toast;
 
 import com.artimanton.infovesele.R;
 import com.artimanton.infovesele.activity.all_transport.BusCity;
+import com.artimanton.infovesele.activity.all_transport.DeliveryService;
 import com.artimanton.infovesele.activity.all_transport.TaxiRead_FireBase;
 
 public class TransportActivity extends BaseActivity {
@@ -30,21 +31,6 @@ public class TransportActivity extends BaseActivity {
             // иначе запрашиваем разрешение у пользователя
             requestPermission(READ_PHONE_STATE_PERMISSION, REQUEST_READ_PHONE_STATE);
         }
-    }
-
-
-    public void btTrains(View view) {
-    }
-
-    public void btBuses(View view) {
-        Intent intent = new Intent(TransportActivity.this, BusCity.class);
-        startActivity(intent);
-    }
-
-
-    public void btTaxi(View view) {
-        Intent intent = new Intent(TransportActivity.this, TaxiRead_FireBase.class);
-        startActivity(intent);
     }
 
     public boolean isPermissionGranted(String permission) {
@@ -70,5 +56,26 @@ public class TransportActivity extends BaseActivity {
     public void requestPermission(String permission, int requestCode) {
         // запрашиваем разрешение
         ActivityCompat.requestPermissions(this, new String[]{permission}, requestCode);
+    }
+
+
+    public void btTrains(View view) {
+    }
+
+    public void btBuses(View view) {
+        Intent intent = new Intent(TransportActivity.this, BusCity.class);
+        startActivity(intent);
+    }
+
+
+    public void btTaxi(View view) {
+        Intent intent = new Intent(TransportActivity.this, TaxiRead_FireBase.class);
+        startActivity(intent);
+    }
+
+
+    public void btDelivery(View view) {
+        Intent intent = new Intent(TransportActivity.this, DeliveryService.class);
+        startActivity(intent);
     }
 }

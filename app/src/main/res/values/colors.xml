@@ -11,4 +11,10 @@
     <color name="whiteish">#FAFAFA</color>
     <color name="toolbar_ic_active">#19ff15</color>
 
+    <color name="GradientCity">
+        <item name="android:startColor">#e3d28c</item>
+        <item name="android:endColor">#baaa79</item>
+        <item name="android:angle">145</item>
+    </color>
+
 </resources>

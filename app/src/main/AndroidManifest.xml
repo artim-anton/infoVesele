@@ -8,7 +8,6 @@
     <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.INTERNET" />
 
-
     <application
         android:name="com.artimanton.infoVesele"
         android:allowBackup="true"
@@ -64,7 +63,10 @@
             android:windowSoftInputMode="stateHidden" />
         <activity android:name=".MainActivityTwo" />
         <activity android:name=".activity.HomeActivity" />
-        <activity android:name=".activity.AdvertVeseleActivity"></activity>
+        <activity android:name=".activity.AdvertVeseleActivity" />
+        <activity android:name=".activity.all_transport.DeliveryService" />
+        <activity android:name=".activity.ServicesActivity" />
+        <activity android:name=".activity.all_services.RepairsActivity"></activity>
     </application>
 
 </manifest>

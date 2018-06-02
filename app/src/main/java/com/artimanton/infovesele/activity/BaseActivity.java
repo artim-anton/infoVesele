@@ -41,11 +41,11 @@ abstract class BaseActivity extends AppCompatActivity {
                     case R.id.nav_item_voice:
                         ActivityToOpen = AdvertVeseleActivity.class;
                         break;
-                    case R.id.nav_item_build:
-                        //Toast.makeText(con, "nav_item_build", Toast.LENGTH_SHORT).show();
-                        break;
                     case R.id.nav_item_forum:
                         //Toast.makeText(con, "nav_item_forum", Toast.LENGTH_SHORT).show();
+                        break;
+                    case R.id.nav_item_build:
+                        ActivityToOpen = ServicesActivity.class;
                         break;
                 }
 

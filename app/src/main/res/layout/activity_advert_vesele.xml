@@ -54,7 +54,7 @@
         android:gravity="center|center_vertical"
         android:onClick="btnAddAdvert"
         android:paddingLeft="10dp"
-        android:text="Добавить запись"
+        android:text="Добавить обьявление"
         android:textSize="24sp"
         android:textStyle="italic" />
 

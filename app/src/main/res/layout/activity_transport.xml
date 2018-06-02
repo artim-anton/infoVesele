@@ -61,7 +61,7 @@
             android:background="@drawable/border"
             android:drawableLeft="@drawable/ic_delivery_service_black_24dp"
             android:gravity="center|center_vertical"
-            android:onClick="btTaxi"
+            android:onClick="btDelivery"
             android:paddingLeft="10dp"
             android:text="Службы доставки"
             android:textSize="24sp"
