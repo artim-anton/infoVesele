@@ -76,7 +76,8 @@
         <activity android:name=".activity.all_services.BusinessActivity" />
         <activity android:name=".activity.all_services.DomesticActivity" />
         <activity android:name=".activity.all_services.CarActivity" />
-        <activity android:name=".activity.all_services.AddServicesActivity"></activity>
+        <activity android:name=".activity.all_services.AddServicesActivity" />
+        <activity android:name=".activity.all_services.BeautyActivity"></activity>
     </application>
 
 </manifest>

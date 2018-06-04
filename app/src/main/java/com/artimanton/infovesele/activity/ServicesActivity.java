@@ -7,6 +7,7 @@ import android.view.View;
 
 import com.artimanton.infovesele.R;
 import com.artimanton.infovesele.activity.all_services.AddServicesActivity;
+import com.artimanton.infovesele.activity.all_services.BeautyActivity;
 import com.artimanton.infovesele.activity.all_services.BuilderActivity;
 import com.artimanton.infovesele.activity.all_services.BusinessActivity;
 import com.artimanton.infovesele.activity.all_services.CarActivity;
@@ -60,6 +61,10 @@ public class ServicesActivity extends BaseActivity {
         startActivity(intent);
     }
 
+    public void btnBeauty(View view) {
+        Intent intent = new Intent(ServicesActivity.this, BeautyActivity.class);
+        startActivity(intent);
+    }
 
     public void btnAddServices(View view) {
         Intent intent = new Intent(ServicesActivity.this, AddServicesActivity.class);

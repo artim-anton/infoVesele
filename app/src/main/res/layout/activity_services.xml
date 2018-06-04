@@ -66,6 +66,13 @@
                 android:text="Ремонт авто" />
 
             <Button
+                android:id="@+id/btn_beauty"
+                style="@style/services_button"
+                android:drawableLeft="@drawable/beauty"
+                android:onClick="btnBeauty"
+                android:text="Услуги красоты и здоровья" />
+
+            <Button
                 android:id="@+id/btn_add_services"
                 style="@style/services_button"
                 android:paddingBottom="50dp"
