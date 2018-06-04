@@ -27,4 +27,12 @@
         <item name="android:background">@drawable/border</item>
     </style>
 
+    <style name="services_button_two">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:background">@drawable/border</item>
+        <item name="android:layout_height">100dp</item>
+    </style>
+
 </resources>

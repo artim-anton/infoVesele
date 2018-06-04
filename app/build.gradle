@@ -34,6 +34,7 @@ dependencies {
     implementation 'com.github.ittianyu:BottomNavigationViewEx:1.2.4'
     implementation "com.android.support:design:26.1.0"
     implementation 'com.github.satyan:sugar:1.4'
+    implementation 'com.android.support:gridlayout-v7:23.1.1'
 }
 
 apply plugin: 'com.google.gms.google-services'

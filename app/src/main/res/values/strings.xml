@@ -5,5 +5,9 @@
     <string name="title_activity_tr_bus">TrBus</string>
     <string name="splash">Splash</string>
     <string name="title_activity_builder">BuilderActivity</string>
+    <string name="tutors">Услуги \n репетиторов</string>
+    <string name="builder">Строительные \n работы</string>
+    <string name="repairs">Ремонт \n техники</string>
+    <string name="home_master">Домашний \n мастер</string>
 
 </resources>

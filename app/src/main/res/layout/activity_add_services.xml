@@ -1,9 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<android.support.v7.widget.GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.all_services.AddServicesActivity">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center"
+    android:layout_margin="10dp"
+    app:columnCount="2"
+    app:orientation="horizontal">
 
-</android.support.constraint.ConstraintLayout>
+    <Button
+        android:id="@+id/btn_repairs"
+        style="@style/services_button_two"
+        app:layout_columnWeight="1"
+        android:drawableTop="@drawable/repairs"
+        android:onClick="btnRepairs"
+        android:text="@string/repairs" />
+
+    <Button
+        android:id="@+id/btn_home_master"
+        style="@style/services_button_two"
+        app:layout_columnWeight="1"
+        android:drawableTop="@drawable/home_master"
+        android:onClick="btnHomeMaster"
+        android:text="@string/home_master"/>
+
+    <Button
+        android:id="@+id/btn_builder"
+        style="@style/services_button_two"
+        app:layout_columnWeight="1"
+        android:drawableTop="@drawable/builder"
+        android:onClick="btnBuilder"
+        android:text="@string/builder" />
+
+    <Button
+        android:id="@+id/btn_tutors"
+        style="@style/services_button_two"
+        app:layout_columnWeight="1"
+        android:drawableTop="@drawable/tutors"
+        android:onClick="btnTutors"
+        android:text="@string/tutors"/>
+
+</android.support.v7.widget.GridLayout>
