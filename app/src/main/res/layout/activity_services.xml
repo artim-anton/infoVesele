@@ -1,68 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activity.ServicesActivity">
 
-    <LinearLayout
+    <ScrollView
+        android:id="@+id/myview"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="wrap_content">
 
-        <Button
-            android:id="@+id/btn_repairs"
-            style="@style/services_button"
-            android:drawableLeft="@drawable/repairs"
-            android:onClick="btnRepairs"
-            android:text="Ремонт техники"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-        <Button
-            android:id="@+id/btn_home_master"
-            style="@style/services_button"
-            android:drawableLeft="@drawable/home_master"
-            android:onClick="btnHomeMaster"
-            android:text="Домашний мастер"/>
+            <Button
+                android:id="@+id/btn_repairs"
+                style="@style/services_button"
+                android:drawableLeft="@drawable/repairs"
+                android:onClick="btnRepairs"
+                android:text="Ремонт техники" />
 
-        <Button
-            android:id="@+id/btn_builder"
-            style="@style/services_button"
-            android:drawableLeft="@drawable/builder"
-            android:onClick="btnBuilder"
-            android:text="Строительные работы"/>
+            <Button
+                android:id="@+id/btn_home_master"
+                style="@style/services_button"
+                android:drawableLeft="@drawable/home_master"
+                android:onClick="btnHomeMaster"
+                android:text="Домашний мастер" />
 
-        <Button
-            android:id="@+id/btn_tutors"
-            style="@style/services_button"
-            android:drawableLeft="@drawable/tutors"
-            android:onClick="btnTutors"
-            android:text="Услуги репетиторов"/>
+            <Button
+                android:id="@+id/btn_builder"
+                style="@style/services_button"
+                android:drawableLeft="@drawable/builder"
+                android:onClick="btnBuilder"
+                android:text="Строительные работы" />
 
-        <Button
-            android:id="@+id/btn_business"
-            style="@style/services_button"
-            android:drawableLeft="@drawable/business"
-            android:onClick="btnBusiness"
-            android:text="Деловые услуги"/>
+            <Button
+                android:id="@+id/btn_tutors"
+                style="@style/services_button"
+                android:drawableLeft="@drawable/tutors"
+                android:onClick="btnTutors"
+                android:text="Услуги репетиторов" />
 
-        <Button
-            android:id="@+id/btn_domestic"
-            style="@style/services_button"
-            android:drawableLeft="@drawable/domestic"
-            android:onClick="btnDomestic"
-            android:text="Бытовые услуги"/>
+            <Button
+                android:id="@+id/btn_business"
+                style="@style/services_button"
+                android:drawableLeft="@drawable/business"
+                android:onClick="btnBusiness"
+                android:text="Деловые услуги" />
 
-        <Button
-            android:id="@+id/btn_car"
-            style="@style/services_button"
-            android:drawableLeft="@drawable/car"
-            android:onClick="btnCar"
-            android:text="Ремонт авто"/>
+            <Button
+                android:id="@+id/btn_domestic"
+                style="@style/services_button"
+                android:drawableLeft="@drawable/domestic"
+                android:onClick="btnDomestic"
+                android:text="Бытовые услуги" />
 
-    </LinearLayout>
+            <Button
+                android:id="@+id/btn_car"
+                style="@style/services_button"
+                android:drawableLeft="@drawable/car"
+                android:onClick="btnCar"
+                android:text="Ремонт авто" />
 
-    <include layout="@layout/bottom_navigation_view"/>
+            <Button
+                android:id="@+id/btn_add_services"
+                style="@style/services_button"
+                android:paddingBottom="50dp"
+                android:drawableLeft="@drawable/repairs"
+                android:onClick="btnAddServices"
+                android:text="Добавить услугу" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <include layout="@layout/bottom_navigation_view" />
 
 </android.support.constraint.ConstraintLayout>

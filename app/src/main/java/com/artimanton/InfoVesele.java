@@ -3,7 +3,7 @@ package com.artimanton;
 import android.app.Application;
 import android.content.Context;
 
-public class infoVesele extends Application {
+public class InfoVesele extends Application {
     private static Context mContext;
 
     @Override

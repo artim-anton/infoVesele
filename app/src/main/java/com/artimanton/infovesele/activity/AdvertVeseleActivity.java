@@ -16,5 +16,7 @@ public class AdvertVeseleActivity extends BaseActivity {
     }
 
     public void btnAddAdvert(View view) {
+
+
     }
 }

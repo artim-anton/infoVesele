@@ -6,7 +6,14 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.artimanton.infovesele.R;
+import com.artimanton.infovesele.activity.all_services.AddServicesActivity;
+import com.artimanton.infovesele.activity.all_services.BuilderActivity;
+import com.artimanton.infovesele.activity.all_services.BusinessActivity;
+import com.artimanton.infovesele.activity.all_services.CarActivity;
+import com.artimanton.infovesele.activity.all_services.DomesticActivity;
+import com.artimanton.infovesele.activity.all_services.HomeMasterActivity;
 import com.artimanton.infovesele.activity.all_services.RepairsActivity;
+import com.artimanton.infovesele.activity.all_services.TutorsActivity;
 import com.artimanton.infovesele.activity.all_transport.DeliveryService;
 
 public class ServicesActivity extends BaseActivity {
@@ -24,20 +31,38 @@ public class ServicesActivity extends BaseActivity {
     }
 
     public void btnHomeMaster(View view) {
+        Intent intent = new Intent(ServicesActivity.this, HomeMasterActivity.class);
+        startActivity(intent);
     }
 
     public void btnBuilder(View view) {
+        Intent intent = new Intent(ServicesActivity.this, BuilderActivity.class);
+        startActivity(intent);
     }
 
     public void btnTutors(View view) {
+        Intent intent = new Intent(ServicesActivity.this, TutorsActivity.class);
+        startActivity(intent);
     }
 
     public void btnBusiness(View view) {
+        Intent intent = new Intent(ServicesActivity.this, BusinessActivity.class);
+        startActivity(intent);
     }
 
     public void btnDomestic(View view) {
+        Intent intent = new Intent(ServicesActivity.this, DomesticActivity.class);
+        startActivity(intent);
     }
 
     public void btnCar(View view) {
+        Intent intent = new Intent(ServicesActivity.this, CarActivity.class);
+        startActivity(intent);
+    }
+
+
+    public void btnAddServices(View view) {
+        Intent intent = new Intent(ServicesActivity.this, AddServicesActivity.class);
+        startActivity(intent);
     }
 }

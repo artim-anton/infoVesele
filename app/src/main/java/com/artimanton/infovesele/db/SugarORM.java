@@ -1,6 +1,6 @@
 package com.artimanton.infovesele.db;
 
-import com.artimanton.infoVesele;
+import com.artimanton.InfoVesele;
 import com.orm.SchemaGenerator;
 import com.orm.SugarContext;
 import com.orm.SugarDb;
@@ -8,10 +8,10 @@ import com.orm.SugarDb;
 public class SugarORM {
     public static void deleteTables(){
         SugarContext.terminate();
-        SchemaGenerator schemaGenerator = new SchemaGenerator(infoVesele.getContext());
-        schemaGenerator.deleteTables(new SugarDb(infoVesele.getContext()).getDB());
-        SugarContext.init(infoVesele.getContext());
-        schemaGenerator.createDatabase(new SugarDb(infoVesele.getContext()).getDB());
+        SchemaGenerator schemaGenerator = new SchemaGenerator(InfoVesele.getContext());
+        schemaGenerator.deleteTables(new SugarDb(InfoVesele.getContext()).getDB());
+        SugarContext.init(InfoVesele.getContext());
+        schemaGenerator.createDatabase(new SugarDb(InfoVesele.getContext()).getDB());
     }
 
 

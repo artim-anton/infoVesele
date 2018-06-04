@@ -4,5 +4,6 @@
     <string name="title_activity_train">Train</string>
     <string name="title_activity_tr_bus">TrBus</string>
     <string name="splash">Splash</string>
+    <string name="title_activity_builder">BuilderActivity</string>
 
 </resources>
