@@ -50,7 +50,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:background="@drawable/border"
-        android:drawableLeft="@drawable/ic_record_voice_over_active_24dp"
+        android:drawableLeft="@drawable/ic_library_add_grean_24dp"
         android:gravity="center|center_vertical"
         android:onClick="btnAddAdvert"
         android:paddingLeft="10dp"

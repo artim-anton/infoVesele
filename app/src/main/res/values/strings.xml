@@ -9,5 +9,9 @@
     <string name="builder">Строительные \n работы</string>
     <string name="repairs">Ремонт \n техники</string>
     <string name="home_master">Домашний \n мастер</string>
+    <string name="business">Деловые \n услуги</string>
+    <string name="domestic">Бытовые \n услуги</string>
+    <string name="car">Ремонт \n авто</string>
+    <string name="beauty">Услуги \n красоты</string>
 
 </resources>
