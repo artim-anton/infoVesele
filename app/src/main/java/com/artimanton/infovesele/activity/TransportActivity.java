@@ -12,6 +12,7 @@ import com.artimanton.infovesele.R;
 import com.artimanton.infovesele.activity.all_transport.BusCity;
 import com.artimanton.infovesele.activity.all_transport.DeliveryService;
 import com.artimanton.infovesele.activity.all_transport.TaxiRead_FireBase;
+import com.artimanton.infovesele.activity.all_transport.Train;
 
 public class TransportActivity extends BaseActivity {
     private static final int REQUEST_READ_PHONE_STATE = 10001;
@@ -60,6 +61,8 @@ public class TransportActivity extends BaseActivity {
 
 
     public void btTrains(View view) {
+        Intent intent = new Intent(TransportActivity.this, Train.class);
+        startActivity(intent);
     }
 
     public void btBuses(View view) {
