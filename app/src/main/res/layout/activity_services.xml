@@ -23,6 +23,7 @@
                 <Button
                     android:id="@+id/btn_add_services"
                     style="@style/services_button"
+                    android:background="@drawable/border"
                     android:drawableLeft="@drawable/ic_library_add_grean_24dp"
                     android:onClick="btnAddServices"
                     android:text="Добавить услугу" />

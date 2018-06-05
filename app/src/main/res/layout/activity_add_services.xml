@@ -1,46 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:clickable="true"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:clickable="true"
     android:orientation="vertical">
 
-<TextView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_margin="10dp"
-    android:textSize="20dp"
-    android:textColor="@color/black"
-    android:text="По вопросам размещения рекламы и сотрудничества обращаться по номеру:"/>
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
-    <EditText
-        android:id="@+id/et_phone"
-        android:layout_width="0dp"
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/whiteish">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:src="@drawable/ic_arrow_back_black_24dp"/>
+
+        </android.support.constraint.ConstraintLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <TextView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="5dp"
-        android:layout_marginTop="5dp"
-        android:layout_weight="4"
-        android:enabled="false"
-        android:inputType="phone"
-        android:text="0978792587"
-        android:textSize="18sp"
-        android:textColor="@color/colorPhone" />
-    <ImageButton
-        android:id="@+id/btn_call"
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_marginLeft="5dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginRight="5dp"
-        android:layout_marginBottom="5dp"
-        android:layout_weight="1.2"
-        android:src="@drawable/ic_call_black_24dp"
-        android:background="@drawable/border"
-        android:text="CL"
-        android:textSize="18sp"/>
-</LinearLayout>
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:text="По вопросам размещения рекламы и сотрудничества обращаться по номеру:"
+        android:textColor="@color/black"
+        android:textSize="20dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <EditText
+            android:id="@+id/et_phone"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="4"
+            android:enabled="false"
+            android:inputType="phone"
+            android:text="0978792587"
+            android:textColor="@color/colorPhone"
+            android:textSize="18sp" />
+
+        <ImageButton
+            android:id="@+id/btn_call"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1.2"
+            android:background="@drawable/border"
+            android:src="@drawable/ic_call_black_24dp"
+            android:text="CL"
+            android:textSize="18sp" />
+    </LinearLayout>
 </LinearLayout>
