@@ -6,4 +6,10 @@
     android:layout_height="match_parent"
     tools:context=".activity.all_services.CarActivity">
 
+    <Button
+        android:id="@+id/btn_car"
+        style="@style/services_button"
+        android:drawableLeft="@drawable/car"
+        android:text="Ремонт авто" />
+
 </android.support.constraint.ConstraintLayout>

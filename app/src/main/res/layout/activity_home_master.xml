@@ -6,4 +6,11 @@
     android:layout_height="match_parent"
     tools:context=".activity.all_services.HomeMasterActivity">
 
+
+    <Button
+        android:id="@+id/btn_home_master"
+        style="@style/services_button"
+        android:drawableLeft="@drawable/home_master"
+        android:text="Домашний мастер" />
+
 </android.support.constraint.ConstraintLayout>

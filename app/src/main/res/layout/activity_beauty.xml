@@ -6,4 +6,10 @@
     android:layout_height="match_parent"
     tools:context=".activity.all_services.BeautyActivity">
 
+    <Button
+        android:id="@+id/btn_beauty"
+        style="@style/services_button"
+        android:drawableLeft="@drawable/beauty"
+        android:text="Услуги красоты и здоровья" />
+
 </android.support.constraint.ConstraintLayout>

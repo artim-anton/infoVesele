@@ -21,10 +21,10 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textSize">20dp</item>
-        <item name="android:paddingLeft">10dp</item>
+        <item name="android:padding">10dp</item>
         <item name="android:gravity">center|center_vertical</item>
         <item name="android:layout_margin">10dp</item>
-        <item name="android:background">@drawable/border</item>
+        <item name="android:background"></item>
     </style>
 
     <style name="services_button_two">

@@ -6,4 +6,10 @@
     android:layout_height="match_parent"
     tools:context=".activity.all_services.DomesticActivity">
 
+    <Button
+        android:id="@+id/btn_domestic"
+        style="@style/services_button"
+        android:drawableLeft="@drawable/domestic"
+        android:text="Бытовые услуги" />
+
 </android.support.constraint.ConstraintLayout>

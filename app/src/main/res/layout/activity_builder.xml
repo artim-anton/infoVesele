@@ -6,4 +6,10 @@
     android:layout_height="match_parent"
     tools:context=".activity.all_services.BuilderActivity">
 
+    <Button
+        android:id="@+id/btn_builder"
+        style="@style/services_button"
+        android:drawableLeft="@drawable/builder"
+        android:text="Строительные работы" />
+
 </android.support.constraint.ConstraintLayout>

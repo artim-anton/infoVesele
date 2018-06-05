@@ -64,7 +64,7 @@ public class TaxiAdapter extends RecyclerView.Adapter<TaxiAdapter.TaxiViewHolder
             }
         });
 
-        holder.btnEdit.setOnClickListener(new View.OnClickListener() {
+        /*holder.btnEdit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Toast.makeText(view.getContext(), "После редактированя, нажмите сохранить", Toast.LENGTH_SHORT).show();
@@ -74,7 +74,7 @@ public class TaxiAdapter extends RecyclerView.Adapter<TaxiAdapter.TaxiViewHolder
                 taxi.phone = holder.etPhone.getText().toString();
                 adapterPosition = holder.getAdapterPosition();
             }
-        });
+        });*/
 
         //Context menu
         /*holder.itemView.setOnCreateContextMenuListener(new View.OnCreateContextMenuListener() {
@@ -94,13 +94,13 @@ public class TaxiAdapter extends RecyclerView.Adapter<TaxiAdapter.TaxiViewHolder
 
     class TaxiViewHolder extends RecyclerView.ViewHolder{
         private EditText etInfoCar, etPhone;
-        private ImageButton btnCall, btnEdit;
+        private ImageButton btnCall;
 
         private TaxiViewHolder(View itemView) {
             super(itemView);
             etInfoCar = itemView.findViewById(R.id.et_info_car);
             etPhone = itemView.findViewById(R.id.et_phone);
-            btnEdit = itemView.findViewById(R.id.btn_edit);
+           // btnEdit = itemView.findViewById(R.id.btn_edit);
             btnCall = itemView.findViewById(R.id.btn_call);
         }
     }

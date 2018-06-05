@@ -6,4 +6,11 @@
     android:layout_height="match_parent"
     tools:context=".activity.all_services.BusinessActivity">
 
+
+    <Button
+        android:id="@+id/btn_business"
+        style="@style/services_button"
+        android:drawableLeft="@drawable/business"
+        android:text="Деловые услуги" />
+
 </android.support.constraint.ConstraintLayout>

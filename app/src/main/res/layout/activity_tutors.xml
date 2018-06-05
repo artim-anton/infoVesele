@@ -6,4 +6,10 @@
     android:layout_height="match_parent"
     tools:context=".activity.all_services.TutorsActivity">
 
+    <Button
+        android:id="@+id/btn_tutors"
+        style="@style/services_button"
+        android:drawableLeft="@drawable/tutors"
+        android:text="Услуги репетиторов" />
+
 </android.support.constraint.ConstraintLayout>
