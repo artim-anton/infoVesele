@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 import com.artimanton.infovesele.R;
 import com.artimanton.infovesele.activity.all_services.RepairsActivity;
@@ -93,7 +94,8 @@ public class ServicesAdapter extends RecyclerView.Adapter<ServicesAdapter.Servic
     }
 
     class ServicesViewHolder extends RecyclerView.ViewHolder{
-        private EditText etMoreInfoServices, etInfoServices, etPhone;
+        private EditText etInfoServices, etPhone;
+        private TextView etMoreInfoServices;
         private ImageButton btnCall;
 
         private ServicesViewHolder(View itemView) {

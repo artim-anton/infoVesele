@@ -3,21 +3,13 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:clickable="true"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
 
-
-    <EditText
-        android:id="@+id/et_more_info_services"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="5dp"
-        android:layout_marginTop="5dp"
-        android:layout_weight="4"
-        android:enabled="false"
-        android:inputType="text"
-        android:text="Lanos"
-        android:textSize="18sp"
-        android:textColor="@color/colorTime"/>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
 
     <EditText
         android:id="@+id/et_info_services"
@@ -28,7 +20,7 @@
         android:layout_weight="4"
         android:enabled="false"
         android:inputType="text"
-        android:text="серый"
+        android:text="Ремонт ПК"
         android:textSize="18sp"
         android:textColor="@color/colorTime"/>
 
@@ -41,7 +33,7 @@
         android:layout_weight="4"
         android:enabled="false"
         android:inputType="phone"
-        android:text="0674512821"
+        android:text="0978792587"
         android:textSize="18sp"
         android:textColor="@color/colorPhone" />
     <ImageButton
@@ -51,10 +43,25 @@
         android:layout_marginLeft="5dp"
         android:layout_marginTop="5dp"
         android:layout_marginRight="5dp"
-        android:layout_marginBottom="5dp"
         android:layout_weight="1.5"
         android:src="@drawable/ic_call_black_24dp"
         android:background="@drawable/border"
         android:text="CL"
         android:textSize="18sp"/>
+</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/et_more_info_services"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_weight="1"
+            android:text="ремонт, продажа, обслуживание"
+            android:textSize="14sp" />
+    </LinearLayout>
 </LinearLayout>

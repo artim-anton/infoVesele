@@ -11,26 +11,31 @@
         android:id="@+id/btn_repairs"
         style="@style/services_button"
         android:drawableLeft="@drawable/repairs"
-        android:text="Ремонт техники" />
+        android:text="Ремонт техники"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/img_pc_master"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
         android:padding="10dp"
-        android:src="@drawable/pc_master"/>
+        android:src="@drawable/pc_master"
+        app:layout_constraintTop_toBottomOf="@id/btn_repairs"/>
 
-    <LinearLayout
+    <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/img_pc_master">
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/services_list"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            tools:listitem="@layout/view_item_taxi">
+            tools:listitem="@layout/view_item_services">
 
         </android.support.v7.widget.RecyclerView>
-    </LinearLayout>
+    </android.support.constraint.ConstraintLayout>
 
 </android.support.constraint.ConstraintLayout>
 
