@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:layout_margin="10dp"
+    android:orientation="vertical"
+    tools:context=".activity.AddAdvertVeseleActivity">
+
+    <Button
+        android:id="@+id/btn_save_advert"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/border"
+        android:drawableLeft="@drawable/ic_library_add_grean_24dp"
+        android:gravity="center|center_vertical"
+        android:onClick="btnSaveAdvert"
+        android:paddingLeft="10dp"
+        android:text="Сохранить"
+        android:textSize="24sp"
+        android:textStyle="italic"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:text="Заголовок"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/et_info_advert_add"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="3"
+            android:inputType="text"
+            android:text=""
+            android:textColor="@color/colorTime"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:text="Описание"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/et_more_info_advert_add"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="3"
+            android:inputType="text"
+            android:text=""
+            android:textColor="@color/colorTime"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:text="Цена"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/et_price_add"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="3"
+            android:inputType="text"
+            android:text=""
+            android:textColor="@color/colorTime"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:text="Номер тел."
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/et_phone_add"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="3"
+            android:inputType="text"
+            android:text=""
+            android:textColor="@color/colorTime"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

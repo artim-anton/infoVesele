@@ -1,6 +1,8 @@
 package com.artimanton.infovesele.activity.all_transport;
 
+import android.content.Intent;
 import android.media.Image;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -19,6 +21,17 @@ public class DeliveryService extends AppCompatActivity {
         setContentView(R.layout.activity_delivery_service);
     }
 
-    public void btnSite(View view) {
+    public void btnSiteNP(View view) {
+        String url = "https://novaposhta.ua";
+        Intent i = new Intent(Intent.ACTION_VIEW);
+        i.setData(Uri.parse(url));
+        startActivity(i);
+    }
+
+    public void btnSiteInTime(View view) {
+        String url = "https://intime.ua";
+        Intent i = new Intent(Intent.ACTION_VIEW);
+        i.setData(Uri.parse(url));
+        startActivity(i);
     }
 }
