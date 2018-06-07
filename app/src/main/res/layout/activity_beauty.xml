@@ -12,4 +12,18 @@
         android:drawableLeft="@drawable/beauty"
         android:text="Услуги красоты и здоровья" />
 
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/btn_beauty">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/services_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:listitem="@layout/view_item_services">
+
+        </android.support.v7.widget.RecyclerView>
+    </android.support.constraint.ConstraintLayout>
+
 </android.support.constraint.ConstraintLayout>

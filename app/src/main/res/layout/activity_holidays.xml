@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.all_services.HolidaysActivity">
+
+    <Button
+        android:id="@+id/btn_organization_of_holidays"
+        style="@style/services_button"
+        android:drawableLeft="@drawable/organization_of_holidays"
+        android:text="Организация праздников" />
+
+</android.support.constraint.ConstraintLayout>

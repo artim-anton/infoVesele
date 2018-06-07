@@ -78,7 +78,8 @@
         <activity android:name=".activity.all_services.CarActivity" />
         <activity android:name=".activity.all_services.AddServicesActivity" />
         <activity android:name=".activity.all_services.BeautyActivity" />
-        <activity android:name=".activity.AddAdvertVeseleActivity"></activity>
+        <activity android:name=".activity.AddAdvertVeseleActivity" />
+        <activity android:name=".activity.all_services.HolidaysActivity"></activity>
     </application>
 
 </manifest>
