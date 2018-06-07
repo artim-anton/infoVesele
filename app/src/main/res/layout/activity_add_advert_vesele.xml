@@ -46,6 +46,7 @@
             android:layout_weight="3"
             android:inputType="text"
             android:text=""
+            android:maxLength="16"
             android:textColor="@color/colorTime"
             android:textSize="18sp" />
 
@@ -63,6 +64,7 @@
             android:layout_marginTop="5dp"
             android:layout_weight="1"
             android:text="Описание"
+            android:maxLength="150"
             android:textSize="14sp" />
 
         <EditText
@@ -74,6 +76,7 @@
             android:layout_weight="3"
             android:inputType="text"
             android:text=""
+            android:maxLength="150"
             android:textColor="@color/colorTime"
             android:textSize="18sp" />
 
@@ -102,6 +105,7 @@
             android:layout_weight="3"
             android:inputType="text"
             android:text=""
+            android:maxLength="16"
             android:textColor="@color/colorTime"
             android:textSize="18sp" />
 
@@ -130,6 +134,7 @@
             android:layout_weight="3"
             android:inputType="text"
             android:text=""
+            android:maxLength="13"
             android:textColor="@color/colorTime"
             android:textSize="18sp" />
 
