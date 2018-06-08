@@ -66,20 +66,37 @@
         <activity android:name=".activity.AdvertVeseleActivity" />
         <activity android:name=".activity.all_transport.DeliveryService" />
         <activity android:name=".activity.ServicesActivity" />
-        <activity android:name=".activity.all_services.RepairsActivity" />
+        <activity
+            android:name=".activity.all_services.RepairsActivity"
+            android:windowSoftInputMode="stateHidden"/>
         <activity android:name=".activity.all_services.HomeMasterActivity" />
         <activity
             android:name=".activity.all_services.BuilderActivity"
             android:label="@string/title_activity_builder"
-            android:theme="@style/AppTheme" />
-        <activity android:name=".activity.all_services.TutorsActivity" />
-        <activity android:name=".activity.all_services.BusinessActivity" />
-        <activity android:name=".activity.all_services.DomesticActivity" />
-        <activity android:name=".activity.all_services.CarActivity" />
-        <activity android:name=".activity.all_services.AddServicesActivity" />
-        <activity android:name=".activity.all_services.BeautyActivity" />
-        <activity android:name=".activity.AddAdvertVeseleActivity" />
-        <activity android:name=".activity.all_services.HolidaysActivity"></activity>
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden"/>
+        <activity
+            android:name=".activity.all_services.TutorsActivity"
+            android:windowSoftInputMode="stateHidden"/>
+        <activity
+            android:name=".activity.all_services.BusinessActivity" />
+        <activity
+            android:name=".activity.all_services.DomesticActivity"
+            android:windowSoftInputMode="stateHidden"/>
+        <activity
+            android:name=".activity.all_services.CarActivity"
+            android:windowSoftInputMode="stateHidden"/>
+        <activity
+            android:name=".activity.all_services.AddServicesActivity"/>
+        <activity
+            android:name=".activity.all_services.BeautyActivity"
+            android:windowSoftInputMode="stateHidden"/>
+        <activity
+            android:name=".activity.AddAdvertVeseleActivity"
+            android:windowSoftInputMode="stateHidden"/>
+        <activity
+            android:name=".activity.all_services.HolidaysActivity"
+            android:windowSoftInputMode="stateHidden"></activity>
     </application>
 
 </manifest>
