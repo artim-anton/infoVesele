@@ -31,25 +31,13 @@ public class HomeActivity extends BaseActivity {
     private List<NewsModel> allContacts;
 
 
-    @Override
+  /*  @Override
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
         outState.putParcelableArrayList("array",mListNews);
         Toast.makeText(this, "onSaveInstanceState", Toast.LENGTH_SHORT).show();
-    }
+    }*/
 
-    @Override
-    protected void onPause() {
-        super.onPause();
-     //   outState.putParcelableArrayList("array",mListNews);
-      //  onSaveInstanceState(outState);
-        /*SugarContext.init(this);
-        for (int i = 0; i < mListNews.size() ; i++) {
-            newsModel = new NewsModel(mListNews.get(i).getLinkImageNews(), mListNews.get(i).getNameNews(),mListNews.get(i).getLinkPageNews());
-            newsModel.save();
-
-        }*/
-    }
 
 
     @Override
@@ -68,10 +56,10 @@ public class HomeActivity extends BaseActivity {
 
         allContacts = NewsModel.listAll(NewsModel.class);
 
-        if(savedInstanceState == null) {
+        /*if(savedInstanceState == null) {
         mListNews = getIntent().getParcelableArrayListExtra("news");}
         else {
-            mListNews = savedInstanceState.getParcelableArrayList("array");}
+            mListNews = savedInstanceState.getParcelableArrayList("array");}*/
        // mListNews = getIntent().getParcelableArrayListExtra("news");
         //tvLog.setText(String.valueOf(mListNews.get(1).getNameNews()));
 
