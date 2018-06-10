@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:clickable="true"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
     <android.support.v7.widget.Toolbar
@@ -16,19 +17,25 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <!--<ImageView
-                android:id="@+id/back_botton"
+            <ImageView
+                android:id="@+id/back_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="10dp"
-                android:onClick="backBotton"
+                android:onClick="backButton"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
-                android:src="@drawable/ic_arrow_back_black_24dp"/>-->
+                android:src="@drawable/ic_arrow_back_black_24dp"/>
 
         </android.support.constraint.ConstraintLayout>
     </android.support.v7.widget.Toolbar>
+
+    <ImageView
+        android:id="@+id/reclame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/reclame"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -37,7 +44,7 @@
         android:padding="10dp"
         android:text="По вопросам размещения рекламы и сотрудничества обращаться по номеру:"
         android:textColor="@color/black"
-        android:textSize="20dp" />
+        android:textSize="24dp" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -45,7 +52,7 @@
         android:padding="10dp">
 
         <EditText
-            android:id="@+id/et_phone"
+            android:id="@+id/et_phone_reclame"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
@@ -55,10 +62,10 @@
             android:inputType="phone"
             android:text="0978792587"
             android:textColor="@color/colorPhone"
-            android:textSize="18sp" />
+            android:textSize="24sp" />
 
         <ImageButton
-            android:id="@+id/btn_call"
+            android:id="@+id/btn_call_reclame"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_marginBottom="5dp"
@@ -66,6 +73,7 @@
             android:layout_marginRight="5dp"
             android:layout_marginTop="5dp"
             android:layout_weight="1.2"
+            android:onClick="btnCallReclame"
             android:background="@drawable/border"
             android:src="@drawable/ic_call_black_24dp"
             android:text="CL"

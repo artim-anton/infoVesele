@@ -11,7 +11,9 @@
         android:id="@+id/btn_business"
         style="@style/services_button"
         android:drawableLeft="@drawable/business"
-        android:text="Деловые услуги" />
+        android:text="Деловые услуги"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
