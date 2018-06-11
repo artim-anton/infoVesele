@@ -10,7 +10,9 @@
         android:id="@+id/btn_car"
         style="@style/services_button"
         android:drawableLeft="@drawable/car"
-        android:text="Ремонт авто" />
+        android:text="Ремонт авто"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"

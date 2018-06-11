@@ -10,7 +10,9 @@
         android:id="@+id/btn_organization_of_holidays"
         style="@style/services_button"
         android:drawableLeft="@drawable/organization_of_holidays"
-        android:text="Организация праздников" />
+        android:text="Организация праздников"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"

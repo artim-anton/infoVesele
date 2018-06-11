@@ -107,8 +107,16 @@
                     android:id="@+id/btn_organization_of_holidays"
                     style="@style/services_button_two"
                     android:drawableTop="@drawable/organization_of_holidays"
-                    android:onClick="btnBeauty"
+                    android:onClick="btnHolidays"
                     android:text="@string/organization_of_holidays"
+                    app:layout_columnWeight="1" />
+
+                <Button
+                    android:id="@+id/development"
+                    style="@style/services_button_two"
+                    android:drawableTop="@drawable/development"
+                    android:onClick="btnDevelopment"
+                    android:text="@string/development"
                     app:layout_columnWeight="1" />
 
             </android.support.v7.widget.GridLayout>

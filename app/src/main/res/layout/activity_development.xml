@@ -4,20 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.all_services.DomesticActivity">
-
+    tools:context=".activity.all_services.DevelopmentActivity">
     <Button
-        android:id="@+id/btn_domestic"
+        android:id="@+id/btn_development_caption"
         style="@style/services_button"
-        android:drawableLeft="@drawable/domestic"
-        android:text="Бытовые услуги"
+        android:drawableLeft="@drawable/development"
+        android:text="Разработка приложений"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/btn_domestic">
+        app:layout_constraintTop_toBottomOf="@id/btn_development_caption">
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/services_list"

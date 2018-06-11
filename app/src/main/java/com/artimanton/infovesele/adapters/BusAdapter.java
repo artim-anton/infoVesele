@@ -65,7 +65,7 @@ public class BusAdapter extends RecyclerView.Adapter<BusAdapter.BusViewHolder> {
             }
         });
 
-        holder.btnEdit.setOnClickListener(new View.OnClickListener() {
+       /* holder.btnEdit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Toast.makeText(view.getContext(), "После редактированя, нажмите сохранить", Toast.LENGTH_SHORT).show();
@@ -77,7 +77,7 @@ public class BusAdapter extends RecyclerView.Adapter<BusAdapter.BusViewHolder> {
                 bus.phone = holder.etPhone.getText().toString();
                 adapterPosition = holder.getAdapterPosition();
             }
-        });
+        });*/
 
         //Context menu
         /*holder.itemView.setOnCreateContextMenuListener(new View.OnCreateContextMenuListener() {
@@ -104,7 +104,7 @@ public class BusAdapter extends RecyclerView.Adapter<BusAdapter.BusViewHolder> {
             etTimeGo = itemView.findViewById(R.id.et_time_go);
             etTimeFinish = itemView.findViewById(R.id.et_time_finish);
             etPhone = itemView.findViewById(R.id.et_phone);
-            btnEdit = itemView.findViewById(R.id.btn_edit);
+           // btnEdit = itemView.findViewById(R.id.btn_edit);
             btnCall = itemView.findViewById(R.id.btn_call);
         }
     }

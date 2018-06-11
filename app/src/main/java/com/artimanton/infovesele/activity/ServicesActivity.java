@@ -11,7 +11,9 @@ import com.artimanton.infovesele.activity.all_services.BeautyActivity;
 import com.artimanton.infovesele.activity.all_services.BuilderActivity;
 import com.artimanton.infovesele.activity.all_services.BusinessActivity;
 import com.artimanton.infovesele.activity.all_services.CarActivity;
+import com.artimanton.infovesele.activity.all_services.DevelopmentActivity;
 import com.artimanton.infovesele.activity.all_services.DomesticActivity;
+import com.artimanton.infovesele.activity.all_services.HolidaysActivity;
 import com.artimanton.infovesele.activity.all_services.HomeMasterActivity;
 import com.artimanton.infovesele.activity.all_services.RepairsActivity;
 import com.artimanton.infovesele.activity.all_services.TutorsActivity;
@@ -68,6 +70,16 @@ public class ServicesActivity extends BaseActivity {
 
     public void btnAddServices(View view) {
         Intent intent = new Intent(ServicesActivity.this, AddServicesActivity.class);
+        startActivity(intent);
+    }
+
+    public void btnHolidays(View view) {
+        Intent intent = new Intent(ServicesActivity.this, HolidaysActivity.class);
+        startActivity(intent);
+    }
+
+    public void btnDevelopment(View view) {
+        Intent intent = new Intent(ServicesActivity.this, DevelopmentActivity.class);
         startActivity(intent);
     }
 }

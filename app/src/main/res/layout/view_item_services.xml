@@ -21,23 +21,24 @@
         android:enabled="false"
         android:inputType="text"
         android:text="Ремонт ПК"
-        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textSize="16sp"
         android:textColor="@color/colorTime"/>
 
     <EditText
-        android:id="@+id/et_phone"
+        android:id="@+id/et_phone_services"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="5dp"
         android:layout_marginTop="5dp"
-        android:layout_weight="4"
+        android:layout_weight="2.7"
         android:enabled="false"
         android:inputType="phone"
         android:text="0978792587"
-        android:textSize="18sp"
+        android:textSize="16sp"
         android:textColor="@color/colorPhone" />
     <ImageButton
-        android:id="@+id/btn_call"
+        android:id="@+id/btn_call_services"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_marginLeft="5dp"
@@ -47,7 +48,7 @@
         android:src="@drawable/ic_call_black_24dp"
         android:background="@drawable/border"
         android:text="CL"
-        android:textSize="18sp"/>
+        android:textSize="16sp"/>
 </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"

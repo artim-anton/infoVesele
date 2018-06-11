@@ -102,9 +102,9 @@ public class ServicesAdapter extends RecyclerView.Adapter<ServicesAdapter.Servic
             super(itemView);
             etMoreInfoServices = itemView.findViewById(R.id.et_more_info_services);
             etInfoServices = itemView.findViewById(R.id.et_info_services);
-            etPhone = itemView.findViewById(R.id.et_phone);
+            etPhone = itemView.findViewById(R.id.et_phone_services);
            // btnEdit = itemView.findViewById(R.id.btn_edit);
-            btnCall = itemView.findViewById(R.id.btn_call);
+            btnCall = itemView.findViewById(R.id.btn_call_services);
         }
     }
 
