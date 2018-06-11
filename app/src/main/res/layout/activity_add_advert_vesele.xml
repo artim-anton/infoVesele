@@ -20,7 +20,7 @@
         android:onClick="btnSaveAdvert"
         android:paddingLeft="10dp"
         android:text="Сохранить"
-        android:textSize="20sp"
+        android:textSize="18sp"
         android:textStyle="italic"/>
 
     <LinearLayout

@@ -107,7 +107,9 @@
         <activity
             android:name=".activity.all_services.HolidaysActivity"
             android:windowSoftInputMode="stateHidden" />
-        <activity android:name=".activity.all_services.DevelopmentActivity"></activity>
+        <activity
+            android:name=".activity.all_services.DevelopmentActivity"
+            android:windowSoftInputMode="stateHidden"></activity>
     </application>
 
 </manifest>
