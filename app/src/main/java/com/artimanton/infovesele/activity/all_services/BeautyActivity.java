@@ -27,7 +27,6 @@ public class BeautyActivity extends BaseServicesActivity {
     private RecyclerView recyclerView;
     private List<ServicesModel> result;
     private ServicesAdapter adapter;
-    private Button btnPushToServer;
 
     private FirebaseDatabase database;
     private DatabaseReference reference;
@@ -40,7 +39,6 @@ public class BeautyActivity extends BaseServicesActivity {
             Toast.makeText(this, "Проверьте подключение к Интернету", Toast.LENGTH_LONG).show();
         }
 
-        btnPushToServer = (Button) findViewById(R.id.btn_push_to_server);
 
         database = FirebaseDatabase.getInstance();
         reference = database.getReference("services/beauty");

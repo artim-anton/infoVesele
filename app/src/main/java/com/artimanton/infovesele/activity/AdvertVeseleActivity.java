@@ -31,7 +31,6 @@ public class AdvertVeseleActivity extends BaseActivity {
     private RecyclerView recyclerView;
     private List<AdvertModel> result;
     private AdvertAdapter adapter;
-    private Button btnPushToServer;
 
     private FirebaseDatabase database;
     private DatabaseReference reference;
@@ -45,7 +44,6 @@ public class AdvertVeseleActivity extends BaseActivity {
             Toast.makeText(this, "Проверьте подключение к Интернету", Toast.LENGTH_LONG).show();
         }
 
-        btnPushToServer = (Button) findViewById(R.id.btn_push_to_server);
 
         database = FirebaseDatabase.getInstance();
         reference = database.getReference("advert");

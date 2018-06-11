@@ -142,53 +142,69 @@
             <TextView
                 android:text="318"
                 android:padding="5dp"
+                android:textSize="@dimen/passenger_trains"
                 app:layout_columnWeight="1"/>
             <TextView
+                android:textSize="@dimen/passenger_trains"
                 android:text="Одесса - Запоріжжя"
                 app:layout_columnWeight="1"/>
             <TextView
                 android:text="02:35"
+                android:textSize="@dimen/passenger_trains"
                 app:layout_columnWeight="1"/>
             <TextView
                 android:text="парні"
+                android:textSize="@dimen/passenger_trains"
                 app:layout_columnWeight="1"/>
             <TextView
                 android:text="6772"
+                android:textSize="@dimen/passenger_trains"
                 android:padding="5dp"
                 app:layout_columnWeight="1"/>
             <TextView
+                android:textSize="@dimen/passenger_trains"
                 android:text="Херсон - Нововесела"
                 app:layout_columnWeight="1"/>
             <TextView
+                android:textSize="@dimen/passenger_trains"
                 android:text="12:12"
                 app:layout_columnWeight="1"/>
             <TextView
+                android:textSize="@dimen/passenger_trains"
                 android:text="щоденно"
                 app:layout_columnWeight="1"/>
             <TextView
+                android:textSize="@dimen/passenger_trains"
                 android:text="6771"
                 android:padding="5dp"
                 app:layout_columnWeight="1"/>
             <TextView
+                android:textSize="@dimen/passenger_trains"
                 android:text="Нововесела- Херсон"
                 app:layout_columnWeight="1"/>
             <TextView
+                android:textSize="@dimen/passenger_trains"
                 android:text="12:42"
                 app:layout_columnWeight="1"/>
             <TextView
+                android:textSize="@dimen/passenger_trains"
                 android:text="щоденно"
                 app:layout_columnWeight="1"/>
             <TextView
+                android:textSize="@dimen/passenger_trains"
                 android:text="317"
                 android:padding="5dp"
                 app:layout_columnWeight="1"/>
             <TextView
+                android:textSize="@dimen/passenger_trains"
                 android:text="Запоріжжя - Одеса"
                 app:layout_columnWeight="1"/>
             <TextView
+                android:textSize="@dimen/passenger_trains"
                 android:text="19:25"
                 app:layout_columnWeight="1"/>
             <TextView
+                android:textSize="@dimen/passenger_trains"
                 android:text="непарні"
                 app:layout_columnWeight="1"/>
 

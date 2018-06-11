@@ -17,7 +17,7 @@
         android:enabled="false"
         android:inputType="text"
         android:text="Lanos серый"
-        android:textSize="18sp"
+        android:textSize="16sp"
         android:textColor="@color/colorTime"/>
 
     <EditText
@@ -26,11 +26,11 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="5dp"
         android:layout_marginTop="5dp"
-        android:layout_weight="4"
+        android:layout_weight="3"
         android:enabled="false"
         android:inputType="phone"
         android:text="0674512821"
-        android:textSize="18sp"
+        android:textSize="16sp"
         android:textColor="@color/colorPhone" />
     <ImageButton
         android:id="@+id/btn_call"

@@ -22,7 +22,7 @@
             android:onClick="btBuses"
             android:paddingLeft="10dp"
             android:text="Автобусы"
-            android:textSize="24sp"
+            android:textSize="@dimen/title_transport"
             android:textStyle="italic" />
 
         <Button
@@ -36,7 +36,7 @@
             android:onClick="btTrains"
             android:paddingLeft="10dp"
             android:text="Поезда"
-            android:textSize="24sp"
+            android:textSize="@dimen/title_transport"
             android:textStyle="italic" />
 
         <Button
@@ -50,7 +50,7 @@
             android:onClick="btTaxi"
             android:paddingLeft="10dp"
             android:text="Такси"
-            android:textSize="24sp"
+            android:textSize="@dimen/title_transport"
             android:textStyle="italic" />
 
         <Button
@@ -64,7 +64,7 @@
             android:onClick="btDelivery"
             android:paddingLeft="10dp"
             android:text="Службы доставки"
-            android:textSize="24sp"
+            android:textSize="@dimen/title_transport"
             android:textStyle="italic" />
     </LinearLayout>
 

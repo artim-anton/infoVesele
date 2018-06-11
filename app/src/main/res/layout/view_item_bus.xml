@@ -38,7 +38,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="5dp"
         android:layout_marginTop="5dp"
-        android:layout_weight="3"
+        android:layout_weight="4"
         android:enabled="false"
         android:inputType="phone"
         android:text="0674512821"

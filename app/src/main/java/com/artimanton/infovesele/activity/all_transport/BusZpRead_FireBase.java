@@ -31,7 +31,7 @@ public class BusZpRead_FireBase extends AppCompatActivity {
     private RecyclerView recyclerView;
     private List<BusModel> result;
     private BusAdapter adapter;
-    private Button btnPushToServer;
+  //  private Button btnPushToServer;
 
     private FirebaseDatabase database;
     private DatabaseReference reference;
@@ -45,7 +45,7 @@ public class BusZpRead_FireBase extends AppCompatActivity {
             Toast.makeText(this, "Проверьте подключение к Интернету", Toast.LENGTH_LONG).show();
         }
 
-        btnPushToServer = (Button) findViewById(R.id.btn_push_to_server);
+       // btnPushToServer = (Button) findViewById(R.id.btn_push_to_server);
         recyclerView =  findViewById(R.id.bus_list);
 
         database = FirebaseDatabase.getInstance();

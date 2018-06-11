@@ -27,7 +27,6 @@
                     android:background="@drawable/border"
                     android:drawableLeft="@drawable/ic_library_add_grean_24dp"
                     android:onClick="btnAddServices"
-                    android:stateListAnimator="@animator/selector_animator_two"
                     android:text="Добавить услугу" />
             </LinearLayout>
 

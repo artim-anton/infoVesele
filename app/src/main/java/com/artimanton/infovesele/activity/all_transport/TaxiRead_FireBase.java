@@ -29,7 +29,7 @@ public class TaxiRead_FireBase extends AppCompatActivity {
     private RecyclerView recyclerView;
     private List<TaxiModel> result;
     private TaxiAdapter adapter;
-    private Button btnPushToServer;
+//    private Button btnPushToServer;
 
     private FirebaseDatabase database;
     private DatabaseReference reference;
@@ -43,7 +43,7 @@ public class TaxiRead_FireBase extends AppCompatActivity {
             Toast.makeText(this, "Проверьте подключение к Интернету", Toast.LENGTH_LONG).show();
         }
 
-        btnPushToServer = (Button) findViewById(R.id.btn_push_to_server);
+       // btnPushToServer = (Button) findViewById(R.id.btn_push_to_server);
 
         database = FirebaseDatabase.getInstance();
         reference = database.getReference("transport/taxi");

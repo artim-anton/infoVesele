@@ -6,50 +6,51 @@
     android:layout_height="wrap_content"
     android:orientation="vertical">
 
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal">
-
-    <EditText
-        android:id="@+id/et_info_advert"
-        android:layout_width="0dp"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="5dp"
-        android:layout_marginTop="5dp"
-        android:layout_weight="4"
-        android:enabled="false"
-        android:inputType="text"
-        android:text="Продам Славуту"
-        android:textSize="18sp"
-        android:textColor="@color/colorTime"/>
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/et_info_advert"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="4"
+            android:enabled="false"
+            android:inputType="text"
+            android:text="Продам Славуту"
+            android:textColor="@color/colorTime"
+            android:textSize="14sp" />
 
 
-    <EditText
-        android:id="@+id/et_phone"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="5dp"
-        android:layout_marginTop="5dp"
-        android:layout_weight="3"
-        android:enabled="false"
-        android:inputType="phone"
-        android:text="0978792587"
-        android:textSize="18sp"
-        android:textColor="@color/colorPhone" />
-    <ImageButton
-        android:id="@+id/btn_call"
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_marginLeft="5dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginRight="5dp"
-        android:layout_weight="1.5"
-        android:src="@drawable/ic_call_black_24dp"
-        android:background="@drawable/border"
-        android:text="CL"
-        android:textSize="18sp"/>
-</LinearLayout>
+        <EditText
+            android:id="@+id/et_phone"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="3"
+            android:enabled="false"
+            android:inputType="phone"
+            android:text="0978792587"
+            android:textColor="@color/colorPhone"
+            android:textSize="14sp" />
+
+        <ImageButton
+            android:id="@+id/btn_call"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1.5"
+            android:background="@drawable/border"
+            android:src="@drawable/ic_call_black_24dp"
+            android:text="CL"
+            android:textSize="18sp" />
+    </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -63,17 +64,17 @@
             android:layout_marginBottom="5dp"
             android:layout_weight="3"
             android:text="продам Славуту люкс, 2005 года, состояние хорошое, летняя и зимняя резина, стеклоподъемники, мощная акустика"
-            android:textSize="14sp" />
+            android:textSize="12sp" />
         <TextView
             android:id="@+id/et_price"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_marginLeft="5dp"
-            android:layout_marginTop="5dp"
+            android:layout_margin="5dp"
             android:layout_weight="1"
             android:inputType="text"
             android:text="2000 y.e."
-            android:textSize="18sp"
-            android:textColor="@color/colorTime"/>
+            android:gravity="center_vertical|center_horizontal"
+            android:textSize="14sp"
+            android:textColor="@color/black"/>
     </LinearLayout>
 </LinearLayout>

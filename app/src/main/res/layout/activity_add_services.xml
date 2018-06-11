@@ -44,7 +44,7 @@
         android:padding="10dp"
         android:text="По вопросам размещения рекламы и сотрудничества обращаться по номеру:"
         android:textColor="@color/black"
-        android:textSize="24dp" />
+        android:textSize="20sp" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -62,7 +62,7 @@
             android:inputType="phone"
             android:text="0978792587"
             android:textColor="@color/colorPhone"
-            android:textSize="24sp" />
+            android:textSize="20sp" />
 
         <ImageButton
             android:id="@+id/btn_call_reclame"
@@ -77,6 +77,6 @@
             android:background="@drawable/border"
             android:src="@drawable/ic_call_black_24dp"
             android:text="CL"
-            android:textSize="18sp" />
+            android:textSize="20sp" />
     </LinearLayout>
 </LinearLayout>
