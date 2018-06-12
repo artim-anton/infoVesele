@@ -19,7 +19,7 @@
             android:layout_marginTop="5dp"
             android:layout_weight="4"
             android:enabled="false"
-            android:inputType="text"
+            android:inputType="textMultiLine"
             android:text="Продам Славуту"
             android:textColor="@color/colorTime"
             android:textSize="14sp" />
@@ -31,7 +31,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
             android:layout_marginTop="5dp"
-            android:layout_weight="3"
+            android:layout_weight="4"
             android:enabled="false"
             android:inputType="phone"
             android:text="0978792587"
@@ -64,7 +64,7 @@
             android:layout_marginBottom="5dp"
             android:layout_weight="3"
             android:text="продам Славуту люкс, 2005 года, состояние хорошое, летняя и зимняя резина, стеклоподъемники, мощная акустика"
-            android:textSize="12sp" />
+            android:textSize="14sp" />
         <TextView
             android:id="@+id/et_price"
             android:layout_width="0dp"
