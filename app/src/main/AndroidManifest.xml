@@ -7,11 +7,13 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="com.android.vending.BILLING" />
+
 
     <application
         android:name="com.artimanton.InfoVesele"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
@@ -110,6 +112,7 @@
         <activity
             android:name=".activity.all_services.DevelopmentActivity"
             android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".activity.all_transport.FuelingActivity"></activity>
         <activity android:name=".activity.BillingActivity"></activity>
     </application>
 

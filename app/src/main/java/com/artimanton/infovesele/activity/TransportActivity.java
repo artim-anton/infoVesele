@@ -11,6 +11,7 @@ import android.widget.Toast;
 import com.artimanton.infovesele.R;
 import com.artimanton.infovesele.activity.all_transport.BusCity;
 import com.artimanton.infovesele.activity.all_transport.DeliveryService;
+import com.artimanton.infovesele.activity.all_transport.FuelingActivity;
 import com.artimanton.infovesele.activity.all_transport.TaxiRead_FireBase;
 import com.artimanton.infovesele.activity.all_transport.Train;
 
@@ -79,6 +80,11 @@ public class TransportActivity extends BaseActivity {
 
     public void btDelivery(View view) {
         Intent intent = new Intent(TransportActivity.this, DeliveryService.class);
+        startActivity(intent);
+    }
+
+    public void btFueling(View view) {
+        Intent intent = new Intent(TransportActivity.this, FuelingActivity.class);
         startActivity(intent);
     }
 }

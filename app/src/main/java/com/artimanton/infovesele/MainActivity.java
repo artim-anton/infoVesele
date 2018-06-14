@@ -47,9 +47,9 @@ public class MainActivity extends AppCompatActivity {
             String urlHome = "https://veselivska-gromada.gov.ua/news/";
             try {
                 Document document = Jsoup.connect(urlHome).get();
-                Elements element = document.select("div[class=pageLister]");
-                String lastPage = element.select("li>a[class=last]").attr("href");
-                int count = Integer.parseInt(lastPage.replace("?p=",""));
+                //Elements element = document.select("div[class=pageLister]");
+                //String lastPage = element.select("li>a[class=last]").attr("href");
+                //int count = Integer.parseInt(lastPage.replace("?p=",""));
 
                 for (int i = 1; i <= 3; i++) {
                     String url = "https://veselivska-gromada.gov.ua/news/?p=" + i;

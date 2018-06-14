@@ -66,6 +66,20 @@
             android:text="Службы доставки"
             android:textSize="@dimen/title_transport"
             android:textStyle="italic" />
+
+        <Button
+            android:id="@+id/btn_fueling_service"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/border"
+            android:drawableLeft="@drawable/ic_ev_station_black_24dp"
+            android:gravity="center|center_vertical"
+            android:onClick="btFueling"
+            android:paddingLeft="10dp"
+            android:text="Заправки"
+            android:textSize="@dimen/title_transport"
+            android:textStyle="italic" />
     </LinearLayout>
 
     <include layout="@layout/bottom_navigation_view"/>
