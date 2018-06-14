@@ -143,7 +143,7 @@ public class AdvertVeseleActivity extends BaseActivity {
     }
 
     public void btnAddAdvert(View view) {
-        Intent intent = new Intent(AdvertVeseleActivity.this, AddAdvertVeseleActivity.class);
+        Intent intent = new Intent(AdvertVeseleActivity.this, BillingActivity.class);
         startActivity(intent);
     }
 }

@@ -16,4 +16,7 @@
     <string name="organization_of_holidays">Организация \n праздников</string>
     <string name="development">Разработка\n приложений</string>
 
+    <string name="wait">wait…</string>
+    <string name="title">Sample Activity #%d</string>
+
 </resources>

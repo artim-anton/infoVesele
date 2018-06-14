@@ -109,7 +109,8 @@
             android:windowSoftInputMode="stateHidden" />
         <activity
             android:name=".activity.all_services.DevelopmentActivity"
-            android:windowSoftInputMode="stateHidden"></activity>
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".activity.BillingActivity"></activity>
     </application>
 
 </manifest>
