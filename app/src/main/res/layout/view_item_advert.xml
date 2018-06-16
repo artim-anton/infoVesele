@@ -20,7 +20,7 @@
             android:layout_weight="4"
             android:enabled="false"
             android:inputType="textMultiLine"
-            android:text="Продам Славуту"
+            android:text="Продам Славуту Люкс"
             android:textColor="@color/colorTime"
             android:textSize="14sp" />
 
@@ -28,12 +28,12 @@
         <EditText
             android:id="@+id/et_phone"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_marginLeft="5dp"
             android:layout_marginTop="5dp"
             android:layout_weight="4"
             android:enabled="false"
-            android:inputType="phone"
+            android:inputType="phone|textMultiLine"
             android:text="0978792587"
             android:textColor="@color/colorPhone"
             android:textSize="14sp" />

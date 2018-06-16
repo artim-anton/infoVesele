@@ -1,6 +1,8 @@
 package com.artimanton.infovesele.activity;
 
+import android.content.Intent;
 import android.content.res.Configuration;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -93,7 +95,7 @@ public class HomeActivity extends BaseActivity {
         }
 
         @Override
-        public void onBindViewHolder(RVAdapter.NewsViewHolder holder, int position) {
+        public void onBindViewHolder(RVAdapter.NewsViewHolder holder, final int position) {
 
 
             holder.nameNews.setText(mNews.get(position).getNameNews().toString());
@@ -104,7 +106,18 @@ public class HomeActivity extends BaseActivity {
                     .load(mNews.get(position).getLinkImageNews())
                     .resize(800,0)
                     .centerInside()
-                    .into(holder.imageNews);}
+                    .into(holder.imageNews);
+            holder.imageNews.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent();
+                    intent.setAction(Intent.ACTION_VIEW);
+                    intent.addCategory(Intent.CATEGORY_BROWSABLE);
+                    intent.setData(Uri.parse(mNews.get(position).getLinkPageNews().toString()));
+                    startActivity(intent);
+                }
+            });
+            }
         }
 
         @Override
