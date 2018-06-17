@@ -35,8 +35,8 @@ public class BillingActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_billing);
 
-        TextView title = (TextView)findViewById(R.id.titleTextView);
-        title.setText(String.format(getString(R.string.title), getIntent().getIntExtra(ACTIVITY_NUMBER, 1)));
+        //TextView title = (TextView)findViewById(R.id.titleTextView);
+        //title.setText(String.format(getString(R.string.title), getIntent().getIntExtra(ACTIVITY_NUMBER, 1)));
 
         if(!BillingProcessor.isIabServiceAvailable(this)) {
             showToast("In-app billing service is unavailable, please upgrade Android Market/Play to version >= 3.9.16");
@@ -45,8 +45,8 @@ public class BillingActivity extends Activity {
         bp = new BillingProcessor(this, LICENSE_KEY, MERCHANT_ID, new BillingProcessor.IBillingHandler() {
             @Override
             public void onProductPurchased(String productId,TransactionDetails details) {
-                showToast("onProductPurchased: " + productId);
-                updateTextViews();
+                //showToast("onProductPurchased: " + productId);
+                //updateTextViews();
             }
             @Override
             public void onBillingError(int errorCode, Throwable error) {
@@ -54,9 +54,9 @@ public class BillingActivity extends Activity {
             }
             @Override
             public void onBillingInitialized() {
-                showToast("onBillingInitialized");
+               // showToast("onBillingInitialized");
                 readyToPurchase = true;
-                updateTextViews();
+                //updateTextViews();
             }
             @Override
             public void onPurchaseHistoryRestored() {
@@ -65,17 +65,17 @@ public class BillingActivity extends Activity {
                     Log.d(LOG_TAG, "Owned Managed Product: " + sku);
                 for(String sku : bp.listOwnedSubscriptions())
                     Log.d(LOG_TAG, "Owned Subscription: " + sku);
-                updateTextViews();
+               // updateTextViews();
             }
         });
     }
 
-    @Override
-    protected void onResume() {
+  /*   @Override
+   protected void onResume() {
         super.onResume();
 
         updateTextViews();
-    }
+    }*/
 
     @Override
     public void onDestroy() {
@@ -90,12 +90,12 @@ public class BillingActivity extends Activity {
             super.onActivityResult(requestCode, resultCode, data);
     }
 
-    private void updateTextViews() {
+   /* private void updateTextViews() {
         TextView text = (TextView)findViewById(R.id.productIdTextView);
         text.setText(String.format("%s is%s purchased", PRODUCT_ID, bp.isPurchased(PRODUCT_ID) ? "" : " not"));
         text = (TextView)findViewById(R.id.subscriptionIdTextView);
         text.setText(String.format("%s is%s subscribed", SUBSCRIPTION_ID, bp.isSubscribed(SUBSCRIPTION_ID) ? "" : " not"));
-    }
+    }*/
 
     private void showToast(String message) {
         Toast.makeText(this, message, Toast.LENGTH_LONG).show();
@@ -107,7 +107,7 @@ public class BillingActivity extends Activity {
             return;
         }
         switch (v.getId()) {
-            case R.id.purchaseButton:
+            /*case R.id.purchaseButton:
                 bp.purchase(this,PRODUCT_ID);
                 break;
             case R.id.consumeButton:
@@ -119,11 +119,11 @@ public class BillingActivity extends Activity {
             case R.id.productDetailsButton:
                 SkuDetails sku = bp.getPurchaseListingDetails(PRODUCT_ID);
                 showToast(sku != null ? sku.toString() : "Failed to load SKU details");
-                break;
+                break;*/
             case R.id.subscribeButton:
                 bp.subscribe(this,SUBSCRIPTION_ID);
                 break;
-            case R.id.updateSubscriptionsButton:
+            /*case R.id.updateSubscriptionsButton:
                 if (bp.loadOwnedPurchasesFromGoogle()) {
                     showToast("Subscriptions updated.");
                     updateTextViews();
@@ -137,8 +137,12 @@ public class BillingActivity extends Activity {
                 startActivity(new Intent(this, BillingActivity.class).putExtra(ACTIVITY_NUMBER, getIntent().getIntExtra(ACTIVITY_NUMBER, 1) + 1));
                 break;
             default:
-                break;
+                break;*/
         }
+    }
+
+    public void backButton(View view) {
+        finish();
     }
 
 }

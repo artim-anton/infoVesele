@@ -8,9 +8,10 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:gravity="center_horizontal"
-        tools:context=".MainActivity" >
+        tools:context=".MainActivity"
+        android:padding="10dp">
 
-        <TextView
+        <!--<TextView
             android:id="@+id/titleTextView"
             android:layout_marginTop="10dp"
             android:layout_width="wrap_content"
@@ -78,7 +79,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Subscriptions" />
+            android:text="Подписка" />
 
         <TextView
             android:id="@+id/subscriptionIdTextView"
@@ -117,8 +118,35 @@
                 android:onClick="onClick"
                 android:id="@+id/subsDetailsButton"/>
 
-        </LinearLayout>
+        </LinearLayout>-->
+        <include layout="@layout/top_toolbar_view"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:textSize="16dp"
+            android:text="Фунция добавить обьявление платная, оформите подписку, чтобы иметь возможность, размещать обявления."/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:text="Оформить подписку на 1 месяц"
+            android:padding="10dp"
+            android:id="@+id/subscribeButton"
+            android:onClick="onClick"
+            android:layout_marginRight="20dp" />
 
     </LinearLayout>
+
+    </LinearLayout>
+
 
 </ScrollView>
