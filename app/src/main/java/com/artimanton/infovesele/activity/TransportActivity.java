@@ -46,9 +46,9 @@ public class TransportActivity extends BaseActivity {
                                            int[] grantResults) {
         if (requestCode == REQUEST_READ_PHONE_STATE) {
             if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                Toast.makeText(TransportActivity.this, "Разрешения получены", Toast.LENGTH_LONG).show();
+                //Toast.makeText(TransportActivity.this, "Разрешения получены", Toast.LENGTH_LONG).show();
             } else {
-                Toast.makeText(TransportActivity.this, "Разрешения не получены", Toast.LENGTH_LONG).show();
+                //Toast.makeText(TransportActivity.this, "Разрешения не получены", Toast.LENGTH_LONG).show();
             }
         } else {
             super.onRequestPermissionsResult(requestCode, permissions, grantResults);
@@ -87,4 +87,5 @@ public class TransportActivity extends BaseActivity {
         Intent intent = new Intent(TransportActivity.this, FuelingActivity.class);
         startActivity(intent);
     }
+
 }

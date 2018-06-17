@@ -9,7 +9,6 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="com.android.vending.BILLING" />
 
-
     <application
         android:name="com.artimanton.InfoVesele"
         android:allowBackup="true"
@@ -112,8 +111,10 @@
         <activity
             android:name=".activity.all_services.DevelopmentActivity"
             android:windowSoftInputMode="stateHidden" />
-        <activity android:name=".activity.all_transport.FuelingActivity"></activity>
-        <activity android:name=".activity.BillingActivity"></activity>
+        <activity android:name=".activity.all_transport.FuelingActivity" />
+        <activity android:name=".activity.BillingActivity" />
+        <activity android:name=".activity.OrganizationActivity" />
+        <activity android:name=".activity.all_organization.WatercanalActivity"></activity>
     </application>
 
 </manifest>

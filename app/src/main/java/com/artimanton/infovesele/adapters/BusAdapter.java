@@ -21,6 +21,8 @@ import com.artimanton.infovesele.model.BusModel;
 import java.util.List;
 
 public class BusAdapter extends RecyclerView.Adapter<BusAdapter.BusViewHolder> {
+    private static final int REQUEST_READ_PHONE_STATE = 10001;
+    private static final String READ_PHONE_STATE_PERMISSION = Manifest.permission.READ_PHONE_STATE;
     private List<BusModel> list;
     BusZpRead_FireBase activity;
 
