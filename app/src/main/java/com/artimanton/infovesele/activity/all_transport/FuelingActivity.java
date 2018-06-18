@@ -7,11 +7,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Gravity;
+import android.widget.ImageView;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
 
 import com.artimanton.infovesele.R;
+import com.squareup.picasso.Picasso;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -30,13 +32,27 @@ public class FuelingActivity extends AppCompatActivity {
     String urlAzsTwo = "https://www.azski.com.ua/networks/zog/32";
     String AzsNameOne, AzsNameTwo;
     String RelevanceOne, RelevanceTwo;
+    ImageView imageAvias;
+    ImageView imageZog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fueling);
 
+        imageAvias = (ImageView) findViewById(R.id.img_avias);
+        imageZog = (ImageView) findViewById(R.id.img_zog);
+
+        Picasso.get()
+                .load("https://www.azski.com.ua/images/networks/avias.jpg")
+                .into(imageAvias);
+        Picasso.get()
+                .load("https://www.azski.com.ua/images/networks/zog.jpg")
+                .into(imageZog);
+
         new MyTask().execute();
+
+
     }
 
     class MyTask extends AsyncTask<Void, Void, Void> {

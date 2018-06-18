@@ -32,10 +32,9 @@
     </android.support.v7.widget.Toolbar>
 
     <ImageView
-        android:id="@+id/reclame"
+        android:id="@+id/img_reclame"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:src="@drawable/reclame"/>
+        android:layout_height="wrap_content"/>
 
     <TextView
         android:layout_width="wrap_content"

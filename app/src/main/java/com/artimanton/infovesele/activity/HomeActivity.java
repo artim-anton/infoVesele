@@ -119,7 +119,7 @@ public class HomeActivity extends BaseActivity {
             Picasso.get()
                     .load(mNews.get(position).getLinkImageNews())
                     .resize(800,0)
-                    .centerInside()
+                    //.centerInside()
                     .into(holder.imageNews);
             holder.imageNews.setOnClickListener(new View.OnClickListener() {
                 @Override

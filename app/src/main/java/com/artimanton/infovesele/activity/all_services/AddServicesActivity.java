@@ -10,17 +10,25 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageView;
 
 import com.artimanton.infovesele.R;
+import com.squareup.picasso.Picasso;
 
 public class AddServicesActivity extends AppCompatActivity {
     EditText etPhoneReclame;
+    ImageView imageReclame;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_services);
+        imageReclame= (ImageView) findViewById(R.id.img_reclame);
+
+        Picasso.get()
+                .load("https://drogmedia.net.ua/wp-content/uploads/2017/10/Reklama-na-bloge-dlya-vas-po-dostupny-m-tsenam.png")
+                .into(imageReclame);
 
 
         /*Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);

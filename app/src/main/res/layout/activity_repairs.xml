@@ -20,7 +20,6 @@
         android:layout_width="0dp"
         android:layout_height="200dp"
         android:padding="10dp"
-        android:src="@drawable/pc_master"
         app:layout_constraintTop_toBottomOf="@id/btn_repairs"/>
 
     <android.support.constraint.ConstraintLayout
