@@ -47,7 +47,6 @@ public class AddServicesActivity extends AppCompatActivity {
 
     public void btnCallReclame(View view) {
         etPhoneReclame = (EditText) findViewById(R.id.et_phone_reclame);
-        //String phone = "0978792587";
         String phone = etPhoneReclame.getText().toString();
         Intent intent = new Intent(Intent.ACTION_CALL, Uri.fromParts("tel", phone, null));
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {

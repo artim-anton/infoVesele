@@ -5,6 +5,7 @@ import android.os.AsyncTask;
 import android.os.PersistableBundle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.artimanton.infovesele.activity.HomeActivity;
@@ -17,6 +18,7 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 import java.io.IOException;
+import java.time.Instant;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -26,6 +28,9 @@ public class MainActivity extends AppCompatActivity {
     private List<NewsModel> listNews = new ArrayList<>();
     private NewsModel newsModel;
 
+    private ProgressBar progressBar;
+    Integer count =1;
+
     public void onSaveInstanceState(Bundle outState, PersistableBundle outPersistentState) {
         super.onSaveInstanceState(outState, outPersistentState);
         Toast.makeText(this, "onSaveInstanceState", Toast.LENGTH_SHORT).show();
@@ -34,24 +39,41 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.splash);
+        progressBar = (ProgressBar) findViewById(R.id.progressbar);
+
 
         SugarORM.deleteTables();
 
         new ParseAllNews().execute();
     }
 
-    class ParseAllNews extends AsyncTask<Void, Void, Void> {
+    class ParseAllNews extends AsyncTask<Void, Integer, Integer> {
 
         @Override
-        protected Void doInBackground(Void... voids) {
+        protected void onPreExecute() {
+            super.onPreExecute();
+            progressBar.setMax(3);
+
+        }
+
+        @Override
+        protected void onProgressUpdate(Integer... values) {
+            super.onProgressUpdate(values);
+            progressBar.setProgress(values[0]);
+        }
+
+        @Override
+        protected Integer doInBackground(Void... voids) {
             String urlHome = "https://veselivska-gromada.gov.ua/news/";
             try {
+
                 Document document = Jsoup.connect(urlHome).get();
                 //Elements element = document.select("div[class=pageLister]");
                 //String lastPage = element.select("li>a[class=last]").attr("href");
                 //int count = Integer.parseInt(lastPage.replace("?p=",""));
 
                 for (int i = 1; i <= 3; i++) {
+                    publishProgress(i);
                     String url = "https://veselivska-gromada.gov.ua/news/?p=" + i;
                     itemNews(url);
                 }
@@ -63,8 +85,8 @@ public class MainActivity extends AppCompatActivity {
         }
 
         @Override
-        protected void onPostExecute(Void aVoid) {
-            super.onPostExecute(aVoid);
+        protected void onPostExecute(Integer integer) {
+            super.onPostExecute(integer);
 
             Intent intent = new Intent(MainActivity.this, HomeActivity.class);
             //intent.putParcelableArrayListExtra("news", (ArrayList<? extends Parcelable>) listNews);
@@ -72,6 +94,7 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
             finish();
         }
+
 
         private void itemNews(String url){
             try {
