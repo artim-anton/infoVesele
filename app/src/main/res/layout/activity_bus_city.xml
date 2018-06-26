@@ -13,7 +13,6 @@
         android:layout_height="wrap_content"
         android:onClick="Zp"
         android:text="Веселое - Запорожье"
-        android:textStyle="italic"
         android:gravity="center|center_vertical"
         android:textSize="@dimen/title_city_bus"
         android:drawableLeft="@drawable/ic_location_city_selector"
@@ -27,7 +26,6 @@
         android:layout_height="wrap_content"
         android:onClick="Melitopol"
         android:text="Веселое - Мелитополь"
-        android:textStyle="italic"
         android:gravity="center|center_vertical"
         android:textSize="@dimen/title_city_bus"
         android:drawableLeft="@drawable/ic_location_city_selector"
@@ -40,7 +38,6 @@
         android:layout_height="wrap_content"
         android:onClick="Zp_back"
         android:text="Запорожье - Веселое"
-        android:textStyle="italic"
         android:gravity="center|center_vertical"
         android:textSize="@dimen/title_city_bus"
         android:drawableLeft="@drawable/ic_location_city_selector"
@@ -54,15 +51,12 @@
         android:layout_height="wrap_content"
         android:onClick="Melitopol_back"
         android:text="Мелитополь - Веселое"
-        android:textStyle="italic"
         android:gravity="center|center_vertical"
         android:textSize="@dimen/title_city_bus"
         android:drawableLeft="@drawable/ic_location_city_selector"
         android:background="@drawable/border"
         android:layout_margin="10dp"
         android:paddingLeft="10dp"/>
-
-
 
 
 </LinearLayout>

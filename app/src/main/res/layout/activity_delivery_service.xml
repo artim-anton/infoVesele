@@ -18,7 +18,6 @@
         android:paddingLeft="10dp"
         android:text="Службы доставки"
         android:textSize="20sp"
-        android:textStyle="italic"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

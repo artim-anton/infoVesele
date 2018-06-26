@@ -73,9 +73,9 @@ public class MainActivity extends AppCompatActivity {
                 //int count = Integer.parseInt(lastPage.replace("?p=",""));
 
                 for (int i = 1; i <= 3; i++) {
-                    publishProgress(i);
                     String url = "https://veselivska-gromada.gov.ua/news/?p=" + i;
                     itemNews(url);
+                    publishProgress(i);
                 }
 
             } catch (IOException e) {

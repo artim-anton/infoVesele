@@ -22,4 +22,5 @@ public class OrganizationActivity extends BaseActivity {
         Intent intent = new Intent(OrganizationActivity.this, WatercanalActivity.class);
         startActivity(intent);
     }
+
 }

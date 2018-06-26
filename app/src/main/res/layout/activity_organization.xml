@@ -23,8 +23,7 @@
             android:onClick="btnWatercanal"
             android:paddingLeft="10dp"
             android:text="@string/watercanal"
-            android:textSize="@dimen/title_transport"
-            android:textStyle="italic" />
+            android:textSize="@dimen/title_transport"/>
 
     </LinearLayout>
 

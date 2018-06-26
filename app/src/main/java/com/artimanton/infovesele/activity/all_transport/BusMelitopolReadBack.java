@@ -6,6 +6,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.artimanton.infovesele.R;
@@ -17,6 +18,7 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -31,6 +33,7 @@ public class BusMelitopolReadBack extends AppCompatActivity {
 
     private FirebaseDatabase database;
     private DatabaseReference reference;
+    ImageView imageMelitopolBack;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +43,12 @@ public class BusMelitopolReadBack extends AppCompatActivity {
         if (!Internet.isOnline(this)){
             Toast.makeText(this, "Проверьте подключение к Интернету", Toast.LENGTH_LONG).show();
         }
+
+        imageMelitopolBack = (ImageView) findViewById(R.id.img_melitopol_back);
+
+        Picasso.get()
+                .load("http://s1vesele.ucoz.net/infoVesele/melitopol_back.jpg")
+                .into(imageMelitopolBack);
 
     //    btnPushToServer = (Button) findViewById(R.id.btn_push_to_server);
 
