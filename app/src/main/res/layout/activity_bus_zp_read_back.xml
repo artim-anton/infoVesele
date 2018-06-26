@@ -263,7 +263,7 @@
                 android:layout_weight="4"
                 android:enabled="false"
                 android:inputType="phone"
-                android:text="0973368166"
+                android:text="0674184728"
                 android:textColor="@color/colorPhone"
                 android:textSize="18sp" />
 
@@ -322,7 +322,7 @@
                 android:layout_weight="4"
                 android:enabled="false"
                 android:inputType="phone"
-                android:text="0973368166"
+                android:text="0681959239"
                 android:textColor="@color/colorPhone"
                 android:textSize="18sp" />
 
@@ -416,9 +416,13 @@
              android:text="Сохранить" />-->
     </LinearLayout>
 
-
-
-
-
+    <ImageView
+        android:id="@+id/img_zp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:scaleType="fitStart"
+        android:adjustViewBounds="true"
+        android:layout_gravity="center_horizontal"/>
 </LinearLayout>
 </ScrollView>

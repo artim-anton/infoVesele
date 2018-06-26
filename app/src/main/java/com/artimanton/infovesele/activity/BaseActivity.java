@@ -33,7 +33,7 @@ abstract class BaseActivity extends AppCompatActivity {
                 Class ActivityToOpen = null;
                 switch (item.getItemId()) {
                     case R.id.nav_item_home:
-                        ActivityToOpen = HomeActivity.class;
+                        ActivityToOpen = HomeActivityWeb.class;
                         break;
                     case R.id.nav_item_transport:
                         ActivityToOpen = TransportActivity.class;

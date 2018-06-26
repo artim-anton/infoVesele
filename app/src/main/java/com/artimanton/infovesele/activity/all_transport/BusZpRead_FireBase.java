@@ -13,6 +13,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.artimanton.infovesele.R;
@@ -25,6 +26,7 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -45,6 +47,7 @@ public class BusZpRead_FireBase extends AppCompatActivity {
     private EditText etCallZpReadTwo;
     private EditText etCallZpReadThree;
     private EditText etCallZpReadFour;
+    ImageView imageZp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,7 +56,14 @@ public class BusZpRead_FireBase extends AppCompatActivity {
 
         if (!Internet.isOnline(this)){
             Toast.makeText(this, "Проверьте подключение к Интернету", Toast.LENGTH_LONG).show();
+
         }
+
+        imageZp = (ImageView) findViewById(R.id.img_zp);
+
+        Picasso.get()
+                .load("http://s1vesele.ucoz.net/infoVesele/zp_white_svan.jpg")
+                .into(imageZp);
 
        // btnPushToServer = (Button) findViewById(R.id.btn_push_to_server);
         recyclerView =  findViewById(R.id.bus_list);

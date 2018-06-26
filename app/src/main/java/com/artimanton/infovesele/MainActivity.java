@@ -2,6 +2,7 @@ package com.artimanton.infovesele;
 
 import android.content.Intent;
 import android.os.AsyncTask;
+import android.os.Handler;
 import android.os.PersistableBundle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -9,6 +10,7 @@ import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.artimanton.infovesele.activity.HomeActivity;
+import com.artimanton.infovesele.activity.HomeActivityWeb;
 import com.artimanton.infovesele.db.SugarORM;
 import com.artimanton.infovesele.model.NewsModel;
 
@@ -24,12 +26,12 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    private String MY_LOG = "myLog";
-    private List<NewsModel> listNews = new ArrayList<>();
-    private NewsModel newsModel;
+   // private String MY_LOG = "myLog";
+    //private List<NewsModel> listNews = new ArrayList<>();
+    //private NewsModel newsModel;
 
-    private ProgressBar progressBar;
-    Integer count =1;
+    //private ProgressBar progressBar;
+    //Integer count = 1;
 
     public void onSaveInstanceState(Bundle outState, PersistableBundle outPersistentState) {
         super.onSaveInstanceState(outState, outPersistentState);
@@ -39,15 +41,24 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.splash);
-        progressBar = (ProgressBar) findViewById(R.id.progressbar);
+        //progressBar = (ProgressBar) findViewById(R.id.progressbar);
 
 
-        SugarORM.deleteTables();
+        //SugarORM.deleteTables();
 
-        new ParseAllNews().execute();
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                Intent i = new Intent(MainActivity.this, HomeActivityWeb.class);
+                startActivity(i);
+                finish();
+            }
+        }, 1*1000);
+
+        //new ParseAllNews().execute();
     }
 
-    class ParseAllNews extends AsyncTask<Void, Integer, Integer> {
+   /* class ParseAllNews extends AsyncTask<Void, Integer, Integer> {
 
         @Override
         protected void onPreExecute() {
@@ -68,9 +79,9 @@ public class MainActivity extends AppCompatActivity {
             try {
 
                 Document document = Jsoup.connect(urlHome).get();
-                //Elements element = document.select("div[class=pageLister]");
-                //String lastPage = element.select("li>a[class=last]").attr("href");
-                //int count = Integer.parseInt(lastPage.replace("?p=",""));
+                Elements element = document.select("div[class=pageLister]");
+                String lastPage = element.select("li>a[class=last]").attr("href");
+                int count = Integer.parseInt(lastPage.replace("?p=",""));
 
                 for (int i = 1; i <= 3; i++) {
                     String url = "https://veselivska-gromada.gov.ua/news/?p=" + i;
@@ -88,7 +99,7 @@ public class MainActivity extends AppCompatActivity {
         protected void onPostExecute(Integer integer) {
             super.onPostExecute(integer);
 
-            Intent intent = new Intent(MainActivity.this, HomeActivity.class);
+            Intent intent = new Intent(MainActivity.this, HomeActivityWeb.class);
             //intent.putParcelableArrayListExtra("news", (ArrayList<? extends Parcelable>) listNews);
             intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(intent);
@@ -100,10 +111,10 @@ public class MainActivity extends AppCompatActivity {
             try {
                 String linkPageNews, linkImageNews, nameNews;
                 Document document = Jsoup.connect(url).get();
-                Elements els =  document.select("div[class=col-xs-12]>div[id=content_block]>div[class=one_object_news]");
+                Elements els =  document.select("div[class=col-xs-12]>div[id=content_block]>div[class=one_news]");
                 Elements elsGrayBlock =  document.select("div[class=col-xs-12]>div[id=content_block]>div[class=one_object_news grey_block]");
 
-                for (Element elj : elsGrayBlock){
+                 for (Element elj : elsGrayBlock){
                     linkPageNews = elj.select("div[class=row]>div[class=col-sm-4]>a").attr("href");
                     linkImageNews = elj.select("div[class=row]>div[class=col-sm-4]>a>img").attr("src");
                     nameNews = elj.select("div[class=row]>div[class=col-sm-8]>p>a").text();
@@ -115,7 +126,7 @@ public class MainActivity extends AppCompatActivity {
                 }
 
                 for (Element el : els) {
-                    linkPageNews = el.select("div[class=row]>div[class=col-sm-4]>a").attr("href");
+                    linkPageNews = el.select("div[class=row]>div[class=grid-30]>a").attr("href");
                     linkImageNews = el.select("div[class=row]>div[class=col-sm-4]>a>img").attr("src");
                     nameNews = el.select("div[class=row]>div[class=col-sm-8]>p>a").text();
 
@@ -132,5 +143,5 @@ public class MainActivity extends AppCompatActivity {
                 e.printStackTrace();
             }
         }
-    }
+    }*/
 }

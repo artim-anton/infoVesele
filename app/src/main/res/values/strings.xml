@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Мое Веселое</string>
+    <string name="app_name">Моё Веселое</string>
     <string name="btn_traffic">Траспорт</string>
     <string name="title_activity_train">Train</string>
     <string name="title_activity_tr_bus">TrBus</string>

@@ -3,9 +3,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.artimanton.infovesele">
 
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission
+        android:name="android.permission.READ_PHONE_STATE"
+        android:required="false" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission
+        android:name="android.permission.CALL_PHONE"
+        android:required="false" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="com.android.vending.BILLING" />
 
@@ -35,7 +39,6 @@
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
@@ -117,7 +120,10 @@
         <activity android:name=".activity.all_transport.FuelingActivity" />
         <activity android:name=".activity.BillingActivity" />
         <activity android:name=".activity.OrganizationActivity" />
-        <activity android:name=".activity.all_organization.WatercanalActivity"></activity>
+        <activity android:name=".activity.all_organization.WatercanalActivity" />
+        <activity android:name=".activity.HomeActivityWeb" />
+        <activity android:name=".activity.all_transport.BusNewBogdanovka" />
+        <activity android:name=".activity.all_transport.BusBardyansk"></activity>
     </application>
 
 </manifest>
