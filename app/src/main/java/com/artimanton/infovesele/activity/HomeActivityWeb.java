@@ -5,8 +5,10 @@ import android.content.pm.PackageManager;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.artimanton.infovesele.R;
@@ -27,6 +29,14 @@ public class HomeActivityWeb extends BaseActivity {
         mWebView = (WebView) findViewById(R.id.webView);
         mWebView.getSettings().setJavaScriptEnabled(true);
         mWebView.setWebViewClient(new MyWebViewClient());
+        mWebView.setWebViewClient(new WebViewClient(){
+
+            public void onPageFinished(WebView view,String url){
+                ProgressBar progressbar = (ProgressBar) findViewById(R.id.progress_bar);
+                progressbar.setVisibility(View.GONE);
+            }
+        });
+
         mWebView.loadUrl("https://veselivska-gromada.gov.ua/news/?p=1");
 
         if ( !Internet.isOnline(this) ){
@@ -78,6 +88,7 @@ public class HomeActivityWeb extends BaseActivity {
             return true;
         }
     }
+
 
     @Override
     public void onBackPressed() {

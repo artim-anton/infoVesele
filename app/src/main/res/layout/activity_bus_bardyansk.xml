@@ -1,9 +1,157 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/myview"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".activity.all_transport.BusBardyansk">
+    android:layout_height="match_parent">
 
-</android.support.constraint.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:context=".activity.all_transport.BusBardyansk">
+
+        <TextView
+            android:id="@+id/tv_to_zp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            android:text="Веселое - Бердянск"
+            android:textColor="@color/green"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_to_zp_avtovokzal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:padding="5dp"
+                android:text="с Автовокзала"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="italic" />
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true">
+
+                <TextView
+                    android:id="@+id/et_time_go_caption_two"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="2"
+                    android:text="отправка"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/et_time_finish_caption_two"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="2"
+                    android:text="прибытие"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/et_phone_caption_two"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="3"
+                    android:text=""
+                    android:textSize="12sp" />
+
+                <ImageButton
+                    android:id="@+id/btn_call_caption_two"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1.2"
+                    android:background="@android:color/transparent"
+                    android:textSize="18sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true">
+
+            <EditText
+                android:id="@+id/et_time_go_zp_read_one"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="2"
+                android:enabled="false"
+                android:inputType="text"
+                android:text="05:40"
+                android:textColor="@color/colorTime"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/et_time_finish_zp_read_one"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="2"
+                android:enabled="false"
+                android:inputType="text"
+                android:text=""
+                android:textColor="@color/colorTime"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/et_phone_zp_read_one"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="4"
+                android:enabled="false"
+                android:inputType="phone"
+                android:text=""
+                android:textColor="@color/colorPhone"
+                android:textSize="18sp" />
+
+            <ImageButton
+                android:id="@+id/btn_call_zp_read_one"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1.2"
+                android:background="@drawable/border"
+                android:onClick="btnCallZpReadOne"
+                android:src="@drawable/ic_call_black_24dp"
+                android:text="CL"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+
+</ScrollView>

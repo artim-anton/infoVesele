@@ -127,7 +127,7 @@
             android:textColor="@color/black"
             android:gravity="center"
             android:textSize="16dp"
-            android:text="Фунция добавить обьявление платная, оформите подписку, чтобы иметь возможность, размещать обявления."/>
+            android:text="Функция добавления объявления платная. Оформите подписку, чтобы иметь возможность размещать объявления. Стоимость 30 грн/мес. Первые 3 дня бесплатно."/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

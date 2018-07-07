@@ -50,7 +50,7 @@ public class BillingActivity extends Activity {
             }
             @Override
             public void onBillingError(int errorCode, Throwable error) {
-                showToast("onBillingError: " + Integer.toString(errorCode));
+                //showToast("onBillingError: " + Integer.toString(errorCode));
             }
             @Override
             public void onBillingInitialized() {

@@ -77,7 +77,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="На Мелитополь" />
+                    android:text="На Мелітополь" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -100,7 +100,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="На Федоровку   " />
+                    android:text="На Федорівку   " />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

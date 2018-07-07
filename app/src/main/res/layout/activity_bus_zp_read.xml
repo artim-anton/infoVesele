@@ -417,7 +417,7 @@
              android:text="Сохранить" />-->
     </LinearLayout>
 
-    <ImageView
+    <com.github.chrisbanes.photoview.PhotoView
         android:id="@+id/img_zp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

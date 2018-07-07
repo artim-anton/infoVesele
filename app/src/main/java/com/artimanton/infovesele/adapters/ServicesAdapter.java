@@ -43,6 +43,8 @@ public class ServicesAdapter extends RecyclerView.Adapter<ServicesAdapter.Servic
     public void onBindViewHolder(final ServicesViewHolder holder, final int position) {
         final ServicesModel services = list.get(position);
         final Context context = holder.itemView.getContext();
+        holder.etInstagram.setText(services.instagram);
+        holder.etFacebook.setText(services.facebook);
         holder.etMoreInfoServices.setText(services.more_info_services);
         holder.etInfoServices.setText(services.info_services);
         holder.etPhone.setText(services.phone);
@@ -95,11 +97,13 @@ public class ServicesAdapter extends RecyclerView.Adapter<ServicesAdapter.Servic
 
     class ServicesViewHolder extends RecyclerView.ViewHolder{
         private EditText etInfoServices, etPhone;
-        private TextView etMoreInfoServices;
+        private TextView etMoreInfoServices,etFacebook, etInstagram;
         private ImageButton btnCall;
 
         private ServicesViewHolder(View itemView) {
             super(itemView);
+            etInstagram = itemView.findViewById(R.id.et_instagram);
+            etFacebook = itemView.findViewById(R.id.et_facebook);
             etMoreInfoServices = itemView.findViewById(R.id.et_more_info_services);
             etInfoServices = itemView.findViewById(R.id.et_info_services);
             etPhone = itemView.findViewById(R.id.et_phone_services);

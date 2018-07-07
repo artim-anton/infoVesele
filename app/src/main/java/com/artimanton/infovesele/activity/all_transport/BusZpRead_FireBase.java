@@ -11,7 +11,6 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
@@ -21,6 +20,7 @@ import com.artimanton.infovesele.adapters.BusAdapter;
 import com.artimanton.infovesele.model.BusModel;
 import com.artimanton.infovesele.permission.Internet;
 import com.artimanton.infovesele.server.MyFireBase;
+import com.github.chrisbanes.photoview.PhotoView;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -47,7 +47,6 @@ public class BusZpRead_FireBase extends AppCompatActivity {
     private EditText etCallZpReadTwo;
     private EditText etCallZpReadThree;
     private EditText etCallZpReadFour;
-    ImageView imageZp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,11 +58,13 @@ public class BusZpRead_FireBase extends AppCompatActivity {
 
         }
 
-        imageZp = (ImageView) findViewById(R.id.img_zp);
+        //ImageView photoView = (ImageView) findViewById(R.id.img_zp);
+
+        final PhotoView photoView = findViewById(R.id.img_zp);
 
         Picasso.get()
                 .load("http://s1vesele.ucoz.net/infoVesele/zp_white_svan.jpg")
-                .into(imageZp);
+                .into(photoView);
 
        // btnPushToServer = (Button) findViewById(R.id.btn_push_to_server);
         recyclerView =  findViewById(R.id.bus_list);

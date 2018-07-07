@@ -13,6 +13,7 @@ import com.artimanton.infovesele.R;
 import com.artimanton.infovesele.adapters.TaxiAdapter;
 import com.artimanton.infovesele.model.TaxiModel;
 import com.artimanton.infovesele.permission.Internet;
+import com.github.chrisbanes.photoview.PhotoView;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -35,7 +36,6 @@ public class TaxiRead_FireBase extends AppCompatActivity {
 
     private FirebaseDatabase database;
     private DatabaseReference reference;
-    ImageView imageViewPcMaster;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,11 +46,11 @@ public class TaxiRead_FireBase extends AppCompatActivity {
             Toast.makeText(this, "Проверьте подключение к Интернету", Toast.LENGTH_LONG).show();
         }
 
-        imageViewPcMaster = (ImageView) findViewById(R.id.img_taxi);
+        final PhotoView photoView = findViewById(R.id.img_taxi);
 
         Picasso.get()
                 .load("http://s1vesele.ucoz.net/infoVesele/taxi_lanos.jpg")
-                .into(imageViewPcMaster);
+                .into(photoView);
 
        // btnPushToServer = (Button) findViewById(R.id.btn_push_to_server);
 

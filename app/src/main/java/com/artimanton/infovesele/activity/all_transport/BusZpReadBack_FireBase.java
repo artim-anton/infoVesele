@@ -25,6 +25,7 @@ import com.artimanton.infovesele.adapters.BusAdapter;
 import com.artimanton.infovesele.model.BusModel;
 import com.artimanton.infovesele.permission.Internet;
 import com.artimanton.infovesele.server.MyFireBase;
+import com.github.chrisbanes.photoview.PhotoView;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -51,7 +52,6 @@ public class BusZpReadBack_FireBase extends AppCompatActivity {
     private EditText etCallZpReadBackTwo;
     private EditText etCallZpReadBackThree;
     private EditText etCallZpReadBackFour;
-    ImageView imageZp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,11 +62,11 @@ public class BusZpReadBack_FireBase extends AppCompatActivity {
             Toast.makeText(this, "Проверьте подключение к Интернету", Toast.LENGTH_LONG).show();
         }
 
-        imageZp = (ImageView) findViewById(R.id.img_zp);
+        final PhotoView photoView = findViewById(R.id.img_zp);
 
         Picasso.get()
                 .load("http://s1vesele.ucoz.net/infoVesele/zp_white_svan.jpg")
-                .into(imageZp);
+                .into(photoView);
 
         //btnPushToServer = (Button) findViewById(R.id.btn_push_to_server);
         recyclerView =  findViewById(R.id.bus_list_back);

@@ -13,6 +13,7 @@ import com.artimanton.infovesele.R;
 import com.artimanton.infovesele.adapters.ServicesAdapter;
 import com.artimanton.infovesele.model.ServicesModel;
 import com.artimanton.infovesele.permission.Internet;
+import com.github.chrisbanes.photoview.PhotoView;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -32,7 +33,6 @@ public class RepairsActivity extends AppCompatActivity {
 
     private FirebaseDatabase database;
     private DatabaseReference reference;
-    ImageView imageViewPcMaster;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,11 +41,12 @@ public class RepairsActivity extends AppCompatActivity {
         if (!Internet.isOnline(this)){
             Toast.makeText(this, "Проверьте подключение к Интернету", Toast.LENGTH_LONG).show();
         }
-        imageViewPcMaster = (ImageView) findViewById(R.id.img_pc_master);
+
+        final PhotoView photoView = findViewById(R.id.img_pc_master);
 
      Picasso.get()
                 .load("http://s1vesele.ucoz.net/infoVesele/pc_master.jpg")
-                .into(imageViewPcMaster);
+                .into(photoView);
 
 
         database = FirebaseDatabase.getInstance();
