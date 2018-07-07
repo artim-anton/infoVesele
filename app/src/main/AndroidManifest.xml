@@ -120,10 +120,16 @@
         <activity android:name=".activity.OrganizationActivity" />
         <activity android:name=".activity.all_organization.WatercanalActivity" />
         <activity android:name=".activity.HomeActivityWeb" />
-        <activity android:name=".activity.all_transport.BusNewBogdanovka" />
-        <activity android:name=".activity.all_transport.BusBardyansk" />
+        <activity
+            android:name=".activity.all_transport.BusNewBogdanovka"
+            android:windowSoftInputMode="stateHidden"/>
+        <activity
+            android:name=".activity.all_transport.BusBardyansk"
+            android:windowSoftInputMode="stateHidden"/>
         <activity android:name=".activity.all_transport.BusStation" />
-        <activity android:name=".activity.all_transport.BusKirilovka"></activity>
+        <activity
+            android:name=".activity.all_transport.BusKirilovka"
+            android:windowSoftInputMode="stateHidden"></activity>
     </application>
 
 </manifest>
