@@ -1,14 +1,19 @@
 package com.artimanton.infovesele.activity;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.drawable.BitmapDrawable;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.anjlab.android.iab.v3.BillingProcessor;
@@ -49,6 +54,13 @@ public class AdvertVeseleActivity extends BaseActivity implements BillingProcess
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_advert_vesele);
         setupBottomNavigation(2,this);
+        Bitmap bmp = BitmapFactory.decodeResource(getResources(), R.drawable.sprinkles); // берем картинку из ресурса
+        BitmapDrawable bitmapDrawable = new BitmapDrawable(bmp);
+        bitmapDrawable.setTileModeXY(android.graphics.Shader.TileMode.REPEAT, android.graphics.Shader.TileMode.REPEAT); // гшоворим обьекту как рисовать (у меня это повторяющийся фон)
+        ConstraintLayout layout = findViewById(R.id.advert_vesele_layout);
+        layout.setBackgroundDrawable(bitmapDrawable); // задаём фон нашему лэйауту
+
+
         if (!Internet.isOnline(this)){
             Toast.makeText(this, "Проверьте подключение к Интернету", Toast.LENGTH_LONG).show();
         }

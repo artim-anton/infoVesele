@@ -21,7 +21,7 @@ public class BusStation extends AppCompatActivity {
         final PhotoView photoView = findViewById(R.id.img_bus_station);
         Toast.makeText(this, "Загрузка...", Toast.LENGTH_LONG).show();
         Picasso.get()
-                .load("http://s1vesele.ucoz.net/infoVesele/bus_station.jpg")
+                .load("http://s1vesele.ucoz.net/infoVesele/bus_station_new.jpg")
                 .into(photoView);
     }
 

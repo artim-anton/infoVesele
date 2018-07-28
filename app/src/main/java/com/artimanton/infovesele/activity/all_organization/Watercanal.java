@@ -8,7 +8,7 @@ import android.view.View;
 
 import com.artimanton.infovesele.R;
 
-public class WatercanalActivity extends AppCompatActivity {
+public class Watercanal extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

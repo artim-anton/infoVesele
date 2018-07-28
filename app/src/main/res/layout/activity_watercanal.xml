@@ -10,7 +10,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".activity.all_organization.WatercanalActivity">
+    tools:context=".activity.all_organization.Watercanal">
 
     <Button
         android:id="@+id/btn_repairs"

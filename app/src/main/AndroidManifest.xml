@@ -117,19 +117,24 @@
             android:windowSoftInputMode="stateHidden" />
         <activity android:name=".activity.all_transport.FuelingActivity" />
         <activity android:name=".activity.BillingActivity" />
-        <activity android:name=".activity.OrganizationActivity" />
-        <activity android:name=".activity.all_organization.WatercanalActivity" />
-        <activity android:name=".activity.HomeActivityWeb" />
+        <activity android:name=".activity.AllOrganizationActivity" />
+        <activity android:name=".activity.all_organization.Watercanal" />
+        <activity
+            android:name=".activity.HomeActivityWeb"
+            android:configChanges="screenSize|orientation" />
         <activity
             android:name=".activity.all_transport.BusNewBogdanovka"
-            android:windowSoftInputMode="stateHidden"/>
+            android:windowSoftInputMode="stateHidden" />
         <activity
             android:name=".activity.all_transport.BusBardyansk"
-            android:windowSoftInputMode="stateHidden"/>
+            android:windowSoftInputMode="stateHidden" />
         <activity android:name=".activity.all_transport.BusStation" />
         <activity
             android:name=".activity.all_transport.BusKirilovka"
-            android:windowSoftInputMode="stateHidden"></activity>
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".activity.all_organization.OrganizationActivity" />
+        <activity android:name=".activity.all_organization.ShopsActivity" />
+        <activity android:name=".activity.all_transport.FreightTaxiActivity"></activity>
     </application>
 
 </manifest>

@@ -42,7 +42,7 @@ abstract class BaseActivity extends AppCompatActivity {
                         ActivityToOpen = AdvertVeseleActivity.class;
                         break;
                     case R.id.nav_item_organization:
-                        ActivityToOpen = OrganizationActivity.class;
+                        ActivityToOpen = AllOrganizationActivity.class;
                         break;
                     case R.id.nav_item_build:
                         ActivityToOpen = ServicesActivity.class;

@@ -10,77 +10,100 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:id="@+id/transport_layout">
 
         <Button
             android:id="@+id/btn_buses"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
             android:background="@drawable/border"
             android:drawableLeft="@drawable/ic_bus"
             android:gravity="center|center_vertical"
+            android:elevation="4dp"
             android:onClick="btBuses"
             android:paddingLeft="10dp"
             android:text="Автобусы"
-            android:textSize="@dimen/title_transport"
-            android:textStyle="italic" />
+            android:textSize="@dimen/title_transport"/>
 
         <Button
             android:id="@+id/btn_trains"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
             android:background="@drawable/border"
             android:drawableLeft="@drawable/ic_train"
             android:gravity="center|center_vertical"
             android:onClick="btTrains"
             android:paddingLeft="10dp"
             android:text="Поезда"
-            android:textSize="@dimen/title_transport"
-            android:textStyle="italic" />
+            android:textSize="@dimen/title_transport"/>
 
         <Button
             android:id="@+id/btn_taxi"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
             android:background="@drawable/border"
             android:drawableLeft="@drawable/ic_local_taxi_black_48dp"
             android:gravity="center|center_vertical"
             android:onClick="btTaxi"
             android:paddingLeft="10dp"
             android:text="Такси"
-            android:textSize="@dimen/title_transport"
-            android:textStyle="italic" />
+            android:textSize="@dimen/title_transport"/>
+
+        <Button
+            android:id="@+id/btn_freight_taxi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/border"
+            android:drawableLeft="@drawable/ic_delivery_service_black_24dp"
+            android:gravity="center|center_vertical"
+            android:onClick="btFreightTaxi"
+            android:paddingLeft="10dp"
+            android:text="Грузовое такси"
+            android:textSize="@dimen/title_transport"/>
 
         <Button
             android:id="@+id/btn_delivery_service"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
             android:background="@drawable/border"
-            android:drawableLeft="@drawable/ic_delivery_service_black_24dp"
+            android:drawableLeft="@drawable/ic_delivery_service_48dp"
             android:gravity="center|center_vertical"
             android:onClick="btDelivery"
             android:paddingLeft="10dp"
             android:text="Службы доставки"
-            android:textSize="@dimen/title_transport"
-            android:textStyle="italic" />
+            android:textSize="@dimen/title_transport"/>
 
         <Button
             android:id="@+id/btn_fueling_service"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
             android:background="@drawable/border"
             android:drawableLeft="@drawable/ic_ev_station_black_24dp"
             android:gravity="center|center_vertical"
             android:onClick="btFueling"
             android:paddingLeft="10dp"
             android:text="Заправки"
-            android:textSize="@dimen/title_transport"
-            android:textStyle="italic" />
+            android:textSize="@dimen/title_transport"/>
     </LinearLayout>
 
     <include layout="@layout/bottom_navigation_view"/>

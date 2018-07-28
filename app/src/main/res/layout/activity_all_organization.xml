@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.all_organization.OrganizationActivity">
+    tools:context=".activity.AllOrganizationActivity"
+    android:orientation="vertical">
 
     <ScrollView
         android:id="@+id/myview"
@@ -12,35 +14,35 @@
         android:layout_height="match_parent">
 
         <LinearLayout
+            android:id="@+id/all_organization_layout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:paddingBottom="50dp"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:paddingBottom="50dp">
 
             <android.support.v7.widget.GridLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_margin="10dp"
                 app:columnCount="2"
                 app:orientation="horizontal">
 
                 <Button
-                    android:id="@+id/btn_watercanal"
+                    android:id="@+id/btn_repairs"
                     style="@style/services_button_two"
-                    android:drawableTop="@drawable/ic_water_blue_24dp"
-                    android:onClick="btnWatercanal"
-                    android:text="Водоканал"
+                    android:drawableTop="@drawable/ic_organization_48dp"
+                    android:onClick="btnOrganization"
+                    android:text="Организации"
                     app:layout_columnWeight="1" />
 
                 <Button
-                    android:id="@+id/btn_res"
+                    android:id="@+id/btn_home_master"
                     style="@style/services_button_two"
-                    android:drawableTop="@drawable/ic_power_black_24dp"
-                    android:onClick="btnRes"
-                    android:text="РЕС"
+                    android:drawableTop="@drawable/ic_shopping_basket_48dp"
+                    android:onClick="btnShops"
+                    android:text="Магазины"
                     app:layout_columnWeight="1" />
-
 
 
             </android.support.v7.widget.GridLayout>
