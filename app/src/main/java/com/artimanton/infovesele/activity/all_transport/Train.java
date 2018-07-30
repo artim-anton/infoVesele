@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.widget.ImageView;
 
 import com.artimanton.infovesele.R;
+import com.artimanton.infovesele.utilities.BackGroundActivity;
 import com.squareup.picasso.Picasso;
 
 public class Train extends AppCompatActivity {

@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.artimanton.infovesele.R;
+import com.artimanton.infovesele.utilities.BackGroundActivity;
 
 public class BusCity extends AppCompatActivity {
 
@@ -13,6 +14,7 @@ public class BusCity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bus_city);
+        BackGroundActivity.setBackground(this, this);
     }
 
     public void Melitopol(View view) {

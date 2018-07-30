@@ -7,6 +7,7 @@ import android.view.View;
 
 import com.artimanton.infovesele.R;
 import com.artimanton.infovesele.activity.AllOrganizationActivity;
+import com.artimanton.infovesele.utilities.BackGroundActivity;
 
 public class OrganizationActivity extends AppCompatActivity {
 
@@ -14,6 +15,7 @@ public class OrganizationActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_organization);
+        BackGroundActivity.setBackground(this, this);
     }
 
     public void btnWatercanal(View view) {
@@ -22,5 +24,9 @@ public class OrganizationActivity extends AppCompatActivity {
     }
 
     public void btnRes(View view) {
+        Intent intent = new Intent(OrganizationActivity.this, ResActivity.class);
+        startActivity(intent);
     }
+
+
 }

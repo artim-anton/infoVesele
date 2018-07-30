@@ -13,6 +13,8 @@ import com.artimanton.infovesele.R;
 import com.artimanton.infovesele.adapters.BusAdapter;
 import com.artimanton.infovesele.model.BusModel;
 import com.artimanton.infovesele.permission.Internet;
+import com.artimanton.infovesele.utilities.BackGroundActivity;
+import com.github.chrisbanes.photoview.PhotoView;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -44,11 +46,13 @@ public class BusMelitopolReadBack extends AppCompatActivity {
             Toast.makeText(this, "Проверьте подключение к Интернету", Toast.LENGTH_LONG).show();
         }
 
-        imageMelitopolBack = (ImageView) findViewById(R.id.img_melitopol_back);
+        //imageMelitopolBack = (ImageView) findViewById(R.id.img_melitopol_back);
+
+        final PhotoView photoView = findViewById(R.id.img_melitopol_back);
 
         Picasso.get()
                 .load("http://s1vesele.ucoz.net/infoVesele/melitopol_back.jpg")
-                .into(imageMelitopolBack);
+                .into(photoView);
 
     //    btnPushToServer = (Button) findViewById(R.id.btn_push_to_server);
 

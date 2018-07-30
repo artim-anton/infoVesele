@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.artimanton.infovesele.R;
+import com.artimanton.infovesele.utilities.BackGroundActivity;
 
 public class BusNewBogdanovka extends AppCompatActivity {
 

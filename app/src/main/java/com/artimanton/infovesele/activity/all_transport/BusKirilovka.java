@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.EditText;
 
 import com.artimanton.infovesele.R;
+import com.artimanton.infovesele.utilities.BackGroundActivity;
 import com.github.chrisbanes.photoview.PhotoView;
 import com.squareup.picasso.Picasso;
 

@@ -13,6 +13,7 @@ import android.widget.TableRow;
 import android.widget.TextView;
 
 import com.artimanton.infovesele.R;
+import com.artimanton.infovesele.utilities.BackGroundActivity;
 import com.squareup.picasso.Picasso;
 
 import org.jsoup.Jsoup;

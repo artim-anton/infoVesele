@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.artimanton.infovesele">
+    package="com.artimanton.infovesele"
+    android:installLocation="auto">
 
     <uses-feature
         android:name="android.hardware.telephony"
@@ -132,9 +133,22 @@
         <activity
             android:name=".activity.all_transport.BusKirilovka"
             android:windowSoftInputMode="stateHidden" />
-        <activity android:name=".activity.all_organization.OrganizationActivity" />
-        <activity android:name=".activity.all_organization.ShopsActivity" />
-        <activity android:name=".activity.all_transport.FreightTaxiActivity"></activity>
+        <activity
+            android:name=".activity.all_organization.OrganizationActivity"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".activity.all_organization.ShopsActivity"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".activity.all_transport.FreightTaxiActivity"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".activity.all_organization.CheaperActivity"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".activity.all_organization.SaleActivity"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".activity.all_organization.ResActivity"></activity>
     </application>
 
 </manifest>

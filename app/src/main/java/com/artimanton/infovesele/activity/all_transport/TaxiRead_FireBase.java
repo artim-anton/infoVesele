@@ -13,6 +13,7 @@ import com.artimanton.infovesele.R;
 import com.artimanton.infovesele.adapters.TaxiAdapter;
 import com.artimanton.infovesele.model.TaxiModel;
 import com.artimanton.infovesele.permission.Internet;
+import com.artimanton.infovesele.utilities.BackGroundActivity;
 import com.github.chrisbanes.photoview.PhotoView;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;

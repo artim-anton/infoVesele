@@ -7,22 +7,20 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.artimanton.infovesele.R;
-import com.artimanton.infovesele.utilities.BackGroundActivity;
 
-public class Watercanal extends AppCompatActivity {
+public class ResActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_watercanal);
-        BackGroundActivity.setBackground(this, this);
+        setContentView(R.layout.activity_res);
     }
 
-    public void btnTestify(View view) {
+    public void btnTestifyRes(View view) {
         Intent intent = new Intent();
         intent.setAction(Intent.ACTION_VIEW);
         intent.addCategory(Intent.CATEGORY_BROWSABLE);
-        intent.setData(Uri.parse("https://docs.google.com/forms/d/e/1FAIpQLSfK3M4llCkwh5ild7vZqSSvW4lMiGkbv14LUCOAxQkxeMYWow/viewform"));
+        intent.setData(Uri.parse("http://www.zoe.com.ua/pokazania.php"));
         startActivity(intent);
     }
 }

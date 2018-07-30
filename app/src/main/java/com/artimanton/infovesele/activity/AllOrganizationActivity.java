@@ -10,7 +10,11 @@ import android.widget.LinearLayout;
 import android.widget.ScrollView;
 
 import com.artimanton.infovesele.R;
+import com.artimanton.infovesele.activity.all_organization.OrganizationActivity;
+import com.artimanton.infovesele.activity.all_organization.ShopsActivity;
 import com.artimanton.infovesele.activity.all_organization.Watercanal;
+import com.artimanton.infovesele.activity.all_transport.FreightTaxiActivity;
+import com.artimanton.infovesele.utilities.BackGroundActivity;
 
 public class AllOrganizationActivity extends BaseActivity {
 
@@ -19,18 +23,18 @@ public class AllOrganizationActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_all_organization);
         setupBottomNavigation(3, this);
-        Bitmap bmp = BitmapFactory.decodeResource(getResources(), R.drawable.sprinkles); // берем картинку из ресурса
-        BitmapDrawable bitmapDrawable = new BitmapDrawable(bmp);
-        bitmapDrawable.setTileModeXY(android.graphics.Shader.TileMode.REPEAT, android.graphics.Shader.TileMode.REPEAT); // гшоворим обьекту как рисовать (у меня это повторяющийся фон)
-        ScrollView layout = findViewById(R.id.myview);
-        layout.setBackgroundDrawable(bitmapDrawable); // задаём фон нашему лэйауту
+        BackGroundActivity.setBackground(this, this);
     }
 
 
     public void btnOrganization(View view) {
+        Intent intent = new Intent(AllOrganizationActivity.this, OrganizationActivity.class);
+        startActivity(intent);
     }
 
     public void btnShops(View view) {
+        Intent intent = new Intent(AllOrganizationActivity.this, ShopsActivity.class);
+        startActivity(intent);
     }
 
 }

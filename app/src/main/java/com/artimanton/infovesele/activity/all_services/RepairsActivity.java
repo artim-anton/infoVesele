@@ -13,6 +13,7 @@ import com.artimanton.infovesele.R;
 import com.artimanton.infovesele.adapters.ServicesAdapter;
 import com.artimanton.infovesele.model.ServicesModel;
 import com.artimanton.infovesele.permission.Internet;
+import com.artimanton.infovesele.utilities.BackGroundActivity;
 import com.github.chrisbanes.photoview.PhotoView;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
@@ -38,6 +39,9 @@ public class RepairsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_repairs);
+        //BackGroundActivity.setBackground(this, this);
+
+
         if (!Internet.isOnline(this)){
             Toast.makeText(this, "Проверьте подключение к Интернету", Toast.LENGTH_LONG).show();
         }

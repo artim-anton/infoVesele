@@ -13,6 +13,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 
 import com.artimanton.infovesele.R;
+import com.artimanton.infovesele.utilities.BackGroundActivity;
 import com.squareup.picasso.Picasso;
 
 public class AddServicesActivity extends AppCompatActivity {
@@ -24,6 +25,7 @@ public class AddServicesActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_services);
+        //BackGroundActivity.setBackground(this, this);
         imageReclame= (ImageView) findViewById(R.id.img_reclame);
 
         Picasso.get()
