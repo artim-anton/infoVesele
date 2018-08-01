@@ -28,6 +28,7 @@ public class HomeActivityWeb extends BaseActivity {
 
         mWebView = (WebView) findViewById(R.id.webView);
         mWebView.getSettings().setJavaScriptEnabled(true);
+        mWebView.getSettings().setBuiltInZoomControls(true);
         mWebView.setWebViewClient(new MyWebViewClient());
         mWebView.setWebViewClient(new WebViewClient(){
 

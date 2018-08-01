@@ -148,7 +148,12 @@
         <activity
             android:name=".activity.all_organization.SaleActivity"
             android:windowSoftInputMode="stateHidden" />
-        <activity android:name=".activity.all_organization.ResActivity"></activity>
+        <activity android:name=".activity.all_organization.ResActivity" />
+        <activity android:name=".activity.AllEducationInstitutionActivity" />
+        <activity android:name=".activity.all_education_institution.FirstSchoolActivity" />
+        <activity android:name=".activity.all_education_institution.SecondSchoolActivity" />
+        <activity android:name=".activity.all_education_institution.GymnasiumActivity" />
+        <activity android:name=".activity.all_education_institution.LyceumActivity"></activity>
     </application>
 
 </manifest>

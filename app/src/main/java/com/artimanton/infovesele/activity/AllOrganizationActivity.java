@@ -37,4 +37,9 @@ public class AllOrganizationActivity extends BaseActivity {
         startActivity(intent);
     }
 
+    public void btnEducationalInstitution(View view) {
+        Intent intent = new Intent(AllOrganizationActivity.this, AllEducationInstitutionActivity.class);
+        startActivity(intent);
+
+    }
 }

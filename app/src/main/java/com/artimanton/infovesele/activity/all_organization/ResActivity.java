@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.artimanton.infovesele.R;
+import com.artimanton.infovesele.utilities.BackGroundActivity;
 
 public class ResActivity extends AppCompatActivity {
 
@@ -14,6 +15,7 @@ public class ResActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_res);
+        BackGroundActivity.setBackground(this, this);
     }
 
     public void btnTestifyRes(View view) {

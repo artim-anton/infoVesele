@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.AllOrganizationActivity"
+    tools:context=".activity.AllEducationInstitutionActivity"
     android:orientation="vertical">
 
     <ScrollView
@@ -29,27 +29,35 @@
                 app:orientation="horizontal">
 
                 <Button
-                    android:id="@+id/btn_repairs"
+                    android:id="@+id/btn_first_school"
                     style="@style/services_button_two"
-                    android:drawableTop="@drawable/ic_organization_48dp"
-                    android:onClick="btnOrganization"
-                    android:text="Организации"
+                    android:drawableTop="@drawable/ic_school_48dp"
+                    android:onClick="btnFirstSchool"
+                    android:text="1 школа"
                     app:layout_columnWeight="1" />
 
                 <Button
-                    android:id="@+id/btn_educational_institution"
+                    android:id="@+id/btn_second_school"
+                    style="@style/services_button_two"
+                    android:drawableTop="@drawable/ic_school_48dp"
+                    android:onClick="btnSecondSchool"
+                    android:text="2 школа"
+                    app:layout_columnWeight="1" />
+
+                <Button
+                    android:id="@+id/btn_gymnasium"
+                    style="@style/services_button_two"
+                    android:drawableTop="@drawable/ic_gymnacium_48dp"
+                    android:onClick="btnGymnasium"
+                    android:text="Гимназия"
+                    app:layout_columnWeight="1" />
+
+                <Button
+                    android:id="@+id/btn_lyceum"
                     style="@style/services_button_two"
                     android:drawableTop="@drawable/ic_lyceum_48dp"
-                    android:onClick="btnEducationalInstitution"
-                    android:text="Учебные заведения"
-                    app:layout_columnWeight="1" />
-
-                <Button
-                    android:id="@+id/btn_home_master"
-                    style="@style/services_button_two"
-                    android:drawableTop="@drawable/ic_shopping_basket_48dp"
-                    android:onClick="btnShops"
-                    android:text="Магазины"
+                    android:onClick="btnLyceum"
+                    android:text="Лицей"
                     app:layout_columnWeight="1" />
 
 
