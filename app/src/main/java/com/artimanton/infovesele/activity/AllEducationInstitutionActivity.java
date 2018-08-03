@@ -11,6 +11,7 @@ import com.artimanton.infovesele.activity.all_education_institution.GymnasiumAct
 import com.artimanton.infovesele.activity.all_education_institution.LyceumActivity;
 import com.artimanton.infovesele.activity.all_education_institution.SecondSchoolActivity;
 import com.artimanton.infovesele.activity.all_organization.OrganizationActivity;
+import com.artimanton.infovesele.utilities.BackGroundActivity;
 
 public class AllEducationInstitutionActivity extends AppCompatActivity {
 
@@ -18,6 +19,7 @@ public class AllEducationInstitutionActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_all_education_institution);
+        BackGroundActivity.setBackground(this, this);
     }
 
     public void btnFirstSchool(View view) {

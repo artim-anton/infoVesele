@@ -11,6 +11,14 @@
     android:paddingTop="5dp"
     tools:context=".activity.all_organization.SaleActivity">
 
+    <TextView
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Раздел в разработке"
+        android:layout_alignParentLeft="true" />
+
     <android.support.design.widget.FloatingActionButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

@@ -5,13 +5,25 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
-
-    <WebView
-        android:id="@+id/webView"
+    <LinearLayout
+        android:id="@+id/services_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingBottom="50dp">
-    </WebView>
+        android:paddingBottom="50dp"
+        android:orientation="vertical">
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipe"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <WebView
+            android:id="@+id/webView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </WebView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+    </LinearLayout>
 
     <ProgressBar
         android:id="@+id/progress_bar"

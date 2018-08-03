@@ -25,7 +25,7 @@ public class AddServicesActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_services);
-        //BackGroundActivity.setBackground(this, this);
+        BackGroundActivity.setBackground(this, this);
         imageReclame= (ImageView) findViewById(R.id.img_reclame);
 
         Picasso.get()
