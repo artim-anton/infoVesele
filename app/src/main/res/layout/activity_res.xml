@@ -16,7 +16,7 @@
         <Button
             android:id="@+id/btn_repairs"
             style="@style/services_button"
-            android:drawableLeft="@drawable/ic_water_blue_24dp"
+            android:drawableLeft="@drawable/ic_power_black_24dp"
             android:text="@string/res" />
 
 

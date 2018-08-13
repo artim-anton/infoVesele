@@ -86,15 +86,11 @@ public class FuelingActivity extends AppCompatActivity {
                     Elements tableRowsOne = docOne.getElementsByClass("fuel-gas-station-price-table").select("tr");
                     Elements tableRowsTwo = docTwo.getElementsByClass("fuel-gas-station-price-table").select("tr");
 
-                    String subAzsNameOne = docOne.getElementsByClass("gas-stations-content-description").first().toString();
-                    AzsNameOne = subAzsNameOne.substring(48, subAzsNameOne.length()-8);
-                    String subRelevanceOne = docOne.getElementsByClass("gas-stations-content-description").last().toString();
-                    RelevanceOne = subRelevanceOne.substring(48, subRelevanceOne.length()-7);
+                    AzsNameOne = docOne.getElementsByClass("entry-content clearfix").select("p").first().text();
+                    RelevanceOne = docOne.getElementsByClass("entry-content clearfix").select("p").last().text();
 
-                    String subAzsNameTwo = docTwo.getElementsByClass("gas-stations-content-description").first().toString();
-                    AzsNameTwo = subAzsNameTwo.substring(48, subAzsNameTwo.length()-7);
-                    String subRelevanceTwo = docTwo.getElementsByClass("gas-stations-content-description").last().toString();
-                    RelevanceTwo = subRelevanceTwo.substring(48, subRelevanceTwo.length()-7);
+                    AzsNameTwo = docTwo.getElementsByClass("entry-content clearfix").select("p").first().text();
+                    RelevanceTwo = docTwo.getElementsByClass("entry-content clearfix").select("p").last().text();
 
                     for (int i = 0; i < tableRowsOne.size(); i++) {
                         Element rowOne = tableRowsOne.get(i);
