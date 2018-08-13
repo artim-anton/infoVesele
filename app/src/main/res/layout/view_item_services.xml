@@ -40,11 +40,13 @@
     <ImageButton
         android:id="@+id/btn_call_services"
         android:layout_width="0dp"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
         android:layout_marginLeft="5dp"
         android:layout_marginTop="5dp"
         android:layout_marginRight="5dp"
-        android:layout_weight="1.5"
+        android:layout_weight="1.3"
         android:src="@drawable/ic_call_black_24dp"
         android:background="@drawable/border"
         android:text="CL"
@@ -53,10 +55,10 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="vertical">
         <TextView
             android:id="@+id/et_more_info_services"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="5dp"
@@ -64,5 +66,33 @@
             android:layout_weight="1"
             android:text="ремонт, продажа, обслуживание"
             android:textSize="14sp" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/et_facebook"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:autoLink="web"
+            android:linksClickable="true"
+            android:text="https://vk.com/artim_anton"
+            android:textSize="12sp" />
+        <TextView
+            android:id="@+id/et_instagram"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:autoLink="web"
+            android:linksClickable="true"
+            android:text="https://vk.com/artim_anton"
+            android:textSize="12sp" />
     </LinearLayout>
 </LinearLayout>

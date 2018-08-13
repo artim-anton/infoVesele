@@ -1,16 +1,24 @@
 package com.artimanton.infovesele.activity;
 
 import android.Manifest;
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
+import android.text.Layout;
 import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.artimanton.infovesele.R;
 import com.artimanton.infovesele.activity.all_transport.BusCity;
 import com.artimanton.infovesele.activity.all_transport.DeliveryService;
+import com.artimanton.infovesele.activity.all_transport.FreightTaxiActivity;
+import com.artimanton.infovesele.activity.all_transport.FuelingActivity;
 import com.artimanton.infovesele.activity.all_transport.TaxiRead_FireBase;
 import com.artimanton.infovesele.activity.all_transport.Train;
 
@@ -23,6 +31,12 @@ public class TransportActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_transport);
         setupBottomNavigation(1, this);
+
+        Bitmap bmp = BitmapFactory.decodeResource(getResources(), R.drawable.sprinkles); // берем картинку из ресурса
+        BitmapDrawable bitmapDrawable = new BitmapDrawable(bmp);
+        bitmapDrawable.setTileModeXY(android.graphics.Shader.TileMode.REPEAT, android.graphics.Shader.TileMode.REPEAT); // гшоворим обьекту как рисовать (у меня это повторяющийся фон)
+        LinearLayout layout = findViewById(R.id.transport_layout);
+        layout.setBackgroundDrawable(bitmapDrawable); // задаём фон нашему лэйауту
 
         // проверяем разрешения: если они уже есть,
         // то приложение продолжает работу в нормальном режиме
@@ -45,9 +59,9 @@ public class TransportActivity extends BaseActivity {
                                            int[] grantResults) {
         if (requestCode == REQUEST_READ_PHONE_STATE) {
             if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                Toast.makeText(TransportActivity.this, "Разрешения получены", Toast.LENGTH_LONG).show();
+                //Toast.makeText(TransportActivity.this, "Разрешения получены", Toast.LENGTH_LONG).show();
             } else {
-                Toast.makeText(TransportActivity.this, "Разрешения не получены", Toast.LENGTH_LONG).show();
+                //Toast.makeText(TransportActivity.this, "Разрешения не получены", Toast.LENGTH_LONG).show();
             }
         } else {
             super.onRequestPermissionsResult(requestCode, permissions, grantResults);
@@ -79,6 +93,16 @@ public class TransportActivity extends BaseActivity {
 
     public void btDelivery(View view) {
         Intent intent = new Intent(TransportActivity.this, DeliveryService.class);
+        startActivity(intent);
+    }
+
+    public void btFueling(View view) {
+        Intent intent = new Intent(TransportActivity.this, FuelingActivity.class);
+        startActivity(intent);
+    }
+
+    public void btFreightTaxi(View view) {
+        Intent intent = new Intent(TransportActivity.this, FreightTaxiActivity.class);
         startActivity(intent);
     }
 }

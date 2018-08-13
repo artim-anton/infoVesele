@@ -12,6 +12,7 @@ import com.artimanton.infovesele.R;
 import com.artimanton.infovesele.adapters.ServicesAdapter;
 import com.artimanton.infovesele.model.ServicesModel;
 import com.artimanton.infovesele.permission.Internet;
+import com.artimanton.infovesele.utilities.BackGroundActivity;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -35,6 +36,7 @@ public class BeautyActivity extends BaseServicesActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_beauty);
+        //BackGroundActivity.setBackground(this, this);
         if (!Internet.isOnline(this)){
             Toast.makeText(this, "Проверьте подключение к Интернету", Toast.LENGTH_LONG).show();
         }

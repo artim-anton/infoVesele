@@ -1,9 +1,13 @@
 package com.artimanton.infovesele.activity;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.drawable.BitmapDrawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.LinearLayout;
 
 import com.artimanton.infovesele.R;
 import com.artimanton.infovesele.activity.all_services.AddServicesActivity;
@@ -26,6 +30,11 @@ public class ServicesActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_services);
         setupBottomNavigation(4,this);
+        Bitmap bmp = BitmapFactory.decodeResource(getResources(), R.drawable.sprinkles); // берем картинку из ресурса
+        BitmapDrawable bitmapDrawable = new BitmapDrawable(bmp);
+        bitmapDrawable.setTileModeXY(android.graphics.Shader.TileMode.REPEAT, android.graphics.Shader.TileMode.REPEAT); // гшоворим обьекту как рисовать (у меня это повторяющийся фон)
+        LinearLayout layout = findViewById(R.id.services_layout);
+        layout.setBackgroundDrawable(bitmapDrawable); // задаём фон нашему лэйауту
     }
 
     public void btnRepairs(View view) {

@@ -1,7 +1,12 @@
 package com.artimanton.infovesele.activity;
 
+import android.Manifest;
+import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.content.res.Configuration;
+import android.net.Uri;
 import android.os.Bundle;
+import android.support.v4.app.ActivityCompat;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -20,6 +25,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class HomeActivity extends BaseActivity {
+    private static final int REQUEST_READ_PHONE_STATE = 10001;
+    private static final String READ_PHONE_STATE_PERMISSION = Manifest.permission.READ_PHONE_STATE;
 
     private RecyclerView mRecyclerView;
     private String MY_LOG = "myLog";
@@ -48,6 +55,15 @@ public class HomeActivity extends BaseActivity {
 
         if ( !Internet.isOnline(this) ){
             Toast.makeText(this, "Нет соединения с интернетом!", Toast.LENGTH_LONG).show();
+        }
+
+        // проверяем разрешения: если они уже есть,
+        // то приложение продолжает работу в нормальном режиме
+        if (isPermissionGranted(READ_PHONE_STATE_PERMISSION)) {
+            //Toast.makeText(this, "Разрешения есть, можно работать", Toast.LENGTH_SHORT).show();
+        } else {
+            // иначе запрашиваем разрешение у пользователя
+            requestPermission(READ_PHONE_STATE_PERMISSION, REQUEST_READ_PHONE_STATE);
         }
 
 
@@ -93,7 +109,7 @@ public class HomeActivity extends BaseActivity {
         }
 
         @Override
-        public void onBindViewHolder(RVAdapter.NewsViewHolder holder, int position) {
+        public void onBindViewHolder(RVAdapter.NewsViewHolder holder, final int position) {
 
 
             holder.nameNews.setText(mNews.get(position).getNameNews().toString());
@@ -103,8 +119,19 @@ public class HomeActivity extends BaseActivity {
             Picasso.get()
                     .load(mNews.get(position).getLinkImageNews())
                     .resize(800,0)
-                    .centerInside()
-                    .into(holder.imageNews);}
+                    //.centerInside()
+                    .into(holder.imageNews);
+            holder.imageNews.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent();
+                    intent.setAction(Intent.ACTION_VIEW);
+                    intent.addCategory(Intent.CATEGORY_BROWSABLE);
+                    intent.setData(Uri.parse(mNews.get(position).getLinkPageNews().toString()));
+                    startActivity(intent);
+                }
+            });
+            }
         }
 
         @Override
@@ -123,6 +150,32 @@ public class HomeActivity extends BaseActivity {
                 linkPageNews = itemView.findViewById(R.id.et_text_news);
             }
         }
+    }
+
+
+    public boolean isPermissionGranted(String permission) {
+        // проверяем разрешение - есть ли оно у нашего приложения
+        int permissionCheck = ActivityCompat.checkSelfPermission(this, permission);
+        return permissionCheck == PackageManager.PERMISSION_GRANTED;
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, String permissions[],
+                                           int[] grantResults) {
+        if (requestCode == REQUEST_READ_PHONE_STATE) {
+            if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                //Toast.makeText(HomeActivity.this, "Разрешения получены", Toast.LENGTH_LONG).show();
+            } else {
+                //Toast.makeText(HomeActivity.this, "Разрешения не получены", Toast.LENGTH_LONG).show();
+            }
+        } else {
+            super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        }
+    }
+
+    public void requestPermission(String permission, int requestCode) {
+        // запрашиваем разрешение
+        ActivityCompat.requestPermissions(this, new String[]{permission}, requestCode);
     }
 
 

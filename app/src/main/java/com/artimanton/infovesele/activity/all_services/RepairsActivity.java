@@ -6,17 +6,21 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.artimanton.infovesele.R;
 import com.artimanton.infovesele.adapters.ServicesAdapter;
 import com.artimanton.infovesele.model.ServicesModel;
 import com.artimanton.infovesele.permission.Internet;
+import com.artimanton.infovesele.utilities.BackGroundActivity;
+import com.github.chrisbanes.photoview.PhotoView;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -35,9 +39,18 @@ public class RepairsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_repairs);
+        //BackGroundActivity.setBackground(this, this);
+
+
         if (!Internet.isOnline(this)){
             Toast.makeText(this, "Проверьте подключение к Интернету", Toast.LENGTH_LONG).show();
         }
+
+        final PhotoView photoView = findViewById(R.id.img_pc_master);
+
+     Picasso.get()
+                .load("http://s1vesele.ucoz.net/infoVesele/pc_master.jpg")
+                .into(photoView);
 
 
         database = FirebaseDatabase.getInstance();

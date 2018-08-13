@@ -12,6 +12,7 @@
         android:layout_height="match_parent">
 
         <LinearLayout
+            android:id="@+id/services_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingBottom="50dp"
@@ -34,7 +35,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_margin="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
                 app:columnCount="2"
                 app:orientation="horizontal">
 
@@ -71,11 +74,11 @@
                     app:layout_columnWeight="1" />
 
                 <Button
-                    android:id="@+id/btn_business"
+                    android:id="@+id/btn_car"
                     style="@style/services_button_two"
-                    android:drawableTop="@drawable/business"
-                    android:onClick="btnBusiness"
-                    android:text="@string/business"
+                    android:drawableTop="@drawable/car"
+                    android:onClick="btnCar"
+                    android:text="@string/car"
                     app:layout_columnWeight="1" />
 
                 <Button
@@ -87,11 +90,11 @@
                     app:layout_columnWeight="1" />
 
                 <Button
-                    android:id="@+id/btn_car"
+                    android:id="@+id/btn_organization_of_holidays"
                     style="@style/services_button_two"
-                    android:drawableTop="@drawable/car"
-                    android:onClick="btnCar"
-                    android:text="@string/car"
+                    android:drawableTop="@drawable/organization_of_holidays"
+                    android:onClick="btnHolidays"
+                    android:text="@string/organization_of_holidays"
                     app:layout_columnWeight="1" />
 
                 <Button
@@ -103,11 +106,11 @@
                     app:layout_columnWeight="1" />
 
                 <Button
-                    android:id="@+id/btn_organization_of_holidays"
+                    android:id="@+id/btn_business"
                     style="@style/services_button_two"
-                    android:drawableTop="@drawable/organization_of_holidays"
-                    android:onClick="btnHolidays"
-                    android:text="@string/organization_of_holidays"
+                    android:drawableTop="@drawable/business"
+                    android:onClick="btnBusiness"
+                    android:text="@string/business"
                     app:layout_columnWeight="1" />
 
                 <Button

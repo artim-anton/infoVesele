@@ -33,7 +33,7 @@ abstract class BaseActivity extends AppCompatActivity {
                 Class ActivityToOpen = null;
                 switch (item.getItemId()) {
                     case R.id.nav_item_home:
-                        ActivityToOpen = HomeActivity.class;
+                        ActivityToOpen = HomeActivityWeb.class;
                         break;
                     case R.id.nav_item_transport:
                         ActivityToOpen = TransportActivity.class;
@@ -41,8 +41,8 @@ abstract class BaseActivity extends AppCompatActivity {
                     case R.id.nav_item_voice:
                         ActivityToOpen = AdvertVeseleActivity.class;
                         break;
-                    case R.id.nav_item_forum:
-                        //Toast.makeText(con, "nav_item_forum", Toast.LENGTH_SHORT).show();
+                    case R.id.nav_item_organization:
+                        ActivityToOpen = AllOrganizationActivity.class;
                         break;
                     case R.id.nav_item_build:
                         ActivityToOpen = ServicesActivity.class;

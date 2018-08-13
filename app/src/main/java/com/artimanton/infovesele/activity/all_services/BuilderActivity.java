@@ -11,6 +11,7 @@ import com.artimanton.infovesele.R;
 import com.artimanton.infovesele.adapters.ServicesAdapter;
 import com.artimanton.infovesele.model.ServicesModel;
 import com.artimanton.infovesele.permission.Internet;
+import com.artimanton.infovesele.utilities.BackGroundActivity;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -29,6 +30,7 @@ public class BuilderActivity extends BaseServicesActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_builder);
+        //BackGroundActivity.setBackground(this, this);
         if (!Internet.isOnline(this)){
             Toast.makeText(this, "Проверьте подключение к Интернету", Toast.LENGTH_LONG).show();
         }

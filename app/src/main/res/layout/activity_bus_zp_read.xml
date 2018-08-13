@@ -217,6 +217,7 @@
                 android:layout_marginRight="5dp"
                 android:layout_marginTop="5dp"
                 android:layout_weight="1.2"
+                android:onClick="btnCallZpReadOne"
                 android:background="@drawable/border"
                 android:src="@drawable/ic_call_black_24dp"
                 android:text="CL"
@@ -263,7 +264,7 @@
                 android:layout_weight="4"
                 android:enabled="false"
                 android:inputType="phone"
-                android:text="0973368166"
+                android:text="0674184728"
                 android:textColor="@color/colorPhone"
                 android:textSize="18sp" />
 
@@ -276,6 +277,7 @@
                 android:layout_marginRight="5dp"
                 android:layout_marginTop="5dp"
                 android:layout_weight="1.2"
+                android:onClick="btnCallZpReadTwo"
                 android:background="@drawable/border"
                 android:src="@drawable/ic_call_black_24dp"
                 android:text="CL"
@@ -321,7 +323,7 @@
                 android:layout_weight="4"
                 android:enabled="false"
                 android:inputType="phone"
-                android:text="0973368166"
+                android:text="0681959239"
                 android:textColor="@color/colorPhone"
                 android:textSize="18sp" />
 
@@ -334,6 +336,7 @@
                 android:layout_marginRight="5dp"
                 android:layout_marginTop="5dp"
                 android:layout_weight="1.2"
+                android:onClick="btnCallZpReadThree"
                 android:background="@drawable/border"
                 android:src="@drawable/ic_call_black_24dp"
                 android:text="CL"
@@ -393,6 +396,7 @@
                 android:layout_marginRight="5dp"
                 android:layout_marginTop="5dp"
                 android:layout_weight="1.2"
+                android:onClick="btnCallZpReadFour"
                 android:background="@drawable/border"
                 android:src="@drawable/ic_call_black_24dp"
                 android:text="CL"
@@ -412,6 +416,15 @@
              android:onClick="pushToServer"
              android:text="Сохранить" />-->
     </LinearLayout>
+
+    <com.github.chrisbanes.photoview.PhotoView
+        android:id="@+id/img_zp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:scaleType="fitStart"
+        android:adjustViewBounds="true"
+        android:layout_gravity="center_horizontal"/>
 
 </LinearLayout>
 </ScrollView>

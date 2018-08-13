@@ -6,6 +6,8 @@ import java.util.Map;
 
 public class ServicesModel implements Serializable{
 
+    public String instagram;
+    public String facebook;
     public String more_info_services;
     public String info_services;
     public String phone;
@@ -15,7 +17,9 @@ public class ServicesModel implements Serializable{
 
     }
 
-    public ServicesModel(String more_info_services, String info_services, String phone, String key) {
+    public ServicesModel(String instagram, String facebook, String more_info_services, String info_services, String phone, String key) {
+        this.instagram = instagram;
+        this.facebook = facebook;
         this.more_info_services = more_info_services;
         this.info_services = info_services;
         this.phone = phone;
@@ -25,7 +29,9 @@ public class ServicesModel implements Serializable{
     @Override
     public String toString() {
         return "ServicesModel{" +
-                "more_info_services='" + more_info_services + '\'' +
+                "instagram='" + instagram + '\'' +
+                ", facebook='" + facebook + '\'' +
+                ", more_info_services='" + more_info_services + '\'' +
                 ", info_services='" + info_services + '\'' +
                 ", phone='" + phone + '\'' +
                 ", key='" + key + '\'' +
@@ -34,6 +40,8 @@ public class ServicesModel implements Serializable{
 
     public Map<String, Object> toMap(){
         HashMap<String, Object> result = new HashMap<>();
+        result.put("instagram",instagram);
+        result.put("facebook",facebook);
         result.put("more_info_services", more_info_services);
         result.put("info_services", info_services);
         result.put("phone", phone);

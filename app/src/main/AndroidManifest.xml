@@ -1,17 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.artimanton.infovesele">
+    package="com.artimanton.infovesele"
+    android:installLocation="auto">
+
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
 
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="com.android.vending.BILLING" />
 
     <application
         android:name="com.artimanton.InfoVesele"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
@@ -109,7 +115,53 @@
             android:windowSoftInputMode="stateHidden" />
         <activity
             android:name=".activity.all_services.DevelopmentActivity"
-            android:windowSoftInputMode="stateHidden"></activity>
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".activity.all_transport.FuelingActivity" />
+        <activity android:name=".activity.BillingActivity" />
+        <activity android:name=".activity.AllOrganizationActivity" />
+        <activity android:name=".activity.all_organization.Watercanal" />
+        <activity
+            android:name=".activity.HomeActivityWeb"
+            android:configChanges="screenSize|orientation" />
+        <activity
+            android:name=".activity.all_transport.BusNewBogdanovka"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".activity.all_transport.BusBardyansk"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".activity.all_transport.BusStation" />
+        <activity
+            android:name=".activity.all_transport.BusKirilovka"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".activity.all_organization.OrganizationActivity"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".activity.all_organization.ShopsActivity"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".activity.all_transport.FreightTaxiActivity"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".activity.all_organization.CheaperActivity"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".activity.all_organization.SaleActivity"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".activity.all_organization.ResActivity" />
+        <activity android:name=".activity.AllEducationInstitutionActivity" />
+        <activity
+            android:name=".activity.all_education_institution.FirstSchoolActivity"
+            android:configChanges="screenSize|orientation"/>
+        <activity
+            android:name=".activity.all_education_institution.SecondSchoolActivity"
+            android:configChanges="screenSize|orientation"/>
+        <activity
+            android:name=".activity.all_education_institution.GymnasiumActivity"
+            android:configChanges="screenSize|orientation"/>
+        <activity
+            android:name=".activity.all_education_institution.LyceumActivity"
+            android:configChanges="screenSize|orientation"></activity>
     </application>
 
 </manifest>

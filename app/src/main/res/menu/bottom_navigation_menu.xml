@@ -13,8 +13,8 @@
         android:icon="@drawable/ic_record_voice_over_selector"
         android:title="" />
     <item
-        android:id="@+id/nav_item_forum"
-        android:icon="@drawable/ic_forum_selector"
+        android:id="@+id/nav_item_organization"
+        android:icon="@drawable/ic_organization_selector"
         android:title="" />
     <item
         android:id="@+id/nav_item_build"

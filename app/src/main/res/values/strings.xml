@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">справка пгт. Веселого</string>
+    <string name="app_name">Моё Весёлое</string>
     <string name="btn_traffic">Траспорт</string>
     <string name="title_activity_train">Train</string>
     <string name="title_activity_tr_bus">TrBus</string>
@@ -15,5 +15,12 @@
     <string name="beauty">Услуги \n красоты</string>
     <string name="organization_of_holidays">Организация \n праздников</string>
     <string name="development">Разработка\n приложений</string>
+    <string name="title_activity_fueling">FuelingActivity</string>
+
+    <string name="wait">wait…</string>
+    <string name="title">Sample Activity #%d</string>
+    <string name="watercanal">КП \"Водоканал\"</string>
+    <string name="watercanal_more">Коммунальное предприятие  \"Водоканал\"</string>
+    <string name="res">Веселовский РЕC</string>
 
 </resources>

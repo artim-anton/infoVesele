@@ -9,6 +9,7 @@ import android.view.View;
 import android.webkit.WebView;
 
 import com.artimanton.infovesele.R;
+import com.artimanton.infovesele.utilities.BackGroundActivity;
 import com.squareup.picasso.Picasso;
 
 public class DeliveryService extends AppCompatActivity {

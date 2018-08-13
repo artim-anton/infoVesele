@@ -10,17 +10,27 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageView;
 
 import com.artimanton.infovesele.R;
+import com.artimanton.infovesele.utilities.BackGroundActivity;
+import com.squareup.picasso.Picasso;
 
 public class AddServicesActivity extends AppCompatActivity {
     EditText etPhoneReclame;
+    ImageView imageReclame;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_services);
+        BackGroundActivity.setBackground(this, this);
+        imageReclame= (ImageView) findViewById(R.id.img_reclame);
+
+        Picasso.get()
+                .load("https://drogmedia.net.ua/wp-content/uploads/2017/10/Reklama-na-bloge-dlya-vas-po-dostupny-m-tsenam.png")
+                .into(imageReclame);
 
 
         /*Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -39,7 +49,6 @@ public class AddServicesActivity extends AppCompatActivity {
 
     public void btnCallReclame(View view) {
         etPhoneReclame = (EditText) findViewById(R.id.et_phone_reclame);
-        //String phone = "0978792587";
         String phone = etPhoneReclame.getText().toString();
         Intent intent = new Intent(Intent.ACTION_CALL, Uri.fromParts("tel", phone, null));
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {

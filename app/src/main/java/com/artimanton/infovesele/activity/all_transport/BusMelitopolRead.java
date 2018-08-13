@@ -12,6 +12,7 @@ import com.artimanton.infovesele.R;
 import com.artimanton.infovesele.adapters.BusAdapter;
 import com.artimanton.infovesele.model.BusModel;
 import com.artimanton.infovesele.permission.Internet;
+import com.artimanton.infovesele.utilities.BackGroundActivity;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;

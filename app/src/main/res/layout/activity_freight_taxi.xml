@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/myview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:context=".activity.all_transport.BusKirilovka">
+
+        <Button
+            android:id="@+id/btn_freight_taxi_caption"
+            style="@style/services_button"
+            android:drawableLeft="@drawable/ic_delivery_service_black_24dp"
+            android:text="Грузовое такси"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.github.chrisbanes.photoview.PhotoView
+            android:id="@+id/img_freight_taxi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:padding="10dp"
+            android:scaleType="fitStart"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_freight_taxi_caption" />
+
+        <LinearLayout
+            android:id="@+id/ln_freight_taxi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            app:layout_constraintTop_toBottomOf="@id/img_freight_taxi">
+
+            <EditText
+                android:id="@+id/et_info_car_freight_taxi"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="4"
+                android:enabled="false"
+                android:inputType="text"
+                android:text="Доставка груза"
+                android:textColor="@color/colorTime"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/et_phone_freight_taxi"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="3"
+                android:enabled="false"
+                android:inputType="phone"
+                android:text="0680901157"
+                android:textColor="@color/colorPhone"
+                android:textSize="16sp" />
+
+            <ImageButton
+                android:id="@+id/btn_call"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1.5"
+                android:background="@drawable/border"
+                android:onClick="btnCallFreightTaxi"
+                android:src="@drawable/ic_call_black_24dp"
+                android:text="CL"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ln_freight_taxi_two"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            app:layout_constraintTop_toBottomOf="@id/ln_freight_taxi">
+
+            <EditText
+                android:id="@+id/et_info_car_freight_taxi_two"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="4"
+                android:enabled="false"
+                android:visibility="invisible"
+                android:inputType="text"
+                android:text=""
+                android:textColor="@color/colorTime"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/et_phone_freight_taxi_two"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="3"
+                android:enabled="false"
+                android:inputType="phone"
+                android:text="0979609469"
+                android:textColor="@color/colorPhone"
+                android:textSize="16sp" />
+
+            <ImageButton
+                android:id="@+id/btn_call_two"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1.5"
+                android:background="@drawable/border"
+                android:onClick="btnCallFreightTaxiTwo"
+                android:src="@drawable/ic_call_black_24dp"
+                android:text="CL"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+    </android.support.constraint.ConstraintLayout>
+
+
+</ScrollView>

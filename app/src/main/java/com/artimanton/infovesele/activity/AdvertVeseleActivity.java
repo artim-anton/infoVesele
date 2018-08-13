@@ -1,14 +1,23 @@
 package com.artimanton.infovesele.activity;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.drawable.BitmapDrawable;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
+import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import com.anjlab.android.iab.v3.BillingProcessor;
+import com.anjlab.android.iab.v3.TransactionDetails;
 import com.artimanton.infovesele.R;
 import com.artimanton.infovesele.activity.all_services.BuilderActivity;
 import com.artimanton.infovesele.adapters.AdvertAdapter;
@@ -27,7 +36,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class AdvertVeseleActivity extends BaseActivity {
+public class AdvertVeseleActivity extends BaseActivity implements BillingProcessor.IBillingHandler  {
     private RecyclerView recyclerView;
     private List<AdvertModel> result;
     private AdvertAdapter adapter;
@@ -35,14 +44,28 @@ public class AdvertVeseleActivity extends BaseActivity {
     private FirebaseDatabase database;
     private DatabaseReference reference;
 
+    private BillingProcessor bp;
+    private static final String LICENSE_KEY = "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAjwSzeEgAXyQBBKCp724PVqTDbIzY9CGhkTdXFrPNmxpwmLjUyHB9oR3rlkOQIbCPRgU1nWaWqD27qhijbnx1dm3sNZ136EnB2tzbMZjTU88p9Meizz8YfkAhD0csKiEzYk7tzbhO9EWfIprDylbD6UpJsa8OJS//8xQHykcgt2r/DKICxoRoR3hxNczgQY9dtJOPcdrMwKKB402lkqqdEAEyN1t5E0vxBQpqU6Ouufjx3aUrI12GovTnn1kOyT4UUYt20UQz9E9M9GRaBoHgxPstZB8rY6ffkkqaKmmmqjFM5g8hY9OxNF8jkApcjgAtvq03t4j6YOiFUetI+4yc5wIDAQAB"; // PUT YOUR MERCHANT KEY HERE;
+    private static final String PRODUCT_ID = "com.artimanton.infovesele";
+    private static final String SUBSCRIPTION_ID = "com.artimanton.infovesele.subs1";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_advert_vesele);
         setupBottomNavigation(2,this);
+        Bitmap bmp = BitmapFactory.decodeResource(getResources(), R.drawable.sprinkles); // берем картинку из ресурса
+        BitmapDrawable bitmapDrawable = new BitmapDrawable(bmp);
+        bitmapDrawable.setTileModeXY(android.graphics.Shader.TileMode.REPEAT, android.graphics.Shader.TileMode.REPEAT); // гшоворим обьекту как рисовать (у меня это повторяющийся фон)
+        ConstraintLayout layout = findViewById(R.id.advert_vesele_layout);
+        layout.setBackgroundDrawable(bitmapDrawable); // задаём фон нашему лэйауту
+
+
         if (!Internet.isOnline(this)){
             Toast.makeText(this, "Проверьте подключение к Интернету", Toast.LENGTH_LONG).show();
         }
+
+        bp = new BillingProcessor(this, LICENSE_KEY, this);
 
 
         database = FirebaseDatabase.getInstance();
@@ -143,8 +166,41 @@ public class AdvertVeseleActivity extends BaseActivity {
     }
 
     public void btnAddAdvert(View view) {
-        Intent intent = new Intent(AdvertVeseleActivity.this, AddAdvertVeseleActivity.class);
-        startActivity(intent);
+        if (bp.isSubscribed(SUBSCRIPTION_ID)) {
+            Intent intent = new Intent(AdvertVeseleActivity.this, AddAdvertVeseleActivity.class);
+            startActivity(intent);
+        }else{
+            Intent intent = new Intent(AdvertVeseleActivity.this, BillingActivity.class);
+            startActivity(intent);
+        }
+    }
+
+
+    @Override
+    public void onProductPurchased(@NonNull String productId, @Nullable TransactionDetails details) {
+
+
+    }
+
+    @Override
+    public void onPurchaseHistoryRestored() {
+        bp.loadOwnedPurchasesFromGoogle();
+
+
+    }
+
+    @Override
+    public void onBillingError(int errorCode, @Nullable Throwable error) {
+
+    }
+
+    @Override
+    public void onBillingInitialized() {
+
+    }
+
+    private void showToast(String message) {
+        Toast.makeText(this, message, Toast.LENGTH_LONG).show();
     }
 }
 
