@@ -38,15 +38,11 @@ public class HolidaysActivity extends AppCompatActivity {
             Toast.makeText(this, "Проверьте подключение к Интернету", Toast.LENGTH_LONG).show();
         }
 
-        final PhotoView imageViewHolidaysOne = findViewById(R.id.img_organization_of_holidays_one);
-        final PhotoView imageViewHolidaysTwo = findViewById(R.id.img_organization_of_holidays_two);
+        final PhotoView imageViewHolidaysOne = findViewById(R.id.img_organization_of_holidays_three);
 
         Picasso.get()
-                .load("http://s1vesele.ucoz.net/infoVesele/HolidaysOne.jpg")
+                .load("http://s1vesele.ucoz.net/infoVesele/HolidaysThree.jpg")
                 .into(imageViewHolidaysOne);
-        Picasso.get()
-                .load("http://s1vesele.ucoz.net/infoVesele/HolidaysTwo.jpg")
-                .into(imageViewHolidaysTwo);
 
         database = FirebaseDatabase.getInstance();
         reference = database.getReference("services/holidays");

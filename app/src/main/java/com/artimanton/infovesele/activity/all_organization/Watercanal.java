@@ -25,4 +25,12 @@ public class Watercanal extends AppCompatActivity {
         intent.setData(Uri.parse("https://docs.google.com/forms/d/e/1FAIpQLSfK3M4llCkwh5ild7vZqSSvW4lMiGkbv14LUCOAxQkxeMYWow/viewform"));
         startActivity(intent);
     }
+
+    public void btnSite(View view) {
+        Intent intent = new Intent();
+        intent.setAction(Intent.ACTION_VIEW);
+        intent.addCategory(Intent.CATEGORY_BROWSABLE);
+        intent.setData(Uri.parse("http://vodokanalvesele.at.ua"));
+        startActivity(intent);
+    }
 }

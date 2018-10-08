@@ -15,12 +15,17 @@ import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.artimanton.infovesele.R;
+import com.artimanton.infovesele.activity.all_advertising.WicondaActivity;
 import com.artimanton.infovesele.activity.all_transport.BusCity;
 import com.artimanton.infovesele.activity.all_transport.DeliveryService;
 import com.artimanton.infovesele.activity.all_transport.FreightTaxiActivity;
 import com.artimanton.infovesele.activity.all_transport.FuelingActivity;
 import com.artimanton.infovesele.activity.all_transport.TaxiRead_FireBase;
 import com.artimanton.infovesele.activity.all_transport.Train;
+import com.github.chrisbanes.photoview.OnViewTapListener;
+import com.github.chrisbanes.photoview.PhotoView;
+import com.github.chrisbanes.photoview.PhotoViewAttacher;
+import com.squareup.picasso.Picasso;
 
 public class TransportActivity extends BaseActivity {
     private static final int REQUEST_READ_PHONE_STATE = 10001;
@@ -34,7 +39,7 @@ public class TransportActivity extends BaseActivity {
 
         Bitmap bmp = BitmapFactory.decodeResource(getResources(), R.drawable.sprinkles); // берем картинку из ресурса
         BitmapDrawable bitmapDrawable = new BitmapDrawable(bmp);
-        bitmapDrawable.setTileModeXY(android.graphics.Shader.TileMode.REPEAT, android.graphics.Shader.TileMode.REPEAT); // гшоворим обьекту как рисовать (у меня это повторяющийся фон)
+        bitmapDrawable.setTileModeXY(android.graphics.Shader.TileMode.REPEAT, android.graphics.Shader.TileMode.REPEAT); // говорим обьекту как рисовать (у меня это повторяющийся фон)
         LinearLayout layout = findViewById(R.id.transport_layout);
         layout.setBackgroundDrawable(bitmapDrawable); // задаём фон нашему лэйауту
 
@@ -46,6 +51,24 @@ public class TransportActivity extends BaseActivity {
             // иначе запрашиваем разрешение у пользователя
             requestPermission(READ_PHONE_STATE_PERMISSION, REQUEST_READ_PHONE_STATE);
         }
+
+
+        final PhotoView photoView = findViewById(R.id.img_wikonda);
+
+       Picasso.get()
+                .load("http://s1vesele.ucoz.net/infoVesele/wikonda_vesele.jpg")
+                .into(photoView);
+
+        photoView.setClickable(true);
+
+        photoView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(TransportActivity.this, WicondaActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
     public boolean isPermissionGranted(String permission) {
@@ -104,5 +127,9 @@ public class TransportActivity extends BaseActivity {
     public void btFreightTaxi(View view) {
         Intent intent = new Intent(TransportActivity.this, FreightTaxiActivity.class);
         startActivity(intent);
+    }
+
+    public void btWiconda(View view) {
+
     }
 }

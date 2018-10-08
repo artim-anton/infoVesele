@@ -127,6 +127,23 @@
         android:text="*показания нужно подавать, до 25 числа, текущего месяца."/>
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal">
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border"
+        android:padding="10dp"
+        android:layout_margin="20dp"
+        android:text=" Сайт"
+        android:drawableLeft="@drawable/ic_site_24dp"
+        android:gravity="center|center_vertical"
+        android:onClick="btnSite"/>
+
+    </LinearLayout>
+
 
 </LinearLayout>
 

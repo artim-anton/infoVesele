@@ -152,16 +152,17 @@
         <activity android:name=".activity.AllEducationInstitutionActivity" />
         <activity
             android:name=".activity.all_education_institution.FirstSchoolActivity"
-            android:configChanges="screenSize|orientation"/>
+            android:configChanges="screenSize|orientation" />
         <activity
             android:name=".activity.all_education_institution.SecondSchoolActivity"
-            android:configChanges="screenSize|orientation"/>
+            android:configChanges="screenSize|orientation" />
         <activity
             android:name=".activity.all_education_institution.GymnasiumActivity"
-            android:configChanges="screenSize|orientation"/>
+            android:configChanges="screenSize|orientation" />
         <activity
             android:name=".activity.all_education_institution.LyceumActivity"
-            android:configChanges="screenSize|orientation"></activity>
+            android:configChanges="screenSize|orientation" />
+        <activity android:name=".activity.all_advertising.WicondaActivity"></activity>
     </application>
 
 </manifest>

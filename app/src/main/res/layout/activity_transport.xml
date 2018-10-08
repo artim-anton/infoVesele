@@ -6,10 +6,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.artimanton.infovesele.activity.TransportActivity">
-
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:paddingBottom="50dp"
         android:orientation="vertical"
         android:id="@+id/transport_layout">
 
@@ -104,8 +107,19 @@
             android:paddingLeft="10dp"
             android:text="Заправки"
             android:textSize="@dimen/title_transport"/>
+
+        <com.github.chrisbanes.photoview.PhotoView
+            android:id="@+id/img_wikonda"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:scaleType="fitStart"
+            android:adjustViewBounds="true"/>
     </LinearLayout>
 
+</ScrollView>
     <include layout="@layout/bottom_navigation_view"/>
 
 </android.support.constraint.ConstraintLayout>

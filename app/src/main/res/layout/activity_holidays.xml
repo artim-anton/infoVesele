@@ -19,30 +19,21 @@
         app:layout_constraintTop_toTopOf="parent"/>
 
     <com.github.chrisbanes.photoview.PhotoView
-        android:id="@+id/img_organization_of_holidays_one"
+        android:id="@+id/img_organization_of_holidays_three"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:padding="5dp"
         android:scaleType="fitStart"
         android:adjustViewBounds="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btn_organization_of_holidays" />
 
-    <com.github.chrisbanes.photoview.PhotoView
-        android:id="@+id/img_organization_of_holidays_two"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:scaleType="fitStart"
-        android:adjustViewBounds="true"
-        android:paddingTop="5dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/img_organization_of_holidays_one" />
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/img_organization_of_holidays_two">
+        app:layout_constraintTop_toBottomOf="@id/img_organization_of_holidays_three">
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/services_list"

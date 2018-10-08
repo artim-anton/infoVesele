@@ -123,7 +123,7 @@ public class HomeActivityWeb extends BaseActivity {
 
     @Override
     public void onBackPressed() {
-        if(mWebView.canGoBack() & !Internet.isOnline(this)) {
+        if(mWebView.canGoBack() & Internet.isOnline(this)) {
             mWebView.goBack();
         } else {
             super.onBackPressed();
