@@ -19,7 +19,7 @@
         android:gravity="center|center_vertical"
         android:onClick="btnSaveAdvert"
         android:paddingLeft="10dp"
-        android:text="Сохранить"
+        android:text="@string/advert_save"
         android:textSize="18sp"
         android:textStyle="italic"/>
 
@@ -33,7 +33,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
             android:layout_marginTop="5dp"
-            android:text="Заголовок"
+            android:text="@string/advert_name"
             android:textSize="14sp" />
 
         <EditText
@@ -61,7 +61,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
             android:layout_marginTop="5dp"
-            android:text="Описание"
+            android:text="@string/advert_more"
             android:maxLength="150"
             android:textSize="14sp" />
 
@@ -90,7 +90,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
             android:layout_marginTop="5dp"
-            android:text="Цена"
+            android:text="@string/advert_prise"
             android:textSize="14sp" />
 
         <EditText
@@ -117,7 +117,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
-            android:text="Номер тел."
+            android:text="@string/advert_mob"
             android:textSize="14sp" />
 
         <EditText

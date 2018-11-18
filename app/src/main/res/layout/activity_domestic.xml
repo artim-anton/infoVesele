@@ -14,7 +14,7 @@
         android:id="@+id/btn_domestic"
         style="@style/services_button"
         android:drawableLeft="@drawable/domestic"
-        android:text="Бытовые услуги"
+        android:text="@string/domestic_more"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
 

@@ -33,7 +33,7 @@
                     style="@style/services_button_two"
                     android:drawableTop="@drawable/ic_school_48dp"
                     android:onClick="btnFirstSchool"
-                    android:text="1 школа"
+                    android:text="@string/first_school"
                     app:layout_columnWeight="1" />
 
                 <Button
@@ -41,7 +41,7 @@
                     style="@style/services_button_two"
                     android:drawableTop="@drawable/ic_school_48dp"
                     android:onClick="btnSecondSchool"
-                    android:text="2 школа"
+                    android:text="@string/second_school"
                     app:layout_columnWeight="1" />
 
                 <Button
@@ -49,7 +49,7 @@
                     style="@style/services_button_two"
                     android:drawableTop="@drawable/ic_gymnacium_48dp"
                     android:onClick="btnGymnasium"
-                    android:text="Гимназия"
+                    android:text="@string/gymnasium"
                     app:layout_columnWeight="1" />
 
                 <Button
@@ -57,7 +57,7 @@
                     style="@style/services_button_two"
                     android:drawableTop="@drawable/ic_lyceum_48dp"
                     android:onClick="btnLyceum"
-                    android:text="Лицей"
+                    android:text="@string/lyceum"
                     app:layout_columnWeight="1" />
 
 

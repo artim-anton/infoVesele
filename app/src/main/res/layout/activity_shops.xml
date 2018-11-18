@@ -30,7 +30,7 @@
                     style="@style/services_button_two"
                     android:drawableTop="@drawable/sale"
                     android:onClick="btnSale"
-                    android:text="Акции"
+                    android:text="@string/sale"
                     app:layout_columnWeight="1" />
 
                 <Button
@@ -38,7 +38,7 @@
                     style="@style/services_button_two"
                     android:drawableTop="@drawable/ic_cheaper_48dp"
                     android:onClick="btnCheaper"
-                    android:text="Где дешевле?"
+                    android:text="@string/cheaper"
                     app:layout_columnWeight="1" />
 
 

@@ -127,7 +127,7 @@
             android:textColor="@color/black"
             android:gravity="center"
             android:textSize="16dp"
-            android:text="Функция добавления объявления платная. Оформите подписку, чтобы иметь возможность размещать объявления. Стоимость 30 грн/мес. Первые 3 дня бесплатно."/>
+            android:text="@string/billing_text"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -138,7 +138,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/border"
-            android:text="Оформить подписку на 1 месяц"
+            android:text="@string/subscribe_text"
             android:padding="10dp"
             android:id="@+id/subscribeButton"
             android:onClick="onClick"

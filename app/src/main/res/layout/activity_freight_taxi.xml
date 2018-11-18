@@ -16,7 +16,7 @@
             android:id="@+id/btn_freight_taxi_caption"
             style="@style/services_button"
             android:drawableLeft="@drawable/ic_delivery_service_black_24dp"
-            android:text="Грузовое такси"
+            android:text="@string/freight_taxi"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -47,7 +47,7 @@
                 android:layout_weight="4"
                 android:enabled="false"
                 android:inputType="text"
-                android:text="Доставка груза"
+                android:text="@string/info_car_freight_taxi"
                 android:textColor="@color/colorTime"
                 android:textSize="16sp" />
 

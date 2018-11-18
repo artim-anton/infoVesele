@@ -44,7 +44,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:padding="10dp"
-        android:text="По вопросам размещения рекламы и сотрудничества обращаться по номеру:"
+        android:text="@string/add_services"
         android:textColor="@color/black"
         android:textSize="20sp" />
 

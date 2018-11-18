@@ -15,105 +15,66 @@
     android:orientation="vertical">
 
     <Button
+        style="@style/bus_city"
         android:id="@+id/btn_bus_station"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:onClick="BusStation"
-        android:text="   Веселовская автостанция"
-        android:gravity="center_vertical"
-        android:textSize="@dimen/title_city_bus"
+        android:text="@string/vesele_bus_station"
         android:drawableLeft="@drawable/ic_bus_station"
         android:background="@drawable/border"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginBottom="10dp"
-        android:paddingLeft="10dp"/>
+        android:layout_marginTop="10dp"/>
 
     <Button
+        style="@style/bus_city"
         android:id="@+id/btn_zp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:onClick="Zp"
-        android:text="   Веселое - Запорожье"
-        android:gravity="center_vertical"
-        android:textSize="@dimen/title_city_bus"
+        android:text="@string/bus_vesele_zp"
         android:drawableLeft="@drawable/ic_location_city_selector"
-        android:background="@drawable/border"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginBottom="10dp"
-        android:paddingLeft="10dp"/>
+        android:background="@drawable/border" />
 
 
     <Button
+        style="@style/bus_city"
         android:id="@+id/btn_melitopol"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:onClick="Melitopol"
-        android:text="   Веселое - Мелитополь"
-        android:gravity="center_vertical"
-        android:textSize="@dimen/title_city_bus"
+        android:text="@string/bus_vesele_melitopol"
         android:drawableLeft="@drawable/ic_location_city_selector"
-        android:background="@drawable/border"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginBottom="10dp"
-        android:paddingLeft="10dp"/>
+        android:background="@drawable/border"/>
 
     <Button
+        style="@style/bus_city"
         android:id="@+id/btn_bardyansk"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:onClick="Bardyansk"
-        android:text="   Веселое - Бердянск"
-        android:gravity="center_vertical"
-        android:textSize="@dimen/title_city_bus"
+        android:text="@string/bus_vesele_bardyansk"
         android:drawableLeft="@drawable/ic_location_city_selector"
-        android:background="@drawable/border"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginBottom="10dp"
-        android:paddingLeft="10dp"/>
+        android:background="@drawable/border"/>
 
     <Button
+        style="@style/bus_city"
         android:id="@+id/btn_kirilovka"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:onClick="Kirilovka"
-        android:text="   Веселое - Кириловка"
+        android:text="@string/bus_vesele_kirilovka"
         android:gravity="center_vertical"
-        android:textSize="@dimen/title_city_bus"
         android:drawableLeft="@drawable/ic_location_city_selector"
-        android:background="@drawable/border"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginBottom="10dp"
-        android:paddingLeft="10dp"/>
+        android:background="@drawable/border"/>
 
     <Button
+        style="@style/bus_city"
         android:id="@+id/btn_bogdanovka"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:onClick="Bogdanovka"
-        android:text="   Веселое - Новобогдановка"
-        android:gravity="center_vertical"
-        android:textSize="@dimen/title_city_bus"
+        android:text="@string/bus_vesele_bogdanovka"
         android:drawableLeft="@drawable/ic_location_city_selector"
-        android:background="@drawable/border"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginBottom="10dp"
-        android:paddingLeft="10dp"/>
+        android:background="@drawable/border"/>
 
     <Button
         android:id="@+id/btn_zp_back"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="Zp_back"
-        android:text="Запорожье - Веселое  "
+        android:text="@string/bus_zp_vesele"
         android:gravity="right|center_vertical"
         android:textSize="@dimen/title_city_bus"
+        android:paddingEnd="@dimen/padding_bus"
+        android:paddingRight="@dimen/padding_bus"
         android:drawableLeft="@drawable/ic_location_city_selector"
         android:background="@drawable/border"
         android:layout_margin="10dp"
@@ -124,9 +85,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="Melitopol_back"
-        android:text="Мелитополь - Веселое   "
+        android:text="@string/bus_melitopol_vesele"
         android:gravity="right|center_vertical"
         android:textSize="@dimen/title_city_bus"
+        android:paddingEnd="@dimen/padding_bus"
+        android:paddingRight="@dimen/padding_bus"
         android:drawableLeft="@drawable/ic_location_city_selector"
         android:background="@drawable/border"
         android:layout_marginLeft="10dp"

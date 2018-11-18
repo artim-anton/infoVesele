@@ -1,5 +1,7 @@
 package com.artimanton.infovesele;
 
+import android.app.AlarmManager;
+import android.app.PendingIntent;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Handler;
@@ -13,6 +15,7 @@ import com.artimanton.infovesele.activity.HomeActivity;
 import com.artimanton.infovesele.activity.HomeActivityWeb;
 import com.artimanton.infovesele.db.SugarORM;
 import com.artimanton.infovesele.model.NewsModel;
+import com.artimanton.infovesele.notification.Notification_reciever;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -22,6 +25,7 @@ import org.jsoup.select.Elements;
 import java.io.IOException;
 import java.time.Instant;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
@@ -54,6 +58,23 @@ public class MainActivity extends AppCompatActivity {
                 finish();
             }
         }, 1*1000);
+
+
+        Calendar calendar = Calendar.getInstance();
+
+        calendar.set(Calendar.DAY_OF_MONTH, 20);
+        calendar.set(Calendar.HOUR_OF_DAY, 19);
+        calendar.set(Calendar.MINUTE, 30);
+
+        Intent intent = new Intent(getApplicationContext(), Notification_reciever.class);
+        intent.setAction("MY_NOTIFICATION_MESSAGE");
+
+        PendingIntent pendingIntent = PendingIntent.getBroadcast(getApplicationContext(), 100, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+
+        AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
+        alarmManager.cancel(pendingIntent);
+        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), AlarmManager.INTERVAL_DAY*31, pendingIntent);
+
 
         //new ParseAllNews().execute();
     }

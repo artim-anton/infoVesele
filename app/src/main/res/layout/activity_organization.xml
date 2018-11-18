@@ -30,7 +30,7 @@
                     style="@style/services_button_two"
                     android:drawableTop="@drawable/ic_water_blue_24dp"
                     android:onClick="btnWatercanal"
-                    android:text="Водоканал"
+                    android:text="@string/watercanal_button"
                     app:layout_columnWeight="1" />
 
                 <Button
@@ -38,7 +38,7 @@
                     style="@style/services_button_two"
                     android:drawableTop="@drawable/ic_power_black_24dp"
                     android:onClick="btnRes"
-                    android:text="РЕС"
+                    android:text="@string/res_text_button"
                     app:layout_columnWeight="1" />
 
 

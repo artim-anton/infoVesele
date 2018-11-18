@@ -15,7 +15,7 @@
         android:id="@+id/btn_home_master"
         style="@style/services_button"
         android:drawableLeft="@drawable/home_master"
-        android:text="Домашний мастер"
+        android:text="@string/home_master_more"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
 

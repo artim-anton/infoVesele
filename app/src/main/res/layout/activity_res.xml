@@ -29,7 +29,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Адрес: "
+                android:text="@string/res_adres"
                 android:textColor="@color/black"
                 android:textStyle="bold" />
 
@@ -37,7 +37,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="4"
-                android:text="72202, Запорожская область, Веселовский район, пгт Веселое, ул. Белорецкая, 131"
+                android:text="@string/res_adres_more"
                 android:textIsSelectable="true"
                 android:textColor="@color/black" />
 
@@ -52,7 +52,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Телефон: "
+                android:text="@string/res_tel"
                 android:textColor="@color/black"
                 android:textStyle="bold" />
 
@@ -60,7 +60,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="4"
-                android:text="0613621091"
+                android:text="@string/res_tel_more"
                 android:textIsSelectable="true"
                 android:textColor="@color/black" />
 
@@ -77,7 +77,7 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/border"
                 android:padding="10dp"
-                android:text=" Подать показания електросчетчика"
+                android:text="@string/res_button_text"
                 android:drawableLeft="@drawable/ic_library_add_grean_24dp"
                 android:gravity="center|center_vertical"
                 android:onClick="btnTestifyRes"/>
@@ -96,7 +96,7 @@
                 android:paddingLeft="20dp"
                 android:paddingRight="20dp"
                 android:textSize="12dp"
-                android:text="*с целью корректного формирования счетов за потребленную электрическую энергию просим подавать показания на 1 (первое) число месяца."/>
+                android:text="@string/res_hint"/>
         </LinearLayout>
 
 

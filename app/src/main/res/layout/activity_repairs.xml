@@ -14,7 +14,7 @@
         android:id="@+id/btn_repairs"
         style="@style/services_button"
         android:drawableLeft="@drawable/repairs"
-        android:text="Ремонт техники"
+        android:text="@string/repairs_more"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
 

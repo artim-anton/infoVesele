@@ -13,7 +13,7 @@
         android:id="@+id/btn_development_caption"
         style="@style/services_button"
         android:drawableLeft="@drawable/development"
-        android:text="Разработка приложений"
+        android:text="@string/it_servise"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
 
