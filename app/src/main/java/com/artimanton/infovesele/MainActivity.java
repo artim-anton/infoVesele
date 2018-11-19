@@ -2,7 +2,9 @@ package com.artimanton.infovesele;
 
 import android.app.AlarmManager;
 import android.app.PendingIntent;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Handler;
 import android.os.PersistableBundle;
@@ -30,6 +32,7 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
+    private static final String MY_SETTINGS = "notification_watercanal";
    // private String MY_LOG = "myLog";
     //private List<NewsModel> listNews = new ArrayList<>();
     //private NewsModel newsModel;
@@ -60,6 +63,13 @@ public class MainActivity extends AppCompatActivity {
         }, 1*1000);
 
 
+
+        SharedPreferences sp = getSharedPreferences(MY_SETTINGS,
+                Context.MODE_PRIVATE);
+        // проверяем, первый ли раз открывается программа
+        boolean saveAlarm = sp.getBoolean("saveAlarm", false);
+
+        if (!saveAlarm) {
         Calendar calendar = Calendar.getInstance();
 
         calendar.set(Calendar.DAY_OF_MONTH, 20);
@@ -69,11 +79,15 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(getApplicationContext(), Notification_reciever.class);
         intent.setAction("MY_NOTIFICATION_MESSAGE");
 
-        PendingIntent pendingIntent = PendingIntent.getBroadcast(getApplicationContext(), 100, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+        PendingIntent pendingIntent = PendingIntent.getBroadcast(getApplicationContext(), 100, intent, PendingIntent.FLAG_CANCEL_CURRENT);
 
         AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
         alarmManager.cancel(pendingIntent);
         alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), AlarmManager.INTERVAL_DAY*31, pendingIntent);
+
+        SharedPreferences.Editor e = sp.edit();
+        e.putBoolean("saveAlarm", true);
+        e.commit();  }
 
 
         //new ParseAllNews().execute();
