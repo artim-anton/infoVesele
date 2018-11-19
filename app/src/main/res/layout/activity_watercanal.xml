@@ -17,7 +17,7 @@
         android:id="@+id/btn_repairs"
         style="@style/services_button"
         android:drawableLeft="@drawable/ic_water_blue_24dp"
-        android:text="@string/watercanal" />
+        android:text="@string/watercanal"/>
 
 
     <TextView
@@ -37,7 +37,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Адрес: "
+            android:text="@string/watercanal_adress"
             android:textColor="@color/black"
             android:textStyle="bold" />
 
@@ -45,7 +45,8 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="4"
-            android:text="72202, Запорожская область, Веселовский район, пгт Веселое, ул. Лесная, 25"
+            android:paddingLeft="5dp"
+            android:text="@string/watercanal_adress_more"
             android:textColor="@color/black" />
 
     </LinearLayout>
@@ -59,7 +60,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Руководитель: "
+            android:text="@string/watercanal_director"
             android:textColor="@color/black"
             android:textStyle="bold" />
 
@@ -67,7 +68,8 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="4"
-            android:text="Кравцов Александр Сергеевич"
+            android:paddingLeft="5dp"
+            android:text="@string/watercanal_director_more"
             android:textColor="@color/black" />
 
     </LinearLayout>
@@ -81,7 +83,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Телефон: "
+            android:text="@string/watercanal_tel"
             android:textColor="@color/black"
             android:textStyle="bold" />
 
@@ -89,7 +91,8 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="4"
-            android:text="0613621133"
+            android:paddingLeft="5dp"
+            android:text="@string/watercanal_tel_more"
             android:textColor="@color/black" />
 
     </LinearLayout>
@@ -105,8 +108,9 @@
             android:layout_height="wrap_content"
             android:background="@drawable/border"
             android:padding="10dp"
-            android:text=" Подать показания водомера"
+            android:text="@string/watercanal_text_button_add"
             android:drawableLeft="@drawable/ic_library_add_grean_24dp"
+            android:drawablePadding="5sp"
             android:gravity="center|center_vertical"
             android:onClick="btnTestify"/>
 
@@ -137,11 +141,42 @@
         android:background="@drawable/border"
         android:padding="10dp"
         android:layout_margin="20dp"
-        android:text=" Сайт"
+        android:text="@string/watercanal_text_button_site"
         android:drawableLeft="@drawable/ic_site_24dp"
         android:gravity="center|center_vertical"
         android:onClick="btnSite"/>
 
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:padding="10dp"
+            android:layout_margin="20dp"
+            android:text="@string/watercanal_text_button_renew"
+            android:drawableLeft="@drawable/ic_autorenew_green_24dp"
+            android:gravity="center|center_vertical"
+            android:onClick="btnCreateNotification"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:textSize="12dp"
+            android:text="*при перезагрузке устройства, смартфон очищает все напоминания, если перестало срабативать напоминание, нажми обновить напоминание."/>
     </LinearLayout>
 
 

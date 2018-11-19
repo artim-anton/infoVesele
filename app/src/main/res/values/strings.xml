@@ -85,5 +85,14 @@
     <string name="add_services_buuton_text">Добавить услугу</string>
     <string name="sale">Акции</string>
     <string name="cheaper">Где дешевле?</string>
+    <string name="watercanal_adress">Адрес:</string>
+    <string name="watercanal_adress_more">72202, Запорожская область, Веселовский район, пгт Веселое, ул. Лесная, 25</string>
+    <string name="watercanal_director">Руководитель:</string>
+    <string name="watercanal_director_more">Кравцов Александр Сергеевич</string>
+    <string name="watercanal_tel">Телефон:</string>
+    <string name="watercanal_tel_more">0613621133</string>
+    <string name="watercanal_text_button_add">Подать показания водомера</string>
+    <string name="watercanal_text_button_site">Сайт</string>
+    <string name="watercanal_text_button_renew">Обновить напоминание</string>
 
 </resources>
