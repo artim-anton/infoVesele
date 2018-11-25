@@ -1,11 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Моё Весёлое</string>
     <string name="btn_traffic">Траспорт</string>
-    <string name="title_activity_train">Train</string>
-    <string name="title_activity_tr_bus">TrBus</string>
+    <string name="title_activity_tr_bus">Автобуси</string>
+    <string name="title_activity_train">Поезда</string>
+    <string name="title_activity_taxi">Такси</string>
+    <string name="title_activity_freight_taxi">Грузовое такси</string>
+    <string name="title_activity_delivery_service">Службы доставки</string>
+    <string name="title_activity_fueling_service">Заправки</string>
     <string name="splash">Splash</string>
     <string name="title_activity_builder">BuilderActivity</string>
     <string name="tutors">Услуги \n репетиторов</string>
+    <string name="tutors_more">Услуги репетиторов</string>
     <string name="builder">Строительные \n работы</string>
     <string name="repairs">Ремонт\nтехники</string>
     <string name="home_master">Домашний \n мастер</string>
@@ -51,7 +57,7 @@
     <string name="bus_vesele_bogdanovka">Веселое - Новобогдановка</string>
     <string name="bus_zp_vesele">Запорожье - Веселое</string>
     <string name="bus_melitopol_vesele">Мелитополь - Веселое</string>
-    <string name="bus_vesele_kirilovka">Веселое - Кириловка</string>
+    <string name="bus_vesele_kirilovka">Веселое - Кирилловка</string>
     <string name="bus_veseloe_melitopol">Веселое - Мелитополь</string>
     <string name="bus_melitopol_veseloe">Мелитополь - Веселое</string>
     <string name="bus_veseloe_novobogdanovka">Веселое - Новобогдановка</string>
@@ -62,9 +68,9 @@
     <string name="to_development">Раздел в разработке</string>
     <string name="delivery_service">Службы доставки</string>
     <string name="new_post">Нова пошта №1</string>
-    <string name="new_post_more">Служба доставки листів і посилок, Московська, 21</string>
+    <string name="new_post_more">Служба доставки писем и посылок, Московская, 21</string>
     <string name="in_time">In-Time</string>
-    <string name="in_time_more">Поштові послуги</string>
+    <string name="in_time_more">Почтовые услуги</string>
     <string name="in_time_street">ул. Волшебная, 143</string>
     <string name="it_servise">Разработка приложений</string>
     <string name="domestic_more">Бытовые услуги</string>
@@ -80,7 +86,7 @@
     <string name="res_adres_more">72202, Запорожская область, Веселовский район, пгт Веселое, ул. Белорецкая, 131</string>
     <string name="res_tel">Телефон:</string>
     <string name="res_tel_more">0613621091</string>
-    <string name="res_button_text">Подать показания електросчетчика</string>
+    <string name="res_button_text">Подать показания электросчетчика</string>
     <string name="res_hint">*с целью корректного формирования счетов за потребленную электрическую энергию просим подавать показания на 1 (первое) число месяца.</string>
     <string name="add_services_buuton_text">Добавить услугу</string>
     <string name="sale">Акции</string>
@@ -94,5 +100,10 @@
     <string name="watercanal_text_button_add">Подать показания водомера</string>
     <string name="watercanal_text_button_site">Сайт</string>
     <string name="watercanal_text_button_renew">Обновить напоминание</string>
+    <string name="nav_setting">Сменить язык</string>
+    <string name="nav_logout">Выйти</string>
+    <string name="choose_language">Выбрать язык...</string>
+
+
 
 </resources>

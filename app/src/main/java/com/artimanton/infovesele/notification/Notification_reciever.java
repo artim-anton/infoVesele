@@ -23,7 +23,7 @@ public class Notification_reciever extends BroadcastReceiver {
 
         NotificationCompat.Builder builder = new NotificationCompat.Builder(context)
                 .setContentIntent(pendingIntent)
-                .setSmallIcon(R.drawable.ic_launcher)
+                .setSmallIcon(R.mipmap.ic_launcher)
                 .setContentTitle("Моё Весёлое")
                 .setStyle(new NotificationCompat.BigTextStyle()
                         .bigText("Напоминаем! Срок подачи показаний водомера до 25 числа, текущего месяца, нажмите на уведомление, чтобы подать сейчас."))

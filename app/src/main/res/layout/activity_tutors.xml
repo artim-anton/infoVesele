@@ -14,7 +14,7 @@
         android:id="@+id/btn_tutors"
         style="@style/services_button"
         android:drawableLeft="@drawable/tutors"
-        android:text="Услуги репетиторов"
+        android:text="@string/tutors_more"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
 

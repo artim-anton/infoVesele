@@ -4,6 +4,9 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.support.design.widget.BottomNavigationView;
+import android.support.design.widget.NavigationView;
+import android.support.v4.view.GravityCompat;
+import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 
@@ -12,7 +15,7 @@ import com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx;
 
 abstract class BaseActivity extends AppCompatActivity {
 
-    static BottomNavigationViewEx bottomNavigationViewEx;
+        static BottomNavigationViewEx bottomNavigationViewEx;
 
     public void setupBottomNavigation(int navNumber, final Activity activity) {
         bottomNavigationViewEx = findViewById(R.id.bottom_navigation_view);

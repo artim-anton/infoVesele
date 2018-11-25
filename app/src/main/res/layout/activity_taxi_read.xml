@@ -11,7 +11,7 @@
         android:id="@+id/btn_taxi_caption"
         style="@style/services_button"
         android:drawableLeft="@drawable/ic_local_taxi_black_48dp"
-        android:text="Такси"
+        android:text="@string/title_activity_taxi"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
 
