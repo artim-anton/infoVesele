@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Моё Весёлое</string>
-    <string name="btn_traffic">Траспорт</string>
+    <string name="btn_traffic">Транспорт</string>
     <string name="title_activity_tr_bus">Автобуси</string>
     <string name="title_activity_train">Поезда</string>
     <string name="title_activity_taxi">Такси</string>
@@ -10,17 +10,17 @@
     <string name="title_activity_fueling_service">Заправки</string>
     <string name="splash">Splash</string>
     <string name="title_activity_builder">BuilderActivity</string>
-    <string name="tutors">Услуги \n репетиторов</string>
+    <string name="tutors">Услуги\nрепетиторов</string>
     <string name="tutors_more">Услуги репетиторов</string>
-    <string name="builder">Строительные \n работы</string>
+    <string name="builder">Строительные\nработы</string>
     <string name="repairs">Ремонт\nтехники</string>
-    <string name="home_master">Домашний \n мастер</string>
-    <string name="business">Деловые \n услуги</string>
-    <string name="domestic">Бытовые \n услуги</string>
-    <string name="car">Ремонт \n авто</string>
-    <string name="beauty">Услуги \n красоты</string>
-    <string name="organization_of_holidays">Организация \n праздников</string>
-    <string name="development">Услуги\n IT-специалистов</string>
+    <string name="home_master">Домашний\nмастер</string>
+    <string name="business">Деловые\nуслуги</string>
+    <string name="domestic">Бытовые\nуслуги</string>
+    <string name="car">Ремонт\nавто</string>
+    <string name="beauty">Услуги\nкрасоты</string>
+    <string name="organization_of_holidays">Организация\nпраздников</string>
+    <string name="development">Услуги\nIT-специалистов</string>
     <string name="title_activity_fueling">FuelingActivity</string>
 
     <string name="wait">wait…</string>
@@ -34,14 +34,14 @@
     <string name="advert_prise">Цена</string>
     <string name="advert_mob">Номер тел.</string>
     <string name="add_services">По вопросам размещения рекламы и сотрудничества обращаться по номеру:</string>
-    <string name="add_advert_vesele">Добавить обьявление</string>
+    <string name="add_advert_vesele">Добавить объявление</string>
     <string name="first_school">1 школа</string>
     <string name="second_school">2 школа</string>
     <string name="gymnasium">Гимназия</string>
     <string name="lyceum">Лицей</string>
-    <string name="organization">Организации\n</string>
+    <string name="organization">"Организации\n"</string>
     <string name="educational_institution">Учебные\nзаведения</string>
-    <string name="shops">Магазины\n</string>
+    <string name="shops">"Магазины\n"</string>
     <string name="beauty_more">Услуги красоты и здоровья</string>
     <string name="billing_text">Функция добавления объявления платная. Оформите подписку, чтобы иметь возможность размещать объявления. Стоимость 30 грн/мес. Первые 3 дня бесплатно.</string>
     <string name="subscribe_text">Оформить подписку на 1 месяц</string>
@@ -72,7 +72,7 @@
     <string name="in_time">In-Time</string>
     <string name="in_time_more">Почтовые услуги</string>
     <string name="in_time_street">ул. Волшебная, 143</string>
-    <string name="it_servise">Разработка приложений</string>
+    <string name="it_servise">Услуги ИТ-специалистов</string>
     <string name="domestic_more">Бытовые услуги</string>
     <string name="freight_taxi">Грузовое такси</string>
     <string name="info_car_freight_taxi">Доставка груза</string>
@@ -104,6 +104,23 @@
     <string name="nav_logout">Выйти</string>
     <string name="choose_language">Выбрать язык...</string>
 
+    <string name="activity_train_trolley_schedule">Расписание движения</string>
+    <string name="activity_train_suburban_and_passenger_trains">пригородных и пассажирских поездов</string>
+    <string name="activity_train_suburban_trains">Пригородные</string>
+    <string name="activity_train_to_melitopol">На Мелитополь</string>
+    <string name="activity_train_to_fedorivka">На Федорівку</string>
+    <string name="activity_train_everyday">ежедневно</string>
+    <string name="activity_train_passenger_trains">Пассажирские</string>
+    <string name="activity_train_odessa_zp">Одесса - Запорожье</string>
+    <string name="activity_train_herson_newvesele">Херсон - Нововеселая</string>
+    <string name="activity_train_newvesele_herson">Нововесела - Херсон</string>
+    <string name="activity_train_zp_odessa">Запоріжжя - Одеса</string>
+    <string name="activity_train_paired">парні</string>
+    <string name="activity_train_notpaired">нечетные</string>
+    <string name="watercanal_hint">*показания нужно подавать, до 25 числа, текущего месяца.</string>
+    <string name="watercanal_hint_notification">*при перезагрузке устройства, смартфон очищает все напоминания, если перестало срабативать напоминание, нажми обновить напоминание.</string>
+    <string name="activity_bus_zp_title_from_center">с центра напротив ДК</string>
+    <string name="activity_bus_zp_bask_title_form_railway">c Ж/Д Запорожье 1</string>
 
 
 </resources>

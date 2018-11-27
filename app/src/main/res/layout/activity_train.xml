@@ -28,7 +28,7 @@
             android:layout_height="match_parent"
             android:gravity="center"
             android:paddingLeft="20dp"
-            android:text="Розклад руху"
+            android:text="@string/activity_train_trolley_schedule"
             android:textColor="@color/black"
             android:textSize="19dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -41,7 +41,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="приміських та пасажирських поїздів"
+        android:text="@string/activity_train_suburban_and_passenger_trains"
         app:layout_constraintTop_toBottomOf="@id/cl_top" />
 
     <TextView
@@ -50,7 +50,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:padding="10dp"
-        android:text="Приміські"
+        android:text="@string/activity_train_suburban_trains"
         android:textColor="@color/black"
         android:textSize="19dp"
         app:layout_constraintTop_toBottomOf="@id/suburban_and_passenger_trains" />
@@ -77,7 +77,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="На Мелітополь" />
+                    android:text="@string/activity_train_to_melitopol" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -87,7 +87,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="щоденно"/>
+                    android:text="@string/activity_train_everyday"/>
             </LinearLayout>
 
             <LinearLayout
@@ -100,7 +100,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="На Федорівку   " />
+                    android:text="@string/activity_train_to_fedorivka" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -110,7 +110,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="щоденно"/>
+                    android:text="@string/activity_train_everyday"/>
             </LinearLayout>
 
         </LinearLayout>
@@ -122,7 +122,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:padding="10dp"
-        android:text="Пасажирські"
+        android:text="@string/activity_train_passenger_trains"
         android:textColor="@color/black"
         android:textSize="19dp"
         app:layout_constraintTop_toBottomOf="@id/ct_suburban_trains" />
@@ -145,14 +145,14 @@
                 app:layout_columnWeight="1"/>
             <TextView
                 android:textSize="@dimen/passenger_trains"
-                android:text="Одесса - Запоріжжя"
+                android:text="@string/activity_train_odessa_zp"
                 app:layout_columnWeight="1"/>
             <TextView
                 android:text="02:35"
                 android:textSize="@dimen/passenger_trains"
                 app:layout_columnWeight="1"/>
             <TextView
-                android:text="парні"
+                android:text="@string/activity_train_paired"
                 android:textSize="@dimen/passenger_trains"
                 app:layout_columnWeight="1"/>
             <TextView
@@ -162,7 +162,7 @@
                 app:layout_columnWeight="1"/>
             <TextView
                 android:textSize="@dimen/passenger_trains"
-                android:text="Херсон - Нововесела"
+                android:text="@string/activity_train_herson_newvesele"
                 app:layout_columnWeight="1"/>
             <TextView
                 android:textSize="@dimen/passenger_trains"
@@ -170,7 +170,7 @@
                 app:layout_columnWeight="1"/>
             <TextView
                 android:textSize="@dimen/passenger_trains"
-                android:text="щоденно"
+                android:text="@string/activity_train_everyday"
                 app:layout_columnWeight="1"/>
             <TextView
                 android:textSize="@dimen/passenger_trains"
@@ -179,7 +179,7 @@
                 app:layout_columnWeight="1"/>
             <TextView
                 android:textSize="@dimen/passenger_trains"
-                android:text="Нововесела- Херсон"
+                android:text="@string/activity_train_newvesele_herson"
                 app:layout_columnWeight="1"/>
             <TextView
                 android:textSize="@dimen/passenger_trains"
@@ -187,7 +187,7 @@
                 app:layout_columnWeight="1"/>
             <TextView
                 android:textSize="@dimen/passenger_trains"
-                android:text="щоденно"
+                android:text="@string/activity_train_everyday"
                 app:layout_columnWeight="1"/>
             <TextView
                 android:textSize="@dimen/passenger_trains"
@@ -196,7 +196,7 @@
                 app:layout_columnWeight="1"/>
             <TextView
                 android:textSize="@dimen/passenger_trains"
-                android:text="Запоріжжя - Одеса"
+                android:text="@string/activity_train_zp_odessa"
                 app:layout_columnWeight="1"/>
             <TextView
                 android:textSize="@dimen/passenger_trains"
@@ -204,7 +204,7 @@
                 app:layout_columnWeight="1"/>
             <TextView
                 android:textSize="@dimen/passenger_trains"
-                android:text="непарні"
+                android:text="@string/activity_train_notpaired"
                 app:layout_columnWeight="1"/>
 
 

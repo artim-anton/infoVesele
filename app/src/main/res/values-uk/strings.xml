@@ -13,7 +13,7 @@
     <string name="tutors">Послуги\nрепетиторів</string>
     <string name="tutors_more">Послуги репетиторів</string>
     <string name="builder">Будівельні\nроботи</string>
-    <string name="repairs">Ремонт\nтехнікі</string>
+    <string name="repairs">Ремонт\nтехніки</string>
     <string name="home_master">Домашній\nмайстер</string>
     <string name="business">Ділові\nпослуги</string>
     <string name="domestic">Побутові\nпослуги</string>
@@ -103,5 +103,23 @@
     <string name="nav_setting">Змінити мову</string>
     <string name="nav_logout">Вийти</string>
     <string name="choose_language">Вибрати мову...</string>
+
+    <string name="activity_train_trolley_schedule">Розклад руху</string>
+    <string name="activity_train_suburban_and_passenger_trains">приміських та пасажирських поїздів</string>
+    <string name="activity_train_suburban_trains">Приміські</string>
+    <string name="activity_train_to_melitopol">На Мелітополь</string>
+    <string name="activity_train_to_fedorivka">На Федорівку</string>
+    <string name="activity_train_everyday">щоденно</string>
+    <string name="activity_train_passenger_trains">Пасажирські</string>
+    <string name="activity_train_odessa_zp">Одесса - Запоріжжя</string>
+    <string name="activity_train_herson_newvesele">Херсон - Нововесела</string>
+    <string name="activity_train_newvesele_herson">Нововесела- Херсон</string>
+    <string name="activity_train_zp_odessa">Запоріжжя - Одеса</string>
+    <string name="activity_train_paired">парні</string>
+    <string name="activity_train_notpaired">непарні</string>
+    <string name="watercanal_hint">*показання потрібно подавати, до 25 числа, поточного місяця.</string>
+    <string name="watercanal_hint_notification">*при перезавантаженні пристрою, смартфон очищає все нагадування, якщо перестало срабатівать нагадування, натисни оновити нагадування.</string>
+    <string name="activity_bus_zp_title_from_center">з центру навпроти БК</string>
+    <string name="activity_bus_zp_bask_title_form_railway">з Ж/Д Запоріжжя 1</string>
 
 </resources>

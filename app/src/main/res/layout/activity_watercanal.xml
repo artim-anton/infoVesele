@@ -128,7 +128,7 @@
         android:paddingLeft="20dp"
         android:paddingRight="20dp"
         android:textSize="12dp"
-        android:text="*показания нужно подавать, до 25 числа, текущего месяца."/>
+        android:text="@string/watercanal_hint"/>
     </LinearLayout>
 
     <LinearLayout
@@ -176,7 +176,7 @@
             android:paddingLeft="20dp"
             android:paddingRight="20dp"
             android:textSize="12dp"
-            android:text="*при перезагрузке устройства, смартфон очищает все напоминания, если перестало срабативать напоминание, нажми обновить напоминание."/>
+            android:text="@string/watercanal_hint_notification"/>
     </LinearLayout>
 
 

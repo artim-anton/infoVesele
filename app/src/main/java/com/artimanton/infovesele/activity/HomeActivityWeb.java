@@ -174,7 +174,7 @@ public class HomeActivityWeb extends BaseActivity implements NavigationView.OnNa
     }
 
     private void showChangeLanguageDialog() {
-        final String[] listItem = {"Русский", "Українська"};
+        final String[] listItem = {"Русский", "Українська", "Polski", "English"};
         AlertDialog.Builder mBilder = new AlertDialog.Builder(HomeActivityWeb.this);
         mBilder.setTitle(getString(R.string.choose_language));
         mBilder.setSingleChoiceItems(listItem, -1, new DialogInterface.OnClickListener() {
@@ -186,6 +186,14 @@ public class HomeActivityWeb extends BaseActivity implements NavigationView.OnNa
                 }
                 else if (i == 1){
                     setLocate("uk");
+                    recreate();
+                }
+                else if (i == 2){
+                    setLocate("pl");
+                    recreate();
+                }
+                else if (i == 3){
+                    setLocate("en");
                     recreate();
                 }
                 dialog.dismiss();

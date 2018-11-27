@@ -111,7 +111,7 @@
             android:layout_gravity="center"
             android:layout_margin="5dp"
             android:padding="5dp"
-            android:text="с центра напротив ДК"
+            android:text="@string/activity_bus_zp_title_from_center"
             android:textColor="@color/black"
             android:textSize="18sp"
             android:textStyle="italic" />

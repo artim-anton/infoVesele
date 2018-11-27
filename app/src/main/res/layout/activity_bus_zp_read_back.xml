@@ -110,7 +110,7 @@
             android:layout_gravity="center"
             android:layout_margin="5dp"
             android:padding="5dp"
-            android:text="c Ж/Д Запорожье 1"
+            android:text="@string/activity_bus_zp_bask_title_form_railway"
             android:textColor="@color/black"
             android:textSize="18sp"
             android:textStyle="italic" />
