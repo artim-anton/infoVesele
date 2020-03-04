@@ -102,7 +102,7 @@
     <string name="watercanal_text_button_renew">Оновити нагадування</string>
     <string name="nav_setting">Змінити мову</string>
     <string name="nav_logout">Вийти</string>
-    <string name="choose_language">Вибрати мову...</string>
+    <string name="chose_language">Вибрати мову...</string>
 
     <string name="activity_train_trolley_schedule">Розклад руху</string>
     <string name="activity_train_suburban_and_passenger_trains">приміських та пасажирських поїздів</string>
