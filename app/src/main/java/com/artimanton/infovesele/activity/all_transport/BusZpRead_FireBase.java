@@ -62,7 +62,11 @@ public class BusZpRead_FireBase extends AppCompatActivity {
         //ImageView photoView = (ImageView) findViewById(R.id.img_zp);
 
         final PhotoView photoView = findViewById(R.id.img_zp);
+        final PhotoView photoViewtwo = findViewById(R.id.img_zp_second);
 
+        Picasso.with(this)
+                .load("http://s1vesele.ucoz.net/infoVesele/0985089096.jpg")
+                .into(photoViewtwo);
         Picasso.with(this)
                 .load("http://s1vesele.ucoz.net/infoVesele/zp_white_svan.jpg")
                 .into(photoView);

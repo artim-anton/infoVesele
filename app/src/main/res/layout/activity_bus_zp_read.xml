@@ -426,6 +426,15 @@
     </LinearLayout>
 
     <com.github.chrisbanes.photoview.PhotoView
+        android:id="@+id/img_zp_second"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:scaleType="fitStart"
+        android:adjustViewBounds="true"
+        android:layout_gravity="center_horizontal"/>
+
+    <com.github.chrisbanes.photoview.PhotoView
         android:id="@+id/img_zp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

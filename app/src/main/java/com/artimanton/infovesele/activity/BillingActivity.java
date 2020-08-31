@@ -2,9 +2,15 @@ package com.artimanton.infovesele.activity;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
+import android.support.constraint.ConstraintLayout;
 import android.util.Log;
 import android.view.View;
+import android.widget.LinearLayout;
+import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -38,6 +44,12 @@ public class BillingActivity extends Activity {
 
         //TextView title = (TextView)findViewById(R.id.titleTextView);
         //title.setText(String.format(getString(R.string.title), getIntent().getIntExtra(ACTIVITY_NUMBER, 1)));
+
+        Bitmap bmp = BitmapFactory.decodeResource(getResources(), R.drawable.sprinkles); // берем картинку из ресурса
+        BitmapDrawable bitmapDrawable = new BitmapDrawable(bmp);
+        bitmapDrawable.setTileModeXY(android.graphics.Shader.TileMode.REPEAT, android.graphics.Shader.TileMode.REPEAT); // гшоворим обьекту как рисовать (у меня это повторяющийся фон)
+        ScrollView layout = findViewById(R.id.billing_layout);
+        layout.setBackgroundDrawable(bitmapDrawable); // задаём фон нашему лэйауту
 
         if(!BillingProcessor.isIabServiceAvailable(this)) {
             showToast("In-app billing service is unavailable, please upgrade Android Market/Play to version >= 3.9.16");
