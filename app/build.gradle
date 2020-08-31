@@ -4,13 +4,13 @@ android {
     lintOptions {
         checkReleaseBuilds false
     }
-    compileSdkVersion 28
+    compileSdkVersion 29
     defaultConfig {
         applicationId "com.artimanton.infovesele"
         minSdkVersion 15
-        targetSdkVersion 28
-        versionCode 20
-        versionName "1.1.7"
+        targetSdkVersion 29
+        versionCode 22
+        versionName "1.1.8"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
