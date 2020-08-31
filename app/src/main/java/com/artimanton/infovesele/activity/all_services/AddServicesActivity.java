@@ -28,7 +28,7 @@ public class AddServicesActivity extends AppCompatActivity {
         BackGroundActivity.setBackground(this, this);
         imageReclame= (ImageView) findViewById(R.id.img_reclame);
 
-        Picasso.get()
+        Picasso.with(this)
                 .load("https://drogmedia.net.ua/wp-content/uploads/2017/10/Reklama-na-bloge-dlya-vas-po-dostupny-m-tsenam.png")
                 .into(imageReclame);
 

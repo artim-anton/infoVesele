@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.artimanton.infovesele.R;
@@ -98,7 +99,8 @@ public class BusAdapter extends RecyclerView.Adapter<BusAdapter.BusViewHolder> {
     }
 
     class BusViewHolder extends RecyclerView.ViewHolder{
-        private EditText etTimeGo, etTimeFinish, etPhone;
+        private EditText etTimeGo, etTimeFinish;
+        private TextView etPhone;
         private ImageButton btnCall, btnEdit;
 
         private BusViewHolder(View itemView) {

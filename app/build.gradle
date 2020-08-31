@@ -9,8 +9,8 @@ android {
         applicationId "com.artimanton.infovesele"
         minSdkVersion 15
         targetSdkVersion 28
-        versionCode 18
-        versionName "1.1.6"
+        versionCode 20
+        versionName "1.1.7"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -39,7 +39,7 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
     implementation 'org.jsoup:jsoup:1.11.2'
-    implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'com.squareup.picasso:picasso:2.5.2'
     implementation 'com.github.ittianyu:BottomNavigationViewEx:1.2.4'
     implementation 'com.github.satyan:sugar:1.4'
     implementation 'com.anjlab.android.iab.v3:library:1.0.44'

@@ -10,6 +10,7 @@ import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.artimanton.infovesele.R;
+import com.artimanton.infovesele.activity.HomeActivityWeb;
 import com.artimanton.infovesele.permission.Internet;
 
 public class FirstSchoolActivity extends AppCompatActivity {
@@ -31,16 +32,14 @@ public class FirstSchoolActivity extends AppCompatActivity {
                 LoadWeb();
             }
         });
-
-        if ( !Internet.isOnline(this) ){
-            Toast.makeText(this, "Нет соединения с интернетом!", Toast.LENGTH_LONG).show();
-        }
     }
 
     public void LoadWeb(){
         mWebView = (WebView) findViewById(R.id.webView);
         mWebView.getSettings().setJavaScriptEnabled(true);
+        mWebView.getSettings().setAppCacheEnabled(true);
         mWebView.getSettings().setBuiltInZoomControls(true);
+        mWebView.getSettings().setDisplayZoomControls(false);
         mWebView.setWebViewClient(new MyWebViewClient());
         mWebView.setWebViewClient(new WebViewClient(){
 
@@ -52,11 +51,11 @@ public class FirstSchoolActivity extends AppCompatActivity {
                 ProgressBar progressbar = (ProgressBar) findViewById(R.id.progress_bar);
                 progressbar.setVisibility(View.GONE);
                 swipe.setRefreshing(false);
-
             }
         });
 
         mWebView.loadUrl("http://s1vesele.ucoz.net");
+
     }
 
     public void isOnline(){

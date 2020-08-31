@@ -38,7 +38,7 @@ public class CarActivity extends AppCompatActivity {
 
         final PhotoView photoView = findViewById(R.id.img_gaz);
 
-        Picasso.get()
+        Picasso.with(this)
                 .load("http://s1vesele.ucoz.net/infoVesele/gaz.jpg")
                 .into(photoView);
 

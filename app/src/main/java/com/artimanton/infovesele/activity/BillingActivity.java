@@ -27,7 +27,7 @@ public class BillingActivity extends Activity {
     // if filled library will provide protection against Freedom alike Play Market simulators
     private static final String MERCHANT_ID=null;
 
-    private BillingProcessor bp;
+    public BillingProcessor bp;
     private boolean readyToPurchase = false;
 
 

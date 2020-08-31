@@ -49,7 +49,7 @@ public class TaxiRead_FireBase extends AppCompatActivity {
 
         final PhotoView photoView = findViewById(R.id.img_taxi);
 
-        Picasso.get()
+        Picasso.with(this)
                 .load("http://s1vesele.ucoz.net/infoVesele/taxi_lanos.jpg")
                 .into(photoView);
 

@@ -32,15 +32,17 @@
         android:textSize="18sp"
         android:textColor="@color/colorTime"/>
 
-    <EditText
+    <TextView
         android:id="@+id/et_phone"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        android:layout_marginBottom="5dp"
         android:layout_marginLeft="5dp"
         android:layout_marginTop="5dp"
         android:layout_weight="4"
-        android:enabled="false"
-        android:inputType="phone"
+        android:enabled="true"
+        android:autoLink="phone|web"
         android:text="0674512821"
         android:textSize="18sp"
         android:textColor="@color/colorPhone" />

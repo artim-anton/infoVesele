@@ -2,7 +2,7 @@
 <resources>
     <string name="app_name">Моё Весёлое</string>
     <string name="btn_traffic">Транспорт</string>
-    <string name="title_activity_tr_bus">Автобуси</string>
+    <string name="title_activity_tr_bus">Автобусы</string>
     <string name="title_activity_train">Поезда</string>
     <string name="title_activity_taxi">Такси</string>
     <string name="title_activity_freight_taxi">Грузовое такси</string>

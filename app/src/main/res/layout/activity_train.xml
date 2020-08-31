@@ -82,12 +82,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="21:35"/>
+                    android:text=""/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="@string/activity_train_everyday"/>
+                    android:text=""/>
             </LinearLayout>
 
             <LinearLayout
@@ -105,12 +105,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="09:04"/>
+                    android:text=""/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="@string/activity_train_everyday"/>
+                    android:text=""/>
             </LinearLayout>
 
         </LinearLayout>
@@ -148,7 +148,7 @@
                 android:text="@string/activity_train_odessa_zp"
                 app:layout_columnWeight="1"/>
             <TextView
-                android:text="02:35"
+                android:text="02:31"
                 android:textSize="@dimen/passenger_trains"
                 app:layout_columnWeight="1"/>
             <TextView
@@ -200,11 +200,11 @@
                 app:layout_columnWeight="1"/>
             <TextView
                 android:textSize="@dimen/passenger_trains"
-                android:text="19:25"
+                android:text="22:58"
                 app:layout_columnWeight="1"/>
             <TextView
                 android:textSize="@dimen/passenger_trains"
-                android:text="@string/activity_train_notpaired"
+                android:text="@string/activity_train_paired"
                 app:layout_columnWeight="1"/>
 
 

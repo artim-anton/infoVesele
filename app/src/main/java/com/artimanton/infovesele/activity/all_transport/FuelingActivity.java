@@ -44,10 +44,10 @@ public class FuelingActivity extends AppCompatActivity {
         imageAvias = (ImageView) findViewById(R.id.img_avias);
         imageZog = (ImageView) findViewById(R.id.img_zog);
 
-        Picasso.get()
+        Picasso.with(this)
                 .load("https://www.azski.com.ua/images/networks/avias.jpg")
                 .into(imageAvias);
-        Picasso.get()
+        Picasso.with(this)
                 .load("https://www.azski.com.ua/images/networks/zog.jpg")
                 .into(imageZog);
 

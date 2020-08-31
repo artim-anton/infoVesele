@@ -195,15 +195,17 @@
                 android:textColor="@color/colorTime"
                 android:textSize="18sp" />
 
-            <EditText
+            <TextView
                 android:id="@+id/et_phone_zp_read_one"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="bottom"
+                android:layout_marginBottom="5dp"
                 android:layout_marginLeft="5dp"
                 android:layout_marginTop="5dp"
                 android:layout_weight="4"
-                android:enabled="false"
-                android:inputType="phone"
+                android:enabled="true"
+                android:autoLink="phone|web"
                 android:text="0973368166"
                 android:textColor="@color/colorPhone"
                 android:textSize="18sp" />
@@ -255,15 +257,17 @@
                 android:textColor="@color/colorTime"
                 android:textSize="18sp" />
 
-            <EditText
+            <TextView
                 android:id="@+id/et_phone__zp_read_two"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="bottom"
+                android:layout_marginBottom="5dp"
                 android:layout_marginLeft="5dp"
                 android:layout_marginTop="5dp"
                 android:layout_weight="4"
-                android:enabled="false"
-                android:inputType="phone"
+                android:enabled="true"
+                android:autoLink="phone|web"
                 android:text="0674184728"
                 android:textColor="@color/colorPhone"
                 android:textSize="18sp" />
@@ -314,15 +318,17 @@
                 android:textColor="@color/colorTime"
                 android:textSize="18sp" />
 
-            <EditText
+            <TextView
                 android:id="@+id/et_phone__zp_read_three"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="bottom"
+                android:layout_marginBottom="5dp"
                 android:layout_marginLeft="5dp"
                 android:layout_marginTop="5dp"
                 android:layout_weight="4"
-                android:enabled="false"
-                android:inputType="phone"
+                android:enabled="true"
+                android:autoLink="phone|web"
                 android:text="0681959239"
                 android:textColor="@color/colorPhone"
                 android:textSize="18sp" />
@@ -374,15 +380,17 @@
                 android:textColor="@color/colorTime"
                 android:textSize="18sp" />
 
-            <EditText
+            <TextView
                 android:id="@+id/et_phone__zp_read_four"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="bottom"
+                android:layout_marginBottom="5dp"
                 android:layout_marginLeft="5dp"
                 android:layout_marginTop="5dp"
                 android:layout_weight="4"
-                android:enabled="false"
-                android:inputType="phone"
+                android:enabled="true"
+                android:autoLink="phone|web"
                 android:text="0973368166"
                 android:textColor="@color/colorPhone"
                 android:textSize="18sp" />

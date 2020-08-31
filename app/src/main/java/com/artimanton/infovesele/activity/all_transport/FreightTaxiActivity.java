@@ -23,7 +23,7 @@ public class FreightTaxiActivity extends AppCompatActivity {
         setContentView(R.layout.activity_freight_taxi);
         final PhotoView photoView = findViewById(R.id.img_freight_taxi);
 
-        Picasso.get()
+        Picasso.with(this)
                 .load("http://s1vesele.ucoz.net/infoVesele/freight_taxi.jpg")
                 .into(photoView);
     }

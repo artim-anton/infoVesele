@@ -9,12 +9,15 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import com.artimanton.infovesele.R;
 import com.artimanton.infovesele.utilities.BackGroundActivity;
 
+import org.w3c.dom.Text;
+
 public class BusBardyansk extends AppCompatActivity {
-    private EditText etCallBardyansk;
+    private TextView etCallBardyansk;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,7 +26,7 @@ public class BusBardyansk extends AppCompatActivity {
     }
 
     public void btnCallBardyansk(View view) {
-        etCallBardyansk = (EditText) findViewById(R.id.et_phone_bardyansk);
+        etCallBardyansk =  findViewById(R.id.et_phone_bardyansk);
         String phone = etCallBardyansk.getText().toString();
         Intent intent = new Intent(Intent.ACTION_CALL, Uri.fromParts("tel", phone, null));
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {

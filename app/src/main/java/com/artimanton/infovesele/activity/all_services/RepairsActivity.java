@@ -48,7 +48,7 @@ public class RepairsActivity extends AppCompatActivity {
 
         final PhotoView photoView = findViewById(R.id.img_pc_master);
 
-     Picasso.get()
+     Picasso.with(this)
                 .load("http://s1vesele.ucoz.net/infoVesele/pc_master.jpg")
                 .into(photoView);
 

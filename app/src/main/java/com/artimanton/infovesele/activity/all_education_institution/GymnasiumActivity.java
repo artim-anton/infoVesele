@@ -40,7 +40,9 @@ public class GymnasiumActivity extends AppCompatActivity {
     public void LoadWeb(){
         mWebView = (WebView) findViewById(R.id.webView);
         mWebView.getSettings().setJavaScriptEnabled(true);
+        mWebView.getSettings().setAppCacheEnabled(true);
         mWebView.getSettings().setBuiltInZoomControls(true);
+        mWebView.getSettings().setDisplayZoomControls(false);
         mWebView.setWebViewClient(new MyWebViewClient());
         mWebView.setWebViewClient(new WebViewClient(){
 

@@ -120,7 +120,7 @@
                 android:textSize="18sp" />
 
             <EditText
-                android:id="@+id/et_phone_zp_read_one"
+                android:id="@+id/et_phone_nb"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
@@ -133,7 +133,7 @@
                 android:textSize="18sp" />
 
             <ImageButton
-                android:id="@+id/btn_call_zp_read_one"
+                android:id="@+id/btn_call_nb"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_marginBottom="5dp"
@@ -142,7 +142,7 @@
                 android:layout_marginTop="5dp"
                 android:layout_weight="1.2"
                 android:background="@drawable/border"
-                android:onClick="btnCallZpReadOne"
+                android:onClick="btnCallNB"
                 android:src="@drawable/ic_call_black_24dp"
                 android:text="CL"
                 android:textSize="18sp" />

@@ -116,7 +116,7 @@ public class HomeActivity extends BaseActivity {
             holder.linkPageNews.setText(mNews.get(position).getLinkPageNews().toString());
 
             if (!mNews.get(position).getLinkImageNews().isEmpty()){
-            Picasso.get()
+            Picasso.with(getApplicationContext())
                     .load(mNews.get(position).getLinkImageNews())
                     .resize(800,0)
                     //.centerInside()

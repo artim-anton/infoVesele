@@ -55,7 +55,7 @@ public class TransportActivity extends BaseActivity {
 
         final PhotoView photoView = findViewById(R.id.img_wikonda);
 
-       Picasso.get()
+       Picasso.with(this)
                 .load("http://s1vesele.ucoz.net/infoVesele/wikonda_vesele.jpg")
                 .into(photoView);
 

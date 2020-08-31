@@ -17,7 +17,7 @@ public class Train extends AppCompatActivity {
         setContentView(R.layout.activity_train);
         imageTrain = (ImageView) findViewById(R.id.img_ukrainian_railways);
 
-        Picasso.get()
+        Picasso.with(this)
                 .load("https://steamusercontent-a.akamaihd.net/ugc/89346793346185062/FC43E449086EEE508073413310E0A9994B291FCF/")
                 .into(imageTrain);
     }

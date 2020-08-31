@@ -40,7 +40,9 @@ public class SecondSchoolActivity extends AppCompatActivity {
     public void LoadWeb(){
         mWebView = (WebView) findViewById(R.id.webView);
         mWebView.getSettings().setJavaScriptEnabled(true);
+        mWebView.getSettings().setAppCacheEnabled(true);
         mWebView.getSettings().setBuiltInZoomControls(true);
+        mWebView.getSettings().setDisplayZoomControls(false);
         mWebView.setWebViewClient(new MyWebViewClient());
         mWebView.setWebViewClient(new WebViewClient(){
 
@@ -56,7 +58,7 @@ public class SecondSchoolActivity extends AppCompatActivity {
             }
         });
 
-        mWebView.loadUrl("http://vesschool2.ucoz.ua");
+        mWebView.loadUrl("https://vesschool2.ucoz.ua");
     }
 
     public void isOnline(){

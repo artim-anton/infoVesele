@@ -9,6 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import com.artimanton.infovesele.R;
 import com.artimanton.infovesele.utilities.BackGroundActivity;
@@ -23,13 +24,13 @@ public class BusKirilovka extends AppCompatActivity {
         setContentView(R.layout.activity_bus_kirilovka);
         final PhotoView photoView = findViewById(R.id.img_kirilovka);
 
-        Picasso.get()
+        Picasso.with(this)
                 .load("http://s1vesele.ucoz.net/infoVesele/kirilovka.jpg")
                 .into(photoView);
     }
 
     public void btnCallKirilovka(View view) {
-        EditText etPhoneKirilovka = (EditText) findViewById(R.id.et_phone_kirilovka);
+        TextView etPhoneKirilovka =  findViewById(R.id.et_phone_kirilovka);
         String phone = etPhoneKirilovka.getText().toString();
         Intent intent = new Intent(Intent.ACTION_CALL, Uri.fromParts("tel", phone, null));
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {

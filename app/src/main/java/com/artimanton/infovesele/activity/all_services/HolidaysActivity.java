@@ -40,7 +40,7 @@ public class HolidaysActivity extends AppCompatActivity {
 
         final PhotoView imageViewHolidaysOne = findViewById(R.id.img_organization_of_holidays_three);
 
-        Picasso.get()
+        Picasso.with(this)
                 .load("http://s1vesele.ucoz.net/infoVesele/HolidaysThree.jpg")
                 .into(imageViewHolidaysOne);
 

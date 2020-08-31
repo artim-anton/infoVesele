@@ -50,7 +50,7 @@ public class BusMelitopolReadBack extends AppCompatActivity {
 
         final PhotoView photoView = findViewById(R.id.img_melitopol_back);
 
-        Picasso.get()
+        Picasso.with(this)
                 .load("http://s1vesele.ucoz.net/infoVesele/melitopol_back.jpg")
                 .into(photoView);
 
