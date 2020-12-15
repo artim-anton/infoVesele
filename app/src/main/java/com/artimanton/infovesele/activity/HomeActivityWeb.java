@@ -9,6 +9,7 @@ import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.content.res.Configuration;
 import android.media.VolumeShaper;
+import android.net.http.SslError;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.ActivityCompat;
@@ -21,6 +22,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.webkit.SslErrorHandler;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.ProgressBar;
@@ -49,12 +51,12 @@ public class HomeActivityWeb extends BaseActivity implements NavigationView.OnNa
         getPermission();
         LoadWeb();
 
-        swipe.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+        /*swipe.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
                 LoadWeb();
             }
-        });
+        });*/
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawerLayout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -79,14 +81,19 @@ public class HomeActivityWeb extends BaseActivity implements NavigationView.OnNa
                 mWebView.loadUrl("file:///android_asset/error.html");
             }
 
+            @Override
+            public void onReceivedSslError(WebView view, SslErrorHandler handler, SslError error) {
+                handler.proceed();
+            }
+
             public void onPageFinished(WebView view,String url){
-                ProgressBar progressbar = (ProgressBar) findViewById(R.id.progress_bar);
-                progressbar.setVisibility(View.GONE);
-                swipe.setRefreshing(false);
+                //ProgressBar progressbar = (ProgressBar) findViewById(R.id.progress_bar);
+                //progressbar.setVisibility(View.GONE);
+                //swipe.setRefreshing(false);
             }
         });
 
-        mWebView.loadUrl("https://veselivska-gromada.gov.ua/news/?p=1");
+        mWebView.loadUrl("https://veselivska-gromada.gov.ua/news/");
 
     }
 

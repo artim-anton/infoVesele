@@ -9,8 +9,8 @@ android {
         applicationId "com.artimanton.infovesele"
         minSdkVersion 15
         targetSdkVersion 29
-        versionCode 22
-        versionName "1.1.8"
+        versionCode 23
+        versionName "1.1.9"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
